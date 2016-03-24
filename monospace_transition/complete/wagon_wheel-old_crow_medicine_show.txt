@@ -1,5 +1,7 @@
-Wagon Wheel
-Bob Dylan and Old Crow Medicine Show
+title: Wagon Wheel
+artist: Old Crow Medicine Show
+recorded: 2003
+genre: country, americana, folk, bluegrass
 
 G                        D
 Headed down south to the land of the pines
@@ -45,3 +47,4 @@ And if I die in Raleigh
 At least I will die free
 
     (Chorus)
+

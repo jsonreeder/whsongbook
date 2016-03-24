@@ -1,6 +1,8 @@
-I Will Follow You Into the Dark
-Death Cab for Cutie
-(Capo 5)
+title: I Will Follow You Into the Dark
+artist: Death Cab for Cutie
+capo: 5
+recorded: 2005
+genre: indie
 
 Intro:
 | Am | C | F | C  G/B |
