@@ -1,0 +1,38 @@
+#+TITLE: Ideas
+#+SUBTITLE: A collection of ideas for future development
+
+* Modes
+- Each song should have three display modes
+
+** Singalong
+- Lyrics with chords on line above
+- This is how the original print songbook is formatted.
+
+** Leadsheet
+- Only chords separated by bar lines
+- This is how instrumental sections are formatted in the original print songbook (such as intros).
+- Lyrics could optionally be displayed below
+- Could allow two modes
+  - Compact: Takes up as little space as possible (for viewing on a screen)
+  - Page: Stretched to fill the whole page (for printing)
+
+** Lyrics
+- Just the lyrics, no chords at all
+
+* Integrations
+
+** LilyPond
+- Ideally, all instrumental note-based parts would be trascribed used LilyPond syntax (such as bass lines or important solos)
+- The notes would be displayed as musical notation or tab (ie rendered with LilyPond)
+- The rendered notes could be displayed at the bottom of the chart. Having a fully transcribed intro at the beginning of the chart would be distracting in a singalong context to anyone without an instrument.
+
+** Chordii
+- Chordii syntax would be an appropriate option for almost everything I want to transcribe.
+- Pros
+  - Simple
+  - Already exists
+  - Designed for a very similar use case
+- Cons
+  - Cannot be used to generate leadsheets
+  - No support for note-based parts (ie what LilyPond does)
+  - As far as I've seen so far it only offers verse & chorus differences. I also need bridge and prechorus distinctions.
