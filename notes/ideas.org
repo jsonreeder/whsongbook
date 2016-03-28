@@ -16,6 +16,10 @@
   - Compact: Takes up as little space as possible (for viewing on a screen)
   - Page: Stretched to fill the whole page (for printing)
 
+*** Implementation
+- Could be done in LilyPond using the ~Bar_engraver~
+  - Documentation: http://www.lilypond.org/doc/v2.19/Documentation/notation/displaying-chords
+
 ** Lyrics
 - Just the lyrics, no chords at all
 
