@@ -32,4 +32,18 @@ def match_chords_with_lyrics(chords, lyrics):
 
     return output
 
-print(match_chords_with_lyrics(list_sample_chords, sample_lyrics))
+def chords_to_list(chords):
+    "Convert a string of chords to a list"
+
+    words_to_remove = "\break|\d|:"
+
+    string_without = re.sub(words_to_remove, "", chords)
+
+    list = string_without.split()
+
+    cap_list = [x.title() for x in list]
+
+    return cap_list
+
+chords = chords_to_list(string_sample_chords)
+print(match_chords_with_lyrics(chords, sample_lyrics))
