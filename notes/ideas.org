@@ -7,6 +7,11 @@
 ** Singalong
 - Lyrics with chords on line above
 - This is how the original print songbook is formatted.
+- I'm not 100% happy with the name 'singalong' for this format. Consider others.
+
+*** Implementation
+- Could be done in Chordii
+  - Documentation: http://www.vromans.org/johan/projects/Chordii/documentation/chordii-4.5-user_guide.pdf
 
 ** Leadsheet
 - Only chords separated by bar lines
@@ -19,6 +24,7 @@
 *** Implementation
 - Could be done in LilyPond using the ~Bar_engraver~
   - Documentation: http://www.lilypond.org/doc/v2.19/Documentation/notation/displaying-chords
+  - An example: https://raw.githubusercontent.com/terje/lilypond-templates/master/chord-sheet-template.ly
 
 ** Lyrics
 - Just the lyrics, no chords at all
