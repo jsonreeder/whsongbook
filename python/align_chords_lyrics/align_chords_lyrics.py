@@ -45,5 +45,32 @@ def chords_to_list(chords):
 
     return cap_list
 
+def chords_above(lyrics_with_chords):
+    """Convert a string of lyrics with chords within brackets
+    to a string of lyrics with chords above"""
+
+    output = ""
+
+    for l in lyrics_with_chords.splitlines():
+        chord_line = ""
+        lyric_line = ""
+
+        for x in l.split("["):
+            if "]" in x:
+                chord, lyric = x.split("]")
+                extra_space = " " * ( len(lyric) - len(chord) )
+                chord_line += chord + extra_space
+                lyric_line += lyric
+            else:
+                chord_line += " " * len(x)
+                lyric_line += x
+
+        output += chord_line + "\n"
+        output += lyric_line + "\n"
+
+    return output
+
 chords = chords_to_list(string_sample_chords)
-print(match_chords_with_lyrics(chords, sample_lyrics))
+chords_with_lyrics = match_chords_with_lyrics(chords, sample_lyrics)
+
+print(chords_above(chords_with_lyrics))
