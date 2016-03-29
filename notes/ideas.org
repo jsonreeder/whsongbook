@@ -24,7 +24,6 @@
 *** Implementation
 - Could be done in LilyPond using the ~Bar_engraver~
   - Documentation: http://www.lilypond.org/doc/v2.19/Documentation/notation/displaying-chords
-  - An example: https://raw.githubusercontent.com/terje/lilypond-templates/master/chord-sheet-template.ly
 
 ** Lyrics
 - Just the lyrics, no chords at all
@@ -46,3 +45,30 @@
   - Cannot be used to generate leadsheets
   - No support for note-based parts (ie what LilyPond does)
   - As far as I've seen so far it only offers verse & chorus differences. I also need bridge and prechorus distinctions.
+
+* Defining syntax
+
+** [2016-03-28 Mon]
+- Currently working with the idea of using LilyPond (LaTeX) syntax as a base
+  - The things it does very well
+    - Gives a general markup for things like titles and sections and variables
+    - Defines a robust note/chord syntax
+  - The things it seems to lack
+    - A simple way to associate lyrics with chords (as opposed to notes)
+    - A simple way to put in placeholders like "(Chorus)"
+  - These things are largely provided by Chordii
+- I've started building a syntax for the verses based on Chordii
+  - Similarities
+    - Chords are associated with lyrics with brackets, eg "If []there's no one be[]side you when your []soul em[]barks []"
+  - Differences
+    - The chords aren't actually written in those brackets. They are written in a separate section above, eg "a:m c e a:m2 g2"
+      - This means I have to reference them, which makes it important that the number of chords equal the number of brackets
+      - The big benefit is that I can use LilyPond syntax to easily output leadsheets
+      - But I realize that I could use that exact same syntax in the bracket, eg "If [a:m]there's no one be[c]side you when your [e]soul em[a:m2]barks [g2]"
+        - I don't think anything would be lost there whatsoever, except potentional the ~\break~ markers, which could easily be added separately (say, auto-generated every 4 or 8 bars)
+- Next Steps
+  - Model the same thing but with chords in the brackets the whole time
+  - Write a function that extracts the chords and formats them in LilyPond's ~\chordmode~ syntax
+  - Start thinking about how to model song form
+  
+
