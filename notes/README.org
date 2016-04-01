@@ -1,0 +1,52 @@
+#+TITLE: README
+#+SUBTITLE: What it is and what it might become
+
+
+* Mission
+- The mission of this project is to provide a free and open-source songbook to the public.
+- Musically, the focus is on singers and guitar players.
+
+* Core
+Core functionality that should be prioritized
+
+** Backend
+*** Lyrics
+*** Chords
+*** Structure for metadata
+** Frontend
+*** Display modes
+**** Chords and lyrics
+- Lyrics with chords on line above
+- This is how the original print songbook is formatted.
+- I'm not 100% happy with the name 'singalong' for this format. Consider others.
+
+***** Implementation
+- Could be done in Chordii
+  - Documentation: http://www.vromans.org/johan/projects/Chordii/documentation/chordii-4.5-user_guide.pdf
+
+**** Lyrics
+- Just the lyrics, no chords at all
+
+
+* Extras
+Extra functionality that should not be prioritized
+
+** LilyPond integration
+- Ideally, all instrumental note-based parts would be trascribed used LilyPond syntax (such as bass lines or important solos)
+- The notes would be displayed as musical notation or tab (ie rendered with LilyPond)
+- The rendered notes could be displayed at the bottom of the chart. Having a fully transcribed intro at the beginning of the chart would be distracting in a singalong context to anyone without an instrument.
+
+** Transposition
+** Leadsheet view
+- Only chords separated by bar lines
+- This is how instrumental sections are formatted in the original print songbook (such as intros).
+- Lyrics could optionally be displayed below
+- Could allow two modes
+  - Compact: Takes up as little space as possible (for viewing on a screen)
+  - Page: Stretched to fill the whole page (for printing)
+
+*** Implementation
+- Could be done in LilyPond using the ~Bar_engraver~
+  - Documentation: http://www.lilypond.org/doc/v2.19/Documentation/notation/displaying-chords
+
+** Alignment of backup vocals
