@@ -1,0 +1,44 @@
+body {
+	margin: 2em;
+}
+
+pre {
+	display: none;
+}
+
+div {
+    display: inline-block;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+.line {
+	display: block;
+}
+
+.chorus {
+	font-weight: bold;
+	margin-left: 1em;
+	margin-top: 1em;
+}
+
+/*Song title*/
+h1 {
+	text-decoration: underline;
+	margin-bottom: 0;
+}
+
+/*Artist*/
+h2 {
+	margin-top: 0;
+	font-size: 0.8em;
+	font-weight: normal;
+}
+
+/*Uncomment to hide the chords*/
+/*aside {*/
+/*	display: none;*/
+/*}*/
