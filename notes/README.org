@@ -1,52 +1,77 @@
-#+TITLE: README
-#+SUBTITLE: What it is and what it might become
-
+#+TITLE: The West House Songbook
+#+SUBTITLE: An open-source songbook
 
 * Mission
-- The mission of this project is to provide a free and open-source songbook to the public.
-- Musically, the focus is on singers and guitar players.
+- The West House Songbook is an open-source songbook.
+- Its mission is to provide lyrics and chords to popular music in a simple but accurate format.
 
-* Core
-Core functionality that should be prioritized
+* Core Features
 
-** Backend
-*** Lyrics
-*** Chords
-*** Structure for metadata
-** Frontend
-*** Display modes
-**** Chords and lyrics
+** Song Content
+- Lyrics
+- Chords
+- Basic transcriptions of important licks
+
+** Song Metadata
+- Title
+- Artist
+- Genre
+
+** Song Navigation
+- An index of all songs, sortable by song metadata
+  
+** Display Modes
+*** Chords and lyrics
 - Lyrics with chords on line above
-- This is how the original print songbook is formatted.
-- I'm not 100% happy with the name 'singalong' for this format. Consider others.
+- This is the default view
 
-***** Implementation
-- Could be done in Chordii
-  - Documentation: http://www.vromans.org/johan/projects/Chordii/documentation/chordii-4.5-user_guide.pdf
-
-**** Lyrics
+*** Lyrics
 - Just the lyrics, no chords at all
 
+** Browsability
+- Web
+- Mobile web: tablet and smartphone
+  
+** Community editing
+- All of the source code for songs is on GitHub
+- Anyone can suggest corrections or additions via pull requests
+  
+* Paths for Expansion
 
-* Extras
-Extra functionality that should not be prioritized
+** Song Content
+- More detailed transcription of licks with tabs and musical notation
+- Transposition of chords and licks to a new key
 
-** LilyPond integration
-- Ideally, all instrumental note-based parts would be trascribed used LilyPond syntax (such as bass lines or important solos)
-- The notes would be displayed as musical notation or tab (ie rendered with LilyPond)
-- The rendered notes could be displayed at the bottom of the chart. Having a fully transcribed intro at the beginning of the chart would be distracting in a singalong context to anyone without an instrument.
+** Format
+- Ability to export a properly-formatted PDF of songbook content
 
-** Transposition
-** Leadsheet view
-- Only chords separated by bar lines
+** Display Modes
+*** Lead sheet view
+- Chords only, with bar lines to indicate timing
 - This is how instrumental sections are formatted in the original print songbook (such as intros).
-- Lyrics could optionally be displayed below
 - Could allow two modes
   - Compact: Takes up as little space as possible (for viewing on a screen)
   - Page: Stretched to fill the whole page (for printing)
-
-*** Implementation
-- Could be done in LilyPond using the ~Bar_engraver~
-  - Documentation: http://www.lilypond.org/doc/v2.19/Documentation/notation/displaying-chords
-
-** Alignment of backup vocals
+*** Improved mobile view
+- Lyrics fit to mobile screen when possible
+- Chorus indentation is reduced
+** Personalization
+- Users can add songs to their personal songbook
+- Users can add transcriptions of new songs
+** Group Singalong Support
+- A user can create a "singalong" and give it an id
+- Then other users can join the "singalong"
+- Users could add songs to a singalong queue like creating a playlist
+- Users could easily navigate to the song that was currently being sung
+** Community editing
+- Users can suggest corrections or additions from inside the app
+  
+* Views
+** Home
+[[file:home.png][screenshot]]
+** Song
+[[file:song_view.png][screenshot]]
+** Songs
+[[file:songs.png][screenshot]]
+** About
+[[file:about.png][screenshot]]
