@@ -1,7 +1,8 @@
 from . import app
 from flask import render_template
 from os import listdir
-import re
+import ast
+
 
 @app.route("/")
 def home():
@@ -22,7 +23,26 @@ def song(title):
 
     songs_dir = "songs/production/"
     full_title = songs_dir + title + ".song"
+    sections = []
+    metadata = {}
+    cur = None
+
     with open(full_title, "r") as f:
-        # parse header
-        
-        return f.read()
+        text = f.read()
+
+    for line in text.splitlines():
+        line = line.rstrip()
+        if not line: continue
+        if line == line.lstrip():
+            cur = []
+            sections.append((line.strip(":"), cur))
+        else:
+            cur.append(line.strip())
+
+    if sections[0][0] == "header":
+        for line in sections.pop(0)[1]:
+            key, value = line.split('=', 1)
+            metadata[key] = ast.literal_eval(value.strip())
+
+    return str(metadata)
+
