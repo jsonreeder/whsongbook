@@ -1,7 +1,7 @@
 from pprint import pprint
 import ast
 
-text = """
+text0 = """
 header:
     title = "I Will Follow You Into the Dark"
     artist = "Death Cab for Cutie"
@@ -50,6 +50,8 @@ chorus:
 sections = []
 metadata = {}
 cur = None
+with open("../songs/production/i_will_follow_you_into_the_dark-death_cab_for_cutie.song", "r") as f:
+    text1 = f.read()
 for line in text.splitlines():
     line = line.rstrip()
     if not line: continue
