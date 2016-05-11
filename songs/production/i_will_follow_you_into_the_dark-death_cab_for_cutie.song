@@ -3,7 +3,7 @@ header:
     artist = "Death Cab for Cutie"
     capo = 5
     year = 2005
-    genre = ["indie"]
+    genres = ["indie"]
 
 instrumental:
     <chorus chords>
