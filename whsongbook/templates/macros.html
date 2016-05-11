@@ -1,22 +1,29 @@
 {% macro render_section(type, content) %}
 <section class={{ type }}>
-    {% for line in content %}
-
-    {% if check_type(line) %}
-    <div class="line">
-        {%-for chord, lyric in line-%}
-        <div>
-            <aside>{{ display_chords(chord) }}</aside>
-            <p>{{ display_lyrics(lyric)}}</p>
-        </div>
-        {%-endfor %}
-    </div>
+    {% if not(content) %}
+        <p>{{ display_section_name(type) }}</p>
 
     {% else %}
-        <p>{{ line }}</p>
-    {% endif %}
+        {% for line in content %}
 
-    {% endfor %}
+            {% if check_type(line) %}
+                <div class="line">
+                    {%-for chord, lyric in line-%}
+                    <div>
+                        <aside>{{ display_chords(chord) }}</aside>
+                        <p>{{ display_lyrics(lyric)}}</p>
+                    </div>
+                    {%-endfor %}
+                </div>
+
+            {% else %}
+                <p>{{ line }}</p>
+
+            {% endif %}
+
+        {% endfor %}
+
+    {% endif %}
 </section>
 
 {% endmacro %}
