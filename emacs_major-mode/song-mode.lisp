@@ -1,21 +1,21 @@
 (require 'generic-x)
 
-(defface chorus-face
+(defface chord-face
   '((t (:foreground "#FF0000")))
   "red")
 
-(define-generic-mode 
+(define-generic-mode
   ;; name
   'song-mode
   ;; comment marker
   '("#")
   ;; keywords
-  '("title" "artist" "genre" "year" "capo" "streudel")
+  '("title" "artist" "genres" "year" "capo")
   ;; other faces
-  '(("(Chorus)" . 'font-lock-function-name-face)
-    ("|\\|:" . 'font-lock-builtin-face)
-    ("^\s\s\s\s[A-Za-z].*" . 'chorus-face))
-  ;; file extension for which to activate this mode 
+  '(("header\\|verse\\|chorus\\|bridge\\|instrumental" . 'font-lock-function-name-face)
+    ("\\[.+?\\]" . 'chord-face)
+    )
+  ;; file extension for which to activate this mode
   '("\\.song$")
   ;; other functions to call
   nil
