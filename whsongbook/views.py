@@ -30,6 +30,7 @@ def song(title):
     with open(full_title, "r") as f:
         text = f.read()
 
+    # Parse file
     for line in text.splitlines():
         line = line.rstrip()
         if not line: continue
