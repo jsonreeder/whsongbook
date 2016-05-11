@@ -27,8 +27,13 @@ def display_chords(chord):
     ret = note.upper() + extension
     return ret
 
+def display_section_name(name):
+    ret = "(%s)" % (name.title())
+    return ret
+
 app.jinja_env.globals.update(
     check_type = check_type,
     display_lyrics = display_lyrics,
-    display_chords = display_chords
+    display_chords = display_chords,
+    display_section_name = display_section_name
 )
