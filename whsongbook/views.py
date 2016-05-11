@@ -50,7 +50,9 @@ def song(title):
                 chord_sections = []
                 for section in line.split("["):
                     if "]" in section:
-                        chord, lyric = section.split("]")
+                        chord_lyric = section.split("]")
+                        chord = chord_lyric[0]
+                        lyric = chord_lyric[1]
                         chord_sections.append((chord, lyric))
                 line = chord_sections
             cur.append(line)
@@ -59,12 +61,11 @@ def song(title):
     if sections[0][0] == "header":
         for line in sections.pop(0)[1]:
             key, value = line.split('=', 1)
-            metadata[key] = ast.literal_eval(value.strip())
+            metadata[key.strip()] = ast.literal_eval(value.strip())
 
+    # return str(sections)
     return render_template("song.html",
                            title=metadata['title'],
                            artist=metadata['artist'],
                            sections=sections
     )
-    # return render_template("song.html")
-
