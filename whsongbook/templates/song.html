@@ -8,10 +8,9 @@
 	<body>
 	    <h1>{{ title }}</h1>
 	    <h2>{{ artist }}</h2>
-      <!--       <p>{{ sections }}</p> -->
       {% block content %}
-      {% for section in sections %}
-      {{ macros.render_section(section[0], section[1]) }}
+      {% for type, content in sections %}
+      {{ macros.render_section(type, content) }}
       {% endfor %}
       {% endblock %}
 	</body>
