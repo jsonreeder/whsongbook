@@ -1,88 +1,22 @@
 {% macro render_section(type, content) %}
 <section class={{ type }}>
     {% for line in content %}
-    <p>{{ line }}</p>
+
+    {% if check_type(line) %}
+    <div class="line">
+        {%-for chord, lyric in line-%}
+        <div>
+            <aside>{{ chord }}</aside>
+            <p>{{ display_lyrics(lyric)}}</p>
+        </div>
+        {%-endfor %}
+    </div>
+
+    {% else %}
+        <p>{{ line }}</p>
+    {% endif %}
+
     {% endfor %}
-    <!-- 		<div class="line">
-				 <div>
-				 <aside>
-				 G
-				 </aside>
-				 <p>
-				 Goin down south to the
-				 </p>
-				 </div>
-				 <div>
-				 <aside>
-				 D
-				 </aside>
-				 <p>
-				 land of the pines
-				 </p>
-				 </div>
-		     </div>
-		     <div class="line">
-				 <div>
-				 <aside>
-				 
-				 </aside>
-				 <p>
-				 And I'm
-				 </p>
-				 </div>
-				 <div>
-				 <aside>
-				 Em
-				 </aside>
-				 <p>
-				 thumbin' my way into
-				 </p>
-				 </div>
-				 <div>
-				 <aside>
-				 C
-				 </aside>
-				 <p>
-				 North Caroline
-				 </p>
-				 </div>
-		     </div>
-		     <div class="line">
-				 <div>
-				 <aside>
-				 G
-				 </aside>
-				 <p>
-				 Starin' up the road
-				 </p>
-				 </div>
-         </div>
-		     <div class="line">
-				 <div>
-				 <aside>
-				 
-				 </aside>
-				 <p>
-				 And
-				 </p>
-				 </div>
-				 <div>
-				 <aside>
-				 D
-				 </aside>
-				 <p>
-				 pray to God I see
-				 </p>
-				 </div>
-				 <div>
-				 <aside>
-				 C
-				 </aside>
-				 <p>
-				 headlights
-				 </p>
-				 </div>
-		   --></div>
 </section>
 
 {% endmacro %}
