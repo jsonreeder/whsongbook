@@ -6,7 +6,7 @@
     <div class="line">
         {%-for chord, lyric in line-%}
         <div>
-            <aside>{{ chord }}</aside>
+            <aside>{{ display_chords(chord) }}</aside>
             <p>{{ display_lyrics(lyric)}}</p>
         </div>
         {%-endfor %}
