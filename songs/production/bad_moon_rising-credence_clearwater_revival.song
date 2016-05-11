@@ -1,7 +1,7 @@
 header:
-  title = "Bad Moon Rising"
-  artist = "Credence Clearwater Revival"
-  genres = ["classic rock"]
+    title = "Bad Moon Rising"
+    artist = "Credence Clearwater Revival"
+    genres = ["classic rock"]
 
 verse:
     [d]I see the [a2]bad [g]moon ri[d1]sing, [d]
@@ -14,15 +14,15 @@ chorus:
     [a]There's a [g]bad moon on the [d]rise [d]
 
 verse:
-    I hear hurricanes blowing, 
+    I hear hurricanes blowing,
     I know the end is coming soon
-    I fear rivers overflowing,  
+    I fear rivers overflowing,
     I hear the voice of rage and ruin.
 
 chorus
 
 verse:
-    Hope you got your things together, 
+    Hope you got your things together,
     Hope you are quite prepared to die,
-    Looks like we're in for nasty weather, 
+    Looks like we're in for nasty weather,
     One eye is taken for an eye
