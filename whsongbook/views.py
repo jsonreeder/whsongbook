@@ -32,18 +32,34 @@ def song(title):
 
     # Parse file
     for line in text.splitlines():
+        # strip initial white space
         line = line.rstrip()
+        # ignore blank lines
         if not line: continue
+
+        # identify line type statements (ie "chorus:")
         if line == line.lstrip():
             cur = []
             sections.append((line.strip(":"), cur))
-        else:
-            cur.append(line.strip())
 
+        # work with all remaining lines (content)
+        else:
+            line = line.strip()
+            # separate chords from lyrics
+            if "[" in line and "genres = " not in line:
+                chord_sections = []
+                for section in line.split("["):
+                    if "]" in section:
+                        chord, lyric = section.split("]")
+                        chord_sections.append((chord, lyric))
+                line = chord_sections
+            cur.append(line)
+
+    # convert header section to dictionary
     if sections[0][0] == "header":
         for line in sections.pop(0)[1]:
             key, value = line.split('=', 1)
-            metadata[key.strip()] = ast.literal_eval(value.strip())
+            metadata[key] = ast.literal_eval(value.strip())
 
     return render_template("song.html",
                            title=metadata['title'],
