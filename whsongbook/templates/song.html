@@ -1,3 +1,4 @@
+{% import "macros.html" as macros %}
 <!DOCTYPE html>
 <html>
 	<head>
@@ -7,157 +8,163 @@
 	<body>
 	    <h1>{{ title }}</h1>
 	    <h2>{{ artist }}</h2>
-		<section class="verse">
-			<div class="line">
-				<div>
-					<aside>
-						G
-					</aside>
-					<p>
-						Goin down south to the
-					</p>
-				</div>
-				<div>
-					<aside>
-						D
-					</aside>
-					<p>
-						land of the pines
-					</p>
-				</div>
-			</div>
-			<div class="line">
-				<div>
-					<aside>
-						
-					</aside>
-					<p>
-						And I'm
-					</p>
-				</div>
-				<div>
-					<aside>
-						Em
-					</aside>
-					<p>
-						thumbin' my way into
-					</p>
-				</div>
-				<div>
-					<aside>
-						C
-					</aside>
-					<p>
-						North Caroline
-					</p>
-				</div>
-			</div>
-			<div class="line">
-				<div>
-					<aside>
-						G
-					</aside>
-					<p>
-						Starin' up the road
-					</p>
-				</div>
-			</div>
-			<div class="line">
-				<div>
-					<aside>
-						
-					</aside>
-					<p>
-						And
-					</p>
-				</div>
-				<div>
-					<aside>
-						D
-					</aside>
-					<p>
-						pray to God I see
-					</p>
-				</div>
-				<div>
-					<aside>
-						C
-					</aside>
-					<p>
-						headlights
-					</p>
-				</div>
-			</div>
-		</section>
-		<section class="chorus">
-			<div class="line">
-				<div>
-					<aside>
-					</aside>
-					<p>
-						So
-					</p>
-				</div>
-				<div>
-					<aside>
-						G
-					</aside>
-					<p>
-						rock me, momma, like a
-					</p>
-				</div>
-				<div>
-					<aside>
-						D
-					</aside>
-					<p>
-						wagon wheel
-					</p>
-				</div>
-			</div>
-			<div class="line">
-				<div>
-					<aside>
-						G
-					</aside>
-					<p>
-						Rock me, momma, any
-					</p>
-				</div>
-				<div>
-					<aside>
-						C
-					</aside>
-					<p>
-						way you feel
-					</p>
-				</div>
-			</div>
-			<div class="line">
-				<div>
-					<aside>
-						G - D
-					</aside>
-					<p>
-						Hey,
-					</p>
-				</div>
-				<div>
-					<aside>
-					</aside>
-					<p>
-						momma,
-					</p>
-				</div>
-				<div>
-					<aside>
-						Em - C
-					</aside>
-					<p>
-						rock me
-					</p>
-				</div>
-			</div>
+      <!--       <p>{{ sections }}</p> -->
+      {% block content %}
+      {% for section in sections %}
+      {{ macros.render_section(section[0], section[1]) }}
+      {% endfor %}
+      {% endblock %}
+      <!-- 		<section class="verse">
+			     <div class="line">
+				   <div>
+					 <aside>
+					 G
+					 </aside>
+					 <p>
+					 Goin down south to the
+					 </p>
+				   </div>
+				   <div>
+					 <aside>
+					 D
+					 </aside>
+					 <p>
+					 land of the pines
+					 </p>
+				   </div>
+			     </div>
+			     <div class="line">
+				   <div>
+					 <aside>
+					 
+					 </aside>
+					 <p>
+					 And I'm
+					 </p>
+				   </div>
+				   <div>
+					 <aside>
+					 Em
+					 </aside>
+					 <p>
+					 thumbin' my way into
+					 </p>
+				   </div>
+				   <div>
+					 <aside>
+					 C
+					 </aside>
+					 <p>
+					 North Caroline
+					 </p>
+				   </div>
+			     </div>
+			     <div class="line">
+				   <div>
+					 <aside>
+					 G
+					 </aside>
+					 <p>
+					 Starin' up the road
+					 </p>
+				   </div>
+			     </div>
+			     <div class="line">
+				   <div>
+					 <aside>
+					 
+					 </aside>
+					 <p>
+					 And
+					 </p>
+				   </div>
+				   <div>
+					 <aside>
+					 D
+					 </aside>
+					 <p>
+					 pray to God I see
+					 </p>
+				   </div>
+				   <div>
+					 <aside>
+					 C
+					 </aside>
+					 <p>
+					 headlights
+					 </p>
+				   </div>
+			     </div>
+		       </section>
+		       <section class="chorus">
+			     <div class="line">
+				   <div>
+					 <aside>
+					 </aside>
+					 <p>
+					 So
+					 </p>
+				   </div>
+				   <div>
+					 <aside>
+					 G
+					 </aside>
+					 <p>
+					 rock me, momma, like a
+					 </p>
+				   </div>
+				   <div>
+					 <aside>
+					 D
+					 </aside>
+					 <p>
+					 wagon wheel
+					 </p>
+				   </div>
+			     </div>
+			     <div class="line">
+				   <div>
+					 <aside>
+					 G
+					 </aside>
+					 <p>
+					 Rock me, momma, any
+					 </p>
+				   </div>
+				   <div>
+					 <aside>
+					 C
+					 </aside>
+					 <p>
+					 way you feel
+					 </p>
+				   </div>
+			     </div>
+			     <div class="line">
+				   <div>
+					 <aside>
+					 G - D
+					 </aside>
+					 <p>
+					 Hey,
+					 </p>
+				   </div>
+				   <div>
+					 <aside>
+					 </aside>
+					 <p>
+					 momma,
+					 </p>
+				   </div>
+				   <div>
+					 <aside>
+					 Em - C
+					 </aside>
+					 <p>
+					 rock me
+					 </p>
+				   </div>
+			     </div> -->
 		</section>
 	</body>
 </html>
