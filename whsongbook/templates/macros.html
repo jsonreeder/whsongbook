@@ -25,5 +25,8 @@
 
     {% endif %}
 </section>
+{% endmacro %}
 
+{% macro list_song(song) %}
+<a href="songs/{{song[0]}}">{{ song[1] }} ({{ song[2] }})</a>
 {% endmacro %}
