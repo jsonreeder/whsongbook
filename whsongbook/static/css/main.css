@@ -1,8 +1,8 @@
 body {
-    margin: 2em;
+    /* margin: 2em; */
 }
 
-div {
+chunk {
     display: inline-block;
 }
 
@@ -19,6 +19,7 @@ p {
     font-weight: bold;
     margin-left: 1em;
     margin-top: 1em;
+    display: inline-block
 }
 
 .verse {
