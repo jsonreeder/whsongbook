@@ -1,17 +1,9 @@
 {% import "macros.html" as macros %}
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>WH Songbook</title>
-		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-	</head>
-	<body>
+{% extends "browser.html" %}
+{% block content %}
 	    <h1>{{ title }}</h1>
 	    <h2>{{ artist }}</h2>
-      {% block content %}
       {% for type, content in sections %}
       {{ macros.render_section(type, content) }}
       {% endfor %}
-      {% endblock %}
-	</body>
-</html>
+{% endblock %}
