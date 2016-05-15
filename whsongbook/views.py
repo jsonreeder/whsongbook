@@ -3,19 +3,31 @@ from flask import render_template
 from os import listdir
 import ast
 
-
 @app.route("/")
 def home():
-    return render_template("song_fixed.html")
+    return render_template("index.html")
 
-@app.route("/songs")
+@app.route("/toc")
 def songs():
     """
     List all songs in the production folder
     """
 
     songs_dir = "songs/production/"
-    return str(listdir(songs_dir))
+    songs = []
+    for song in listdir(songs_dir):
+        no_extension = song[:-5]
+        spaces = no_extension.replace("_", " ")
+        caps = spaces.title()
+        title, artist = caps.split("-")
+        songs.append([no_extension, title, artist])
+
+    # return render_template("song_fixed.html")
+    return render_template("toc.html",
+                           songs = songs
+    )
+    # songs_dir = "songs/production/"
+    # return str(listdir(songs_dir))
 
 @app.route("/songs/<title>")
 def song(title):
