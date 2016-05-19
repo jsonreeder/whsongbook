@@ -75,7 +75,12 @@ def song(title):
                 for section in line.split("["):
                     if "]" in section:
                         chord, lyric = section.split("]", 1)
-                        chord_sections.append((chord, lyric))
+                        if " " in chord:
+                            multi_chords = chord.split(" ")
+                            for m in multi_chords:
+                                chord_sections.append((m,""))
+                        else:
+                            chord_sections.append((chord, lyric))
                     elif section:
                         chord_sections.append(("", section))
                 line = chord_sections
