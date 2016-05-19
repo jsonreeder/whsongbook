@@ -38,3 +38,26 @@
     <li><a href ="{{ url_for(endpoint) }}">{{name}}</a></li>
 {% endif %}
 {% endmacro %}
+
+{% macro nav_button(endpoint, name) %}
+<a href="{{ url_for(endpoint) }}" class="btn btn-lg btn-default">{{name}}</a>
+{% endmacro %}
+
+{% macro song_table(songs) %}
+<thead>
+    <tr>
+        <th>Title</th>
+        <th>Artist</th>
+    </tr>
+</thead>
+<tbody>
+    {% for song in songs %}
+    <tr>
+        <td><a href="songs/{{song[0]}}">{{ song[1] }}</td>
+        <td>{{ song[2] }}</td>
+    </tr>
+    {% endfor %}
+    <tr>
+    </tr>
+</tbody>
+{% endmacro %}
