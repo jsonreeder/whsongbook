@@ -25,13 +25,23 @@ p {
 
 .chorus {
     font-weight: bold;
-    margin-left: 1em;
+    margin-left: 2em;
     margin-top: 1em;
     display: inline-block
 }
 
 .verse {
     margin-top: 1em;
+}
+
+.bridge {
+    margin-top: 1em;
+    margin-left: 4em;
+    font-style: italic;
+}
+
+.instruction {
+    font-style: italic;
 }
 
 /*Song title*/
