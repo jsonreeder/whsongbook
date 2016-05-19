@@ -1,11 +1,23 @@
 from . import app
-from flask import render_template
+from flask import render_template, redirect
 from os import listdir
+from random import choice
 import ast
 
 @app.route("/")
 def home():
     return render_template("index.html")
+
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
+@app.route("/random")
+def random():
+    songs_dir = "songs/production/"
+    songs = listdir(songs_dir)
+    selection = choice(songs)
+    return redirect("/songs/%s" % (selection[:-5]))
 
 @app.route("/toc")
 def songs():
