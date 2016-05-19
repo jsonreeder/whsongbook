@@ -1,5 +1,13 @@
 body {
     /* margin: 2em; */
+  padding-top: 50px;
+  padding: 50px 15px;
+}
+
+.container-fluid {
+  width: auto;
+  max-width: 880px;
+  padding: 0 15px;
 }
 
 chunk {
