@@ -3,9 +3,12 @@
 {% block content %}
 <h1>Table of Contents</h1>
 <br>
-<ul>
-    {% for song in songs %}
-        <li>{{ macros.list_song(song) }}</li>
-    {% endfor %}
-</ul>
+
+<div class="row">
+    <div>
+        <table class="table table-striped">
+{{macros.song_table(songs)}}
+        </table>
+    </div>
+</div>
 {% endblock %}
