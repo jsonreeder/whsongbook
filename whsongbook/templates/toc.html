@@ -1,16 +1,11 @@
 {% import "macros.html" as macros %}
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Songs</title>
-    </head>
-    <body>
-        <h1>West House Songbook</h1>
-        <h2>Songs</h2>
-        <ul>
-            {% for song in songs %}
-                <li>{{ macros.list_song(song) }}</li>
-            {% endfor %}
-        </ul>
-    </body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+<h1>Table of Contents</h1>
+<br>
+<ul>
+    {% for song in songs %}
+        <li>{{ macros.list_song(song) }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
