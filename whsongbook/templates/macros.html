@@ -30,3 +30,11 @@
 {% macro list_song(song) %}
 <a href="songs/{{song[0]}}">{{ song[1] }} ({{ song[2] }})</a>
 {% endmacro %}
+
+{% macro nav_link(endpoint, name) %}
+{% if request.endpoint.endswith(endpoint) %}
+    <li class="active"><a href ="{{ url_for(endpoint) }}" class="active">{{name}}</a></li>
+{% else %}
+    <li><a href ="{{ url_for(endpoint) }}">{{name}}</a></li>
+{% endif %}
+{% endmacro %}
