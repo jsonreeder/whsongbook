@@ -21,8 +21,9 @@ body {
  * Top navigation
  * Hide default border to remove 1px line.
  */
-.navbar-fixed-top {
-  border: 0;
+.navbar-static-top {
+  /* border: 0; */
+  margin-bottom: 19px;
 }
 
 /*
