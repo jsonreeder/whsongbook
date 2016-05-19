@@ -5,8 +5,8 @@ header:
     year = 2005
     genres = ["indie"]
 
-instrumental:
-    <chorus chords>
+instruction:
+    (Intro over chorus chords)
 
 verse:
     [c]Love of mine some day [a:m]you will die
