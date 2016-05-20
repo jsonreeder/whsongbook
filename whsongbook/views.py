@@ -1,4 +1,4 @@
-from . import app
+from . import app, songs_data
 from flask import render_template, redirect
 from os import listdir
 from random import choice
@@ -98,3 +98,10 @@ def song(title):
                            artist=metadata['artist'],
                            sections=sections
     )
+
+@app.route("/songs_list")
+def songs_list():
+    ret = ""
+    for song in songs_data:
+        ret += str(song.metadata)
+    return str(ret)
