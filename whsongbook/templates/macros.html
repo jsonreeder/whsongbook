@@ -9,10 +9,15 @@
             {% if check_type(line) %}
                 <div class="line">
                     {%-for chord, lyric in line-%}
-                    <chunk>
-                        <aside>{{ display_chords(chord) }}</aside>
-                        <p>{{ display_lyrics(lyric)}}</p>
-                    </chunk>
+                        <chunk>
+                        {% if lyric %}
+                                <aside>{{ display_chords(chord) }}</aside>
+                                <p>{{ display_lyrics(lyric)}}</p>
+                        {% else %}
+                                <aside>&nbsp;&nbsp;{{ display_chords(chord) }}</aside>
+                                <p>&nbsp;</p>
+                        {% endif %}
+                        </chunk>
                     {%-endfor %}
                 </div>
 
