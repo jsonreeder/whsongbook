@@ -21,8 +21,8 @@ chorus:
     Báda, [d:m7]ba, ba, ba[bf:6]dá, ba, 
     [c]Baa da, báda, baa [d:m7 f/bf bf:5 c:sus]
 
-interlude:
-    | Dm | Dm | F | F | x2
+instrumental:
+    [| d:m | d:m | f | f | (x2)] 
 
 verse:
     I cannot guess what we'll discover, 
@@ -44,7 +44,7 @@ chorus:
 
 bridge:
     Where [d:m]soul meets [d:m]body. [f d:m d:m]
-    Where [d:m]soul meets [d:m]body. [f] Where [c]sould meets body.
+    Where [d:m]soul meets [d:m]body. [f] Where [c]soul meets body.
 
 chorus:
     And I do believe it's true… (etc.)
@@ -53,7 +53,7 @@ chorus:
     So, Brown Eyes, I'll hold you near… (etc.)
     …a melody sofly soaring through my atmosphere   (x3)
 
-chords:
+notes:
     Dm7: xx021x
     F: xx321x
     C: x3xxxx
