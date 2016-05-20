@@ -11,7 +11,6 @@ a:hover {
 
 /* Custom default button */
 .btn-default,
-.btn-default:hover,
 .btn-default:focus {
   color: #333;
   text-shadow: none; /* Prevent inheritence from `body` */
@@ -19,7 +18,9 @@ a:hover {
   border: 1px solid black;
 }
 
-
+.btn-default:hover {
+    /* color: green; */
+}
 /*
  * Base structure
  */
@@ -162,4 +163,16 @@ body {
 
 .img-responsive {
     color=green;
+}
+
+.image-bg-fluid-height {
+    padding: 50px 0;
+}
+
+.img-center {
+	margin: 0 auto;
+}
+
+h3 {
+    font-size: 3em;
 }
