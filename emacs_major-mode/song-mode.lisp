@@ -12,7 +12,7 @@
   ;; keywords
   '("title" "artist" "genres" "year" "capo")
   ;; other faces
-  '(("header\\|verse\\|chorus\\|bridge\\|instrumental" . 'font-lock-function-name-face)
+  '(("header\\|verse\\|chorus\\|bridge\\|instrumental\\|notes" . 'font-lock-function-name-face)
     ("\\[.+?\\]" . 'chord-face)
     )
   ;; file extension for which to activate this mode
