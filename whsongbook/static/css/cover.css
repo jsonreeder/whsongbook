@@ -114,8 +114,16 @@ body {
 .cover .btn-lg {
   padding: 10px 20px;
   font-weight: bold;
+  min-width: 120px;
+  max-width: 120px;
+}
 }
 
+.cover .btn-block {
+  padding: 10px 20px;
+  font-weight: bold;
+  /* width: 30px; */
+}
 
 /*
  * Footer
