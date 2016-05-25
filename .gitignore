@@ -2,3 +2,5 @@ env
 *.pyc
 songs/.DS_Store
 songs/archives/.DS_Store
+/junk/align_chords_lyrics/align_chords_lyrics.py
+/junk/align_chords_lyrics/input.tex
