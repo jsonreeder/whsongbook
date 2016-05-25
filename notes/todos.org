@@ -5,7 +5,6 @@
 
 ** Defining song syntax
 *** Next steps
-**** TODO Convert a few songs to pythonic format
 **** TODO Write script to convert songs to HTML
 
 *** Reflections
@@ -47,3 +46,41 @@
 - {
 - (
 
+* Dashboard
+
+** TODO Write "about" page
+** TODO Change navbar to be fixed
+** TODO Make navbar light
+** TODO Change fonts
+** TODO Create artist pages
+** TODO Add genres to TOC
+** TODO Clean up CSS
+- Remove the extra bits from borrowed templates
+** TODO Load all songs into memory on startup
+- Add function to __init__.py
+*** TODO Test the syntax of all song files
+*** TODO Test for suffixes
+suffix = {"f": "b", "s": "#"}
+suffix[slash_chord[1]]
+*** If errors
+- Don't render the file
+- Write error to log
+*** Loading a directory
+for file in os.listdir("production"):
+try:
+songs.append(parse_file(file))
+except Exception as e:
+log error and move on
+** TODO Create script for reformatting word doc
+*** Coverting chords
+**** Convert WSIWYG chords to LilyPond
+**** Decide on symbol to mark chord insertion points (~)
+***** Eg
+                       Em           B7
+When you're ~down and ~troubled, 
+              Em       B7       Em
+And you ~need a helping ~hand,
+**** Recognize a line of chords
+- If it contains more than 4 consecutive spaces
+**** Name the file
+**** Script should output the final file

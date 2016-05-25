@@ -13,3 +13,29 @@ CLOSED: [2016-05-19 Thu 16:18]
 :ARCHIVE_CATEGORY: todos
 :ARCHIVE_TODO: DONE
 :END:
+
+* DONE Fix song display
+CLOSED: [2016-05-19 Thu 17:59]
+:PROPERTIES:
+:ARCHIVE_TIME: 2016-05-19 Thu 17:59
+:ARCHIVE_FILE: ~/Documents/Code/whsongbook/notes/todos.org
+:ARCHIVE_OLPATH: Dashboard
+:ARCHIVE_CATEGORY: todos
+:ARCHIVE_TODO: DONE
+:END:
+** DONE Add support for sharps and flats in chord names
+CLOSED: [2016-05-19 Thu 17:59]
+- Following LilyPond syntax, "f" and "s" should be displayed as "#" and "b"
+** DONE Correct display of multi-chords
+CLOSED: [2016-05-19 Thu 16:46]
+- Right now when multiple chords show up in a row, they are displayed without spaces
+
+* DONE Add image to welcome page
+CLOSED: [2016-05-19 Thu 18:28]
+:PROPERTIES:
+:ARCHIVE_TIME: 2016-05-19 Thu 18:28
+:ARCHIVE_FILE: ~/Documents/Code/whsongbook/notes/todos.org
+:ARCHIVE_OLPATH: Dashboard
+:ARCHIVE_CATEGORY: todos
+:ARCHIVE_TODO: DONE
+:END:
