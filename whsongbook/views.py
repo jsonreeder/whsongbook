@@ -17,8 +17,8 @@ def random():
     selection = choice(songs_data).filename
     return redirect("/songs/%s" % (selection[:-5]))
 
-@app.route("/toc")
-def songs():
+@app.route("/browse")
+def browse():
     songs = []
     for song in songs_data:
         no_extension = song.filename[:-5]
@@ -26,7 +26,7 @@ def songs():
         artist = song.metadata["artist"]
         songs.append([no_extension, title, artist])
 
-    return render_template("toc.html",
+    return render_template("browse.html",
                            songs = songs
     )
 
@@ -35,7 +35,7 @@ def song(title):
     try:
         selection = next(song for song in songs_data if song.filename[:-5]==title)
     except StopIteration:
-        return redirect("/toc")
+        return redirect({{ url_for(browse) }})
 
     return render_template("song.html",
                            title=selection.metadata['title'],

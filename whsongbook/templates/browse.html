@@ -1,13 +1,12 @@
 {% import "macros.html" as macros %}
 {% extends "base.html" %}
 {% block content %}
-<h1>Table of Contents</h1>
 <br>
 
 <div class="row">
     <div>
         <table class="table table-striped">
-{{macros.song_table(songs)}}
+            {{macros.song_table(songs)}}
         </table>
     </div>
 </div>
