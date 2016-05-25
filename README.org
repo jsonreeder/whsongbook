@@ -2,76 +2,42 @@
 #+SUBTITLE: An open-source songbook
 
 * Mission
-- The West House Songbook is an open-source songbook.
-- Its mission is to provide lyrics and chords to popular music in a simple but accurate format.
+The West House Songbook is an open-source songbook. Its mission is to provide simple transcriptions of lyrics and chords to pop and folk songs for group singalongs. It began as a Word document, and in the early stages of conversion into a web app.
 
-* Core Features
+* Browsing
+To view the songbook go to [[jasonreeder.com/whsongbook][jasonreeder.com/whsongbook]].
 
-** Song Content
-- Lyrics
-- Chords
-- Basic transcriptions of important licks
+* Contributing
+Corrections, suggestions, additions, and other contributions are welcome. At the moment, pull requests are the best means for contributing.
 
-** Song Metadata
-- Title
-- Artist
-- Genre
+The source code for the songs is available in the directory [[file:songs/production][songs/production/]], and any changes to the chords or lyrics there will be reflected in the app.
 
-** Song Navigation
-- An index of all songs, sortable by song metadata
-  
-** Display Modes
-*** Chords and lyrics
-- Lyrics with chords on line above
-- This is the default view
+Notes for future work are documented and organized in [[file:documentation/todos.org][documentation/todos.org]].
 
-*** Lyrics
-- Just the lyrics, no chords at all
+* Syntax
+The songs are documented in a basic syntax following these parameters:
+- Lyrics are displayed as written. Currently no markup is supported.
+- Chords are written in the syntax defined by LilyPond, a spectacular music engraving markup language:
+  - LilyPond ~chord-mode~ syntax: [[http://lilypond.org/doc/v2.19/Documentation/notation/chord-mode][LilyPond documentation]]
+- For a chord to be aligned above a given word, that chord should be in brackets immediately preceding it:
+  : [c]Love of mine some day [a:m]you will die
+  - This syntax was inspired by Chordii
+- Metadata is documented in line with Python variable definitions:
+  : title = "I Will Follow You Into the Dark"
+  : artist = "Death Cab for Cutie"
+  : capo = 5
+  : year = 2005
+  : genres = ["indie"]
 
-** Browsability
-- Web
-- Mobile web: tablet and smartphone
-  
-** Community editing
-- All of the source code for songs is on GitHub
-- Anyone can suggest corrections or additions via pull requests
-  
-* Paths for Expansion
+The Emacs Major Mode provides basic syntax highlighting in line with the specifications above: [[file:emacs_major-mode/song-mode.lisp][song-mode.lisp]].
 
-** Song Content
-- More detailed transcription of licks with tabs and musical notation
-- Transposition of chords and licks to a new key
+* Acknowledgments
+This songbook was born out of the West House community, and if it weren't for so many open dinners and Friday singalongs, I would have had neither the idea nor the motivation to put in so many hours to improve the book. More about West House: [[https://brownwesthouse.wordpress.com/][brownwesthouse.wordpress.com]]
 
-** Format
-- Ability to export a properly-formatted PDF of songbook content
+For song transcription, I'm grateful to John Keller for starting the songbook, and to Emilie Lygren for her transcriptions and editing.
 
-** Display Modes
-*** Lead sheet view
-- Chords only, with bar lines to indicate timing
-- This is how instrumental sections are formatted in the original print songbook (such as intros).
-- Could allow two modes
-  - Compact: Takes up as little space as possible (for viewing on a screen)
-  - Page: Stretched to fill the whole page (for printing)
-*** Improved mobile view
-- Lyrics fit to mobile screen when possible
-- Chorus indentation is reduced
-** Personalization
-- Users can add songs to their personal songbook
-- Users can add transcriptions of new songs
-** Group Singalong Support
-- A user can create a "singalong" and give it an id
-- Then other users can join the "singalong"
-- Users could add songs to a singalong queue like creating a playlist
-- Users could easily navigate to the song that was currently being sung
-** Community editing
-- Users can suggest corrections or additions from inside the app
-  
-* Views
-** Home
-[[file:home.png][screenshot]]
-** Song
-[[file:song_view.png][screenshot]]
-** Songs
-[[file:songs.png][screenshot]]
-** About
-[[file:about.png][screenshot]]
+For the development, I have Chris Angelico aka Rosuav to thank for many hours of mentorship and for defining, editing, and correcting much of the digital machinery. More about Rosuav: [[https://github.com/rosuav][github.com/rosuav]].
+
+As mentioned in ~Syntax~ above, particulars of the song markup syntax were inspired by LilyPond and Chordii. More info about LilyPond: [[http://lilypond.org/][lilypond.org]]. More info about Chordii: [[http://www.vromans.org/johan/projects/Chordii/chordpro/][vromans.org]].
+
+I first learned about folk fakebooks at the Lair of the Golden Bear, and I modeled my own work here on the Lair Songbook. More about the Lair: [[http://alumni.berkeley.edu/lair][alumni.berkeley.edu]].
