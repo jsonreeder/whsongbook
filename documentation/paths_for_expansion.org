@@ -1,0 +1,34 @@
+#+TITLE: Paths for Expansion
+#+SUBTITLE: Notes on next steps in development
+
+* Song Content
+- More detailed transcription of licks with tabs and musical notation
+- Transposition of chords and licks to a new key
+
+* Format
+- Ability to export a properly-formatted PDF of songbook content
+
+* Display Modes
+** Lead sheet view
+- Chords only, with bar lines to indicate timing
+- This is how instrumental sections are formatted in the original print songbook (such as intros).
+- Could allow two modes
+  - Compact: Takes up as little space as possible (for viewing on a screen)
+  - Page: Stretched to fill the whole page (for printing)
+** Improved mobile view
+- Lyrics fit to mobile screen when possible
+- Chorus indentation is reduced
+  
+* Personalization
+- Users can add songs to their personal songbook
+- Users can add transcriptions of new songs
+  
+* Group Singalong Support
+- A user can create a "singalong" and give it an id
+- Then other users can join the "singalong"
+- Users could add songs to a singalong queue like creating a playlist
+- Users could easily navigate to the song that was currently being sung
+  
+* Community editing
+- Users can suggest corrections or additions from inside the app
+  
