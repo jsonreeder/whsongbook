@@ -39,3 +39,64 @@ CLOSED: [2016-05-19 Thu 18:28]
 :ARCHIVE_CATEGORY: todos
 :ARCHIVE_TODO: DONE
 :END:
+
+* DONE Write "about" page
+CLOSED: [2016-05-25 Wed 16:22]
+:PROPERTIES:
+:ARCHIVE_TIME: 2016-05-25 Wed 16:22
+:ARCHIVE_FILE: ~/Documents/Code/whsongbook/documentation/todos.org
+:ARCHIVE_OLPATH: Dashboard
+:ARCHIVE_CATEGORY: todos
+:ARCHIVE_TODO: DONE
+:END:
+
+* Decisions
+:PROPERTIES:
+:ARCHIVE_TIME: 2016-05-25 Wed 16:23
+:ARCHIVE_FILE: ~/Documents/Code/whsongbook/documentation/todos.org
+:ARCHIVE_CATEGORY: todos
+:END:
+
+** Defining song syntax
+*** Next steps
+**** TODO Write script to convert songs to HTML
+
+*** Reflections
+**** [2016-03-31 Thu]
+- Put off the LilyPond integration for now. It's a good idea but should not be a priority.
+- Move away from the the LaTeX syntax. Since I'm not actually using LaTeX to parse the files, this is just overkill
+- Move towards a more pythonic syntax (indentation instead of brackets)
+**** [2016-03-28 Mon]
+- Currently working with the idea of using LilyPond (LaTeX) syntax as a base
+  - The things it does very well
+    - Gives a general markup for things like titles and sections and variables
+    - Defines a robust note/chord syntax
+  - The things it seems to lack
+    - A simple way to associate lyrics with chords (as opposed to notes)
+    - A simple way to put in placeholders like "(Chorus)"
+  - These things are largely provided by Chordii
+- I've started building a syntax for the verses based on Chordii
+  - Similarities
+    - Chords are associated with lyrics with brackets, eg "If []there's no one be[]side you when your []soul em[]barks []"
+  - Differences
+    - The chords aren't actually written in those brackets. They are written in a separate section above, eg "a:m c e a:m2 g2"
+      - This means I have to reference them, which makes it important that the number of chords equal the number of brackets
+      - The big benefit is that I can use LilyPond syntax to easily output leadsheets
+      - But I realize that I could use that exact same syntax in the bracket, eg "If [a:m]there's no one be[c]side you when your [e]soul em[a:m2]barks [g2]"
+        - I don't think anything would be lost there whatsoever, except potentional the ~\break~ markers, which could easily be added separately (say, auto-generated every 4 or 8 bars)
+- Next Steps
+  - Model the same thing but with chords in the brackets the whole time
+  - Write a function that extracts the chords and formats them in LilyPond's ~\chordmode~ syntax
+  - Start thinking about how to model song form
+
+** Which brackets to use when
+*** Contexts
+- Abbreviations (Chorus)
+- Backup singing (Be a man!)
+- Musical notes (solo)
+*** Options
+- [
+- <
+- {
+- (
+
