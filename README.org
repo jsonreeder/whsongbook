@@ -1,4 +1,4 @@
-#+TITLE: The West House Songbook
+#+TITLE: West House Songbook
 #+SUBTITLE: An open-source songbook
 
 * Mission
