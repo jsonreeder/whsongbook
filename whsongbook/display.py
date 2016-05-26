@@ -25,13 +25,6 @@ def display_chords(chord):
 
     # parse all other chords
     else:
-        # check for unparsable characters
-        try:
-            parsable = "[a-gsuim1-9:/\|]+"
-            assert(re.fullmatch(parsable, chord) != None)
-        except AssertionError:
-            logging.error("Unparsable chord: %s" % (chord))
-            return False
 
         note = chord[:1]
         accidental = ""
