@@ -1,0 +1,30 @@
+.box {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 80px;
+}
+
+.image-bg-fluid-height {
+    padding-bottom: 2.5%;
+}
+
+.img-center {
+	margin: 0 auto;
+}
+
+h3 {
+    font-size: 3em;
+    padding-bottom: .5em;
+}
+
+.cover {
+    text-align: center;
+}
+
+.btn {
+    border-color: black;
+}
+.btn:hover { 
+    background-color: #c1fcc1; 
+    border-color: black;
+}
