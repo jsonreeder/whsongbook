@@ -5,7 +5,7 @@ import unittest
 #     os.environ["CONFIG_PATH"] = "whsongbook.config.TestingConfig"
 
 import whsongbook
-from whsongbook.__init__ import *
+from whsongbook.display import *
 
 class FilterTests(unittest.TestCase):
     def test_display_chords(self):
@@ -14,6 +14,8 @@ class FilterTests(unittest.TestCase):
         for b in bad_chords:
             test_out = display_chords(b)
             self.assertEqual(expectation, test_out)
+
+
 
 if __name__ == "__main__":
     unittest.main()
