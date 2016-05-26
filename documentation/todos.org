@@ -3,6 +3,7 @@
 
 * Soon
 
+** TODO Update Python to 3.5.2
 ** TODO Push to Heroku
 
 ** TODO Load all songs into memory on startup
