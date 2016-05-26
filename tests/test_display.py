@@ -8,14 +8,7 @@ import whsongbook
 from whsongbook.display import *
 
 class FilterTests(unittest.TestCase):
-    def test_display_chords(self):
-        bad_chords = ["A#m", "Hsus"]
-        expectation = False
-        for b in bad_chords:
-            test_out = display_chords(b)
-            self.assertEqual(expectation, test_out)
-
-
+    pass
 
 if __name__ == "__main__":
     unittest.main()
