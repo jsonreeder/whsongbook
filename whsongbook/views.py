@@ -32,6 +32,8 @@ def browse():
 
 @app.route("/songs/<title>")
 def song(title):
+
+    # test for urls to songs that do not exist
     try:
         selection = next(song for song in songs_data if song.filename[:-5]==title)
     except StopIteration:
