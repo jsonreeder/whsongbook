@@ -5,7 +5,7 @@
 The West House Songbook is an open-source songbook. Its mission is to provide simple transcriptions of lyrics and chords to pop and folk songs for group singalongs. It began as a Word document, and in the early stages of conversion into a web app.
 
 * Browsing
-To view the songbook go to [[whsongbook.jasonreeder.com][whsongbook.jasonreeder.comk]].
+To view the songbook go to [[http://whsongbook.jasonreeder.com/][whsongbook.jasonreeder.com]]
 
 * Contributing
 Corrections, suggestions, additions, and other contributions are welcome. At the moment, pull requests are the best means for contributing.
