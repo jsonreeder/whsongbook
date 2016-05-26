@@ -35,7 +35,8 @@ def song(title):
     try:
         selection = next(song for song in songs_data if song.filename[:-5]==title)
     except StopIteration:
-        return redirect({{ url_for(browse) }})
+        # return redirect({{ url_for(browse) }})
+        return redirect("/browse")
 
     return render_template("song.html",
                            title=selection.metadata['title'],
