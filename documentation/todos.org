@@ -1,11 +1,51 @@
 #+TITLE: TODOs
 #+SUBTITLE: Tasks for development
 
+* Now
+
+** TODO Add testing
+
+*** Is the file parsed correctly?
+**** Are the chords correct?
+***** DONE Simplify accidental checks
+CLOSED: [2016-05-26 Thu 10:36]
+***** DONE Check for additional characters
+CLOSED: [2016-05-26 Thu 12:20]
+- not :|\/ [a-z1-9]
+**** Are all sections correct?
+**** Is the metadata correct?
+
+*** Are the views displayed correctly?
+
+*** Future logging
+
+**** Bad URL redirects
+
+*** Future testing
+
+**** Unacceptable duplicates
+- :
+- /
+- slash chords with extensions
+
+** TODO Integrate with Travis CI
+
+
+** TODO Deactivate debug mode
+
+** TODO Improve testing
+
+*** TODO Add more robust header testing
+- incorrect data types such as
+  : artist = Death Cab for Cutie
+
+*** TODO Add more robust chord testing
+- chords that should be caught but are not yet
+- bad_chords = ["7", "e:m7b5"]
+
 * Soon
 
 ** TODO Update Python to 3.5.2
-** TODO Push to Heroku
-
 ** TODO Load all songs into memory on startup
 *** DONE Add function to __init__.py
 CLOSED: [2016-05-25 Wed 16:23]
@@ -51,7 +91,9 @@ And you ~need a helping ~hand,
 
 ** TODO Clean up CSS
 - Remove the extra bits from borrowed templates
-
+** TODO Change song title formatting
+- Separator should not be "-" since this can occur in song titles and artist names
+- Maybe "--" instead ?
 * Later
 
 ** TODO Allow transposition
