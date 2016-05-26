@@ -1,3 +1,4 @@
+from logging import FileHandler, WARNING
 import os
 import re
 import ast
@@ -8,6 +9,12 @@ app = Flask(__name__)
 songs_data = []
 
 from . import views
+
+if not app.debug:
+    file_handler = FileHandler("errorlog.txt")
+    file_handler.setLevel(WARNING)
+
+    app.logger.addHandler(file_handler)
 
 def check_type(data):
     return isinstance(data, list)
