@@ -1,19 +1,20 @@
 .box {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 80px;
+    padding-left: 90px;
+    padding-right: 90px;
+    padding-top: 20px;
 }
 
 .image-bg-fluid-height {
-    padding-bottom: 2.5%;
+    padding-bottom: 5pm;
 }
 
 .img-center {
-	margin: 0 auto;
+    margin: 0 auto;
+    height: 250px;
 }
 
 h3 {
-    font-size: 3em;
+    font-size: 2.5em;
     padding-bottom: .5em;
 }
 
@@ -21,10 +22,39 @@ h3 {
     text-align: center;
 }
 
+ul {
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+}
+
 .btn {
     border-color: black;
+    margin: .25em .25em .25em 0;
+    width: 100px;
 }
+
 .btn:hover { 
     background-color: #c1fcc1; 
     border-color: black;
+}
+
+
+/* for large screens */
+@media only screen and (min-width: 500px) {
+    .box {
+        padding-top: 150px;
+    }
+    
+    li {
+        display: inline;
+    }
+    
+    .img-center {
+        height: 100%;
+    }
+
+    h3 {
+        font-size: 3em;
+    }
 }

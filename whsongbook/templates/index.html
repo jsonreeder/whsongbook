@@ -31,9 +31,11 @@
             </div>
             <div class="cover">
                 <h3 class="masthead-brand">West House Songbook</h3>
-                {{ macros.nav_button('browse', 'Browse') }}
-                {{ macros.nav_button('about', 'About') }}
-                {{ macros.nav_button('random', 'Random') }}
+                <ul>
+                    <li>{{ macros.nav_button('browse', 'Browse') }}</li>
+                    <li>{{ macros.nav_button('about', 'About') }}</li>
+                    <li>{{ macros.nav_button('random', 'Random') }}</li>
+                </ul>
             </div>
         </div>
 
