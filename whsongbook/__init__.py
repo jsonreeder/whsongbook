@@ -1,4 +1,5 @@
-from logging import FileHandler, WARNING
+from logging import FileHandler, ERROR
+import logging
 import os
 import re
 import ast
@@ -10,11 +11,11 @@ songs_data = []
 
 from . import views
 
-if not app.debug:
-    file_handler = FileHandler("errorlog.txt")
-    file_handler.setLevel(WARNING)
-
-    app.logger.addHandler(file_handler)
+# Configure logging
+logging.basicConfig(filename="song_errors.log", level=logging.ERROR)
+file_handler = FileHandler("app_errors.log")
+file_handler.setLevel(ERROR)
+app.logger.addHandler(file_handler)
 
 def check_type(data):
     return isinstance(data, list)
@@ -31,9 +32,24 @@ def display_lyrics(lyrics):
 def display_chords(chord):
     accidentals = {"f": "b", "s": "#"}
 
+    # parse repeat signs as chords, eg (x3)
     if chord[:1] == "(":
         ret = chord
+
+    # parse empty strings as chords
+    elif len(chord) == 0:
+        ret = chord
+
+    # parse all other chords
     else:
+        # check for unparsable characters
+        try:
+            parsable = "[a-gsuim1-9:/\|]+"
+            assert(re.fullmatch(parsable, chord) != None)
+        except AssertionError:
+            logging.error("Unparsable chord: %s" % (chord))
+            return False
+
         note = chord[:1]
         accidental = ""
         extension = ""
