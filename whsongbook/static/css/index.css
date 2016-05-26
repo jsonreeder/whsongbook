@@ -1,7 +1,5 @@
 .box {
-    padding-left: 90px;
-    padding-right: 90px;
-    padding-top: 20px;
+    padding-top: 10%;
 }
 
 .image-bg-fluid-height {
@@ -14,7 +12,7 @@
 }
 
 h3 {
-    font-size: 2.5em;
+    font-size: 2em;
     padding-bottom: .5em;
 }
 
@@ -23,9 +21,13 @@ h3 {
 }
 
 ul {
-    display: inline-block;
+    display: inline;
     list-style: none;
     padding: 0;
+}
+
+li {
+    display: inline;
 }
 
 .btn {
@@ -39,17 +41,8 @@ ul {
     border-color: black;
 }
 
-
 /* for large screens */
-@media only screen and (min-width: 500px) {
-    .box {
-        padding-top: 150px;
-    }
-    
-    li {
-        display: inline;
-    }
-    
+@media only screen and (min-width: 480px) {
     .img-center {
         height: 100%;
     }
