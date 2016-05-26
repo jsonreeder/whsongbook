@@ -4,3 +4,4 @@ songs/.DS_Store
 songs/archives/.DS_Store
 /junk/*
 archives/
+*.log
