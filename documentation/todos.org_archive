@@ -111,3 +111,86 @@ CLOSED: [2016-05-26 Thu 09:20]
 :ARCHIVE_TODO: DONE
 :END:
 
+
+* Is the file parsed correctly?
+:PROPERTIES:
+:ARCHIVE_TIME: 2016-05-26 Thu 21:44
+:ARCHIVE_FILE: ~/Documents/Code/whsongbook/documentation/todos.org
+:ARCHIVE_OLPATH: Now/Add testing
+:ARCHIVE_CATEGORY: todos
+:END:
+** Are the chords correct?
+*** DONE Simplify accidental checks
+CLOSED: [2016-05-26 Thu 10:36]
+*** DONE Check for additional characters
+CLOSED: [2016-05-26 Thu 12:20]
+- not :|\/ [a-z1-9]
+** Are all sections correct?
+** Is the metadata correct?
+
+
+* DONE Integrate with Travis CI
+CLOSED: [2016-05-26 Thu 21:44]
+:PROPERTIES:
+:ARCHIVE_TIME: 2016-05-26 Thu 21:44
+:ARCHIVE_FILE: ~/Documents/Code/whsongbook/documentation/todos.org
+:ARCHIVE_OLPATH: Now
+:ARCHIVE_CATEGORY: todos
+:ARCHIVE_TODO: DONE
+:END:
+
+
+
+* DONE Deactivate debug mode
+CLOSED: [2016-05-26 Thu 21:45]
+:PROPERTIES:
+:ARCHIVE_TIME: 2016-05-26 Thu 21:45
+:ARCHIVE_FILE: ~/Documents/Code/whsongbook/documentation/todos.org
+:ARCHIVE_OLPATH: Now
+:ARCHIVE_CATEGORY: todos
+:ARCHIVE_TODO: DONE
+:END:
+
+
+* DONE Add function to __init__.py
+CLOSED: [2016-05-25 Wed 16:23]
+:PROPERTIES:
+:ARCHIVE_TIME: 2016-05-26 Thu 21:47
+:ARCHIVE_FILE: ~/Documents/Code/whsongbook/documentation/todos.org
+:ARCHIVE_OLPATH: Soon/Load all songs into memory on startup
+:ARCHIVE_CATEGORY: todos
+:ARCHIVE_TODO: DONE
+:END:
+
+* TODO Test the syntax of all song files
+:PROPERTIES:
+:ARCHIVE_TIME: 2016-05-26 Thu 21:47
+:ARCHIVE_FILE: ~/Documents/Code/whsongbook/documentation/todos.org
+:ARCHIVE_OLPATH: Soon/Load all songs into memory on startup
+:ARCHIVE_CATEGORY: todos
+:ARCHIVE_TODO: TODO
+:END:
+
+* Loading a directory
+:PROPERTIES:
+:ARCHIVE_TIME: 2016-05-26 Thu 21:47
+:ARCHIVE_FILE: ~/Documents/Code/whsongbook/documentation/todos.org
+:ARCHIVE_OLPATH: Soon/Load all songs into memory on startup
+:ARCHIVE_CATEGORY: todos
+:END:
+for file in os.listdir("production"):
+try:
+songs.append(parse_file(file))
+except Exception as e:
+log error and move on
+
+
+* DONE Load all songs into memory on startup
+CLOSED: [2016-05-26 Thu 21:47]
+:PROPERTIES:
+:ARCHIVE_TIME: 2016-05-26 Thu 21:47
+:ARCHIVE_FILE: ~/Documents/Code/whsongbook/documentation/todos.org
+:ARCHIVE_OLPATH: Soon
+:ARCHIVE_CATEGORY: todos
+:ARCHIVE_TODO: DONE
+:END:

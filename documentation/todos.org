@@ -2,67 +2,26 @@
 #+SUBTITLE: Tasks for development
 
 * Now
-
-** TODO Add testing
-
-*** Is the file parsed correctly?
-**** Are the chords correct?
-***** DONE Simplify accidental checks
-CLOSED: [2016-05-26 Thu 10:36]
-***** DONE Check for additional characters
-CLOSED: [2016-05-26 Thu 12:20]
-- not :|\/ [a-z1-9]
-**** Are all sections correct?
-**** Is the metadata correct?
-
-*** Are the views displayed correctly?
-
-*** Future logging
-
-**** Bad URL redirects
-
-*** Future testing
-
-**** Unacceptable duplicates
-- :
-- /
-- slash chords with extensions
-
-** TODO Integrate with Travis CI
-
-
-** TODO Deactivate debug mode
-
-** TODO Improve testing
-
-*** TODO Add more robust header testing
+** TODO Remove acceptance testing from Travis
+** TODO Refactor file parsing
+*** Consolidate in one function
+*** Replace "assert" statements with simple conditionals
+*** Add conditional tests and error logging to all parse operations
+**** Header / Metadata
 - incorrect data types such as
   : artist = Death Cab for Cutie
-
-*** TODO Add more robust chord testing
+**** Sections
+** TODO Refactor testing
+*** Each error gets its own test (not each function)
+** TODO Refactor chord parsing
+*** Move from formatting to parsing
+*** Add conditional tests
 - chords that should be caught but are not yet
 - bad_chords = ["7", "e:m7b5"]
 
 * Soon
 
 ** TODO Update Python to 3.5.2
-** TODO Load all songs into memory on startup
-*** DONE Add function to __init__.py
-CLOSED: [2016-05-25 Wed 16:23]
-*** TODO Test the syntax of all song files
-*** TODO Test for suffixes
-suffix = {"f": "b", "s": "#"}
-suffix[slash_chord[1]]
-*** If errors
-- Don't render the file
-- Write error to log
-*** Loading a directory
-for file in os.listdir("production"):
-try:
-songs.append(parse_file(file))
-except Exception as e:
-log error and move on
-
 ** TODO Create script for reformatting Word doc
 *** Coverting chords
 **** Convert WSIWYG chords to LilyPond
@@ -94,6 +53,13 @@ And you ~need a helping ~hand,
 ** TODO Change song title formatting
 - Separator should not be "-" since this can occur in song titles and artist names
 - Maybe "--" instead ?
+** TODO Make sure that CI testing is stopping bad commits
+- Right now I believe that commits are getting through even when tests are failed
+** TODO Add icon
+** TODO Trasition to sub loggers
+- Right now I have parallel logs, not sub logs
+- Consider root logger separate from song logger
+- sub loggers allow shared rules
 * Later
 
 ** TODO Allow transposition
@@ -113,6 +79,17 @@ And you ~need a helping ~hand,
 - Add an option to download the songook as a PDF or plain text
 
 ** TODO Add better documentation for song syntax
+** Future logging
+
+**** Bad URL redirects
+
+** Future testing
+
+**** Unacceptable duplicates
+- :
+- /
+- slash chords with extensions
+
 * One Day
 
 ** TODO Allow community editing
