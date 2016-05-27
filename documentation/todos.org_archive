@@ -194,3 +194,13 @@ CLOSED: [2016-05-26 Thu 21:47]
 :ARCHIVE_CATEGORY: todos
 :ARCHIVE_TODO: DONE
 :END:
+
+* DONE Remove acceptance testing from Travis
+CLOSED: [2016-05-26 Thu 21:55]
+:PROPERTIES:
+:ARCHIVE_TIME: 2016-05-26 Thu 21:55
+:ARCHIVE_FILE: ~/Documents/Code/whsongbook/documentation/todos.org
+:ARCHIVE_OLPATH: Now
+:ARCHIVE_CATEGORY: todos
+:ARCHIVE_TODO: DONE
+:END:

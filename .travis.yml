@@ -5,4 +5,3 @@ install: python3 -m pip install -r requirements.txt
 script:
     - PYTHONPATH=. python3 tests/test_display.py
     - PYTHONPATH=. python3 tests/test_parse.py
-    - PYTHONPATH=. python3 tests/test_views_acceptance.py

@@ -2,7 +2,6 @@
 #+SUBTITLE: Tasks for development
 
 * Now
-** TODO Remove acceptance testing from Travis
 ** TODO Refactor file parsing
 *** Consolidate in one function
 *** Replace "assert" statements with simple conditionals
