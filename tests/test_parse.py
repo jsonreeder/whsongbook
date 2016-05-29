@@ -7,7 +7,26 @@ import unittest
 import whsongbook
 from whsongbook.parse import *
 
-class FilterTests(unittest.TestCase):
+class Tests(unittest.TestCase):
+
+    def test_bad_section_name(self):
+        bad_section_name = """
+chors:
+    [f]Down on the [c]corner, [g]out in the [c]street
+    Willy and the [f]Poorboys are [c]playin'
+        """
+        whsongbook.parse.parse_text("BadSectionName", bad_section_name)
+        self.assertTrue("BadSectionName" in whsongbook.failing_songs)
+
+    def test_bad_chord(self):
+        whsongbook.parse.parse_text("BadChord", """verse:
+    [h]Early in the evenin' [A#5]just about supper [c]time """)
+        self.assertEqual(whsongbook.failing_songs[-1], "BadChord")
+
+    # def test_bad_header(self)
+
+    # test bad section
+
     def test_check_chord(self):
         """
         Test to see if any of the chords have failed to be parsed

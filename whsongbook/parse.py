@@ -5,6 +5,13 @@ from . import failing_songs
 
 logging.basicConfig(filename="song_errors.log", level=logging.ERROR)
 
+# Acceptable syntax
+
+## Sections
+SECTION_NAMES = ["header", "verse", "chorus", "bridge", "instrumental", "notes"]
+
+## Chords
+
 class Song:
 
     def __init__(self, filename, metadata, content):
@@ -53,20 +60,6 @@ def parse_header(header):
 
     return metadata
 
-def check_section(section):
-    """
-    Check that sections are recognizeable.
-    """
-
-    parsable = ["header", "verse", "chorus", "bridge", "instrumental", "notes"]
-
-    try:
-        assert(section[0] in parsable)
-    except AssertionError:
-        return False
-
-    return True
-
 def parse_file(filename):
     songs_dir = "songs/production/"
     full_title = songs_dir + filename
@@ -82,13 +75,22 @@ def parse_text(filename, text):
     cur = None
 
     for line in text.splitlines():
+
         # strip initial white space
         line = line.rstrip()
+
         # ignore blank lines
         if not line: continue
 
-        # identify line type statements (ie "chorus:")
+        # identify section definitions (ie "chorus:")
         if line == line.lstrip():
+            section_name = line.strip(":")
+
+            # log error if section is not recognized
+            if section_name not in SECTION_NAMES:
+                logging.error("Unrecognized section name (%s) in file (%s). Recognized sections are: %s." % (section_name, filename, ", ".join(sorted(SECTION_NAMES))))
+                failing_songs.append(filename)
+
             cur = []
             sections.append((line.strip(":"), cur))
 
@@ -117,13 +119,6 @@ def parse_text(filename, text):
                 line = chord_sections
 
             cur.append(line)
-
-    # check sections
-    for s in sections:
-        try:
-            assert(check_section(section) == True)
-        except AssertionError:
-            logging.error("Unrecognized section (%s) in file (%s)" % (chord, filename))
 
     # convert header section to dictionary
     if sections[0][0] == "header":
