@@ -98,7 +98,7 @@ def parse_text(filename, text):
         else:
             line = line.strip()
             # separate chords from lyrics
-            if "[" in line and "genres = " not in line:
+            if "[" in line and "=" not in line:
                 chord_sections = []
                 for section in line.split("["):
                     if "]" in section:
