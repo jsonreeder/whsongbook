@@ -5,12 +5,9 @@ from . import failing_songs
 
 logging.basicConfig(filename="song_errors.log", level=logging.ERROR)
 
-# Acceptable syntax
+# Initialive variables for acceptable song syntax
 
-## Sections
 SECTION_NAMES = ["header", "verse", "chorus", "bridge", "instrumental", "notes"]
-
-## Chords
 
 class Song:
 
@@ -20,19 +17,17 @@ class Song:
         self.content = content
 
 def check_chord(chord):
-    """
-    Check that chords are in the right format.
-    """
+    """Check that chords are in the right format."""
 
-    # allow anything in parentheses (eg "(x3)")
+    # Allow anything in parentheses (eg "(x3)")
     if chord[:1] == "(":
         pass
 
-    # allow empty strings (for lyrics with no chords)
+    # Allow empty strings (for lyrics with no chords)
     elif len(chord) == 0:
         pass
 
-    # reject unparsable characters
+    # Reject unparsable characters
     else:
         try:
             parsable = "[a-gsuim1-9:/\|]+"
@@ -41,24 +36,6 @@ def check_chord(chord):
             return False
 
     return True
-
-def parse_header(header):
-    """
-    TODO: This function is unused and incomplete
-    Parse header and check that metadata is in the right format
-    """
-
-    parsable = ["title", "artist", "genres", "year", "capo"]
-
-    metadata = []
-    for line in header:
-        try:
-            key, value = line.split('=', 1)
-            metadata[key.strip()] = ast.literal_eval(value.strip())
-        except ValueError:
-            return (False, False)
-
-    return metadata
 
 def parse_file(filename):
     songs_dir = "songs/production/"
@@ -76,17 +53,17 @@ def parse_text(filename, text):
 
     for line in text.splitlines():
 
-        # strip initial white space
+        # Strip initial white space
         line = line.rstrip()
 
-        # ignore blank lines
+        # Ignore blank lines
         if not line: continue
 
-        # identify section definitions (ie "chorus:")
+        # Identify section definitions (ie "chorus:")
         if line == line.lstrip():
             section_name = line.strip(":")
 
-            # log error if section is not recognized
+            # Log error if section is not recognized
             if section_name not in SECTION_NAMES:
                 logging.error("Unrecognized section name (%s) in file (%s). Recognized sections are: %s." % (section_name, filename, ", ".join(sorted(SECTION_NAMES))))
                 failing_songs.append(filename)
@@ -94,35 +71,39 @@ def parse_text(filename, text):
             cur = []
             sections.append((line.strip(":"), cur))
 
-        # work with all remaining lines (content)
+        # Work with all remaining lines (content)
         else:
             line = line.strip()
 
-            # separate chords from lyrics
+            # Separate chords from lyrics
             if "[" in line and "=" not in line:
                 chord_sections = []
 
-                # log error if unmatched bracket
+                # Log error if unmatched bracket
                 if line.count("[") != line.count("]"):
                     logging.error("Unmatched bracket in line (%s) in file (%s)" % (line, filename))
                     failing_songs.append(filename)
 
                 for section in line.split("["):
 
+                    # Parse lines with both lyrics and chords
                     if "]" in section:
                         chord, lyric = section.split("]", 1)
 
-                        # parse multi chords (chords with spaces)
+                        # Parse multi chords (chords separated by spaces)
                         if " " in chord:
                             multi_chords = chord.split(" ")
                             for m in multi_chords:
                                 chord_sections.append((m,""))
                         else:
                             chord_sections.append((chord, lyric))
+
+                    # Parse lines with only lyrics
                     elif section:
                         chord_sections.append(("", section))
 
-                # throw error if chord not recognized
+                # Throw error if chord not recognized
+                # TODO: Add more robust chord parsing here
                 for chord, lyric in chord_sections:
                     if not check_chord(chord):
                         logging.error("Unparsable chord (%s) in file (%s)" % (chord, filename))
@@ -131,9 +112,10 @@ def parse_text(filename, text):
 
             cur.append(line)
 
-    # convert header section to dictionary
+    # Convert header section to dictionary
     if sections[0][0] == "header":
         for line in sections.pop(0)[1]:
+
             # Check for lines without equals
             try:
                 key, value = line.split('=', 1)
@@ -142,11 +124,11 @@ def parse_text(filename, text):
                 failing_songs.append(filename)
             try:
                 metadata[key.strip()] = ast.literal_eval(value.strip())
+
             # Catch errors in variable definition
             except SyntaxError:
                 logging.error("Unparsable header line (%s) in file (%s). Make sure that types are defined correctly (i.e. that strings are in quotes, lists are in brackets, etc.)" % (line, filename))
                 failing_songs.append(filename)
                 metadata[key.strip()] = ""
 
-    # return str(sections)
     return Song(filename, metadata, sections)
