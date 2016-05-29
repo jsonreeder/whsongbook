@@ -18,14 +18,47 @@ chors:
         whsongbook.parse.parse_text("BadSectionName", bad_section_name)
         self.assertTrue("BadSectionName" in whsongbook.failing_songs)
 
-    def test_unmatched_bracket(self):
-        unmatched_bracket = """
+    def test_unmatched_bracket_content(self):
+        unmatched_bracket_content = """
 chorus:
     [f]Down on the [c]corner, [gout in the [c]street
     Willy and the [f]Poorboys are [c]playin' """
 
-        whsongbook.parse.parse_text("UnmatchedBracket", unmatched_bracket)
-        self.assertTrue("UnmatchedBracket" in whsongbook.failing_songs)
+        whsongbook.parse.parse_text("UnmatchedBracketContent", unmatched_bracket_content)
+        self.assertTrue("UnmatchedBracketContent" in whsongbook.failing_songs)
+
+    def test_unmatched_bracket_header(self):
+        unmatched_bracket_header = """
+header:
+  title = "Bare Necessities"
+  artist = "Terry Gilkyson"
+  year = 1967
+  genres = "disney", "musical", "ragtime"]
+"""
+        whsongbook.parse.parse_text("UnmatchedBracketHeader", unmatched_bracket_header)
+        self.assertTrue("UnmatchedBracketHeader" in whsongbook.failing_songs)
+
+    def test_no_quotes_header(self):
+        no_quotes_header = """
+header:
+  title = "Bare Necessities"
+  artist = Terry Gilkyson
+  year = 1967
+  genres = ["disney", "musical", "ragtime"]
+"""
+        whsongbook.parse.parse_text("NoQuotesHeader", no_quotes_header)
+        self.assertTrue("NoQuotesHeader" in whsongbook.failing_songs)
+
+    def test_no_equals_header(self):
+        no_equals_header = """
+header:
+  title = "Bare Necessities"
+  artist "Terry Gilkyson"
+  year = 1967
+  genres = ["disney", "musical", "ragtime"]
+"""
+        whsongbook.parse.parse_text("NoEqualsHeader", no_equals_header)
+        self.assertTrue("NoEqualsHeader" in whsongbook.failing_songs)
 
     def test_bad_chord(self):
         whsongbook.parse.parse_text("BadChord", """verse:
@@ -42,22 +75,6 @@ chorus:
         for b in bad_chords:
             test_out = check_chord(b)
             self.assertEqual(expect, test_out)
-
-    def test_parse_header(self):
-        """
-        TODO: The function parse_header() is unused, so this test is currently useless
-        """
-        bad_header = """
-header:
-    title "I Will Follow You Into the Dark"
-    artist "Death Cab for Cutie"
-    capo = 5
-    year = 2005
-    genres = ["indie"]"""
-        expect = False
-        test_out = parse_header(bad_header)
-        # self.assertEqual(expect, test_out)
-        pass
 
 if __name__ == "__main__":
     unittest.main()

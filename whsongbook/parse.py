@@ -133,16 +133,20 @@ def parse_text(filename, text):
 
     # convert header section to dictionary
     if sections[0][0] == "header":
-        ## attempting to switch to fuction "parse_header()"
-        # header = sections.pop(0)[1]
-        # metadata = parse_header(header)
-        # if False in metadata:
-        #     logging.error("Unparsable header line (%s) in file (%s)" % (line, filename))
-
-        # the old way
         for line in sections.pop(0)[1]:
-            key, value = line.split('=', 1)
-            metadata[key.strip()] = ast.literal_eval(value.strip())
+            # Check for lines without equals
+            try:
+                key, value = line.split('=', 1)
+            except ValueError:
+                logging.error("Unparsable header line (%s) in file (%s). Missing an equals sign." % (line, filename))
+                failing_songs.append(filename)
+            try:
+                metadata[key.strip()] = ast.literal_eval(value.strip())
+            # Catch errors in variable definition
+            except SyntaxError:
+                logging.error("Unparsable header line (%s) in file (%s). Make sure that types are defined correctly (i.e. that strings are in quotes, lists are in brackets, etc.)" % (line, filename))
+                failing_songs.append(filename)
+                metadata[key.strip()] = ""
 
     # return str(sections)
     return Song(filename, metadata, sections)
