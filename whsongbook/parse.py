@@ -1,6 +1,7 @@
 import logging
 import ast
 import re
+from . import failing_songs
 
 logging.basicConfig(filename="song_errors.log", level=logging.ERROR)
 
@@ -69,12 +70,16 @@ def check_section(section):
 def parse_file(filename):
     songs_dir = "songs/production/"
     full_title = songs_dir + filename
-    sections = []
-    metadata = {}
-    cur = None
 
     with open(full_title, "r") as f:
         text = f.read()
+
+    return parse_text(filename, text)
+
+def parse_text(filename, text):
+    sections = []
+    metadata = {}
+    cur = None
 
     for line in text.splitlines():
         # strip initial white space
@@ -106,10 +111,9 @@ def parse_file(filename):
                         chord_sections.append(("", section))
                 # throw error if chord not recognized
                 for chord, lyric in chord_sections:
-                    try:
-                        assert(check_chord(chord) == True)
-                    except AssertionError:
+                    if not check_chord(chord):
                         logging.error("Unparsable chord (%s) in file (%s)" % (chord, filename))
+                        failing_songs.append(filename)
                 line = chord_sections
 
             cur.append(line)
