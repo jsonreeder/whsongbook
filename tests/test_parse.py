@@ -12,20 +12,25 @@ class Tests(unittest.TestCase):
     def test_bad_section_name(self):
         bad_section_name = """
 chors:
-    [f]Down on the [c]corner, [g]out in the [c]street
-    Willy and the [f]Poorboys are [c]playin'
-        """
+    [f]Down on the [c]corner, [gout in the [c]street
+    Willy and the [f]Poorboys are [c]playin' """
+
         whsongbook.parse.parse_text("BadSectionName", bad_section_name)
         self.assertTrue("BadSectionName" in whsongbook.failing_songs)
+
+    def test_unmatched_bracket(self):
+        unmatched_bracket = """
+chorus:
+    [f]Down on the [c]corner, [gout in the [c]street
+    Willy and the [f]Poorboys are [c]playin' """
+
+        whsongbook.parse.parse_text("UnmatchedBracket", unmatched_bracket)
+        self.assertTrue("UnmatchedBracket" in whsongbook.failing_songs)
 
     def test_bad_chord(self):
         whsongbook.parse.parse_text("BadChord", """verse:
     [h]Early in the evenin' [A#5]just about supper [c]time """)
         self.assertEqual(whsongbook.failing_songs[-1], "BadChord")
-
-    # def test_bad_header(self)
-
-    # test bad section
 
     def test_check_chord(self):
         """
@@ -53,12 +58,6 @@ header:
         test_out = parse_header(bad_header)
         # self.assertEqual(expect, test_out)
         pass
-
-    def test_check_section(self):
-        bad_section = ["solo", ""]
-        good_section = ["verse", ""]
-        self.assertEqual(False, check_section(bad_section))
-        self.assertEqual(True, check_section(good_section))
 
 if __name__ == "__main__":
     unittest.main()

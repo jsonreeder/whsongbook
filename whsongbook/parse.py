@@ -97,12 +97,22 @@ def parse_text(filename, text):
         # work with all remaining lines (content)
         else:
             line = line.strip()
+
             # separate chords from lyrics
             if "[" in line and "=" not in line:
                 chord_sections = []
+
+                # log error if unmatched bracket
+                if line.count("[") != line.count("]"):
+                    logging.error("Unmatched bracket in line (%s) in file (%s)" % (line, filename))
+                    failing_songs.append(filename)
+
                 for section in line.split("["):
+
                     if "]" in section:
                         chord, lyric = section.split("]", 1)
+
+                        # parse multi chords (chords with spaces)
                         if " " in chord:
                             multi_chords = chord.split(" ")
                             for m in multi_chords:
@@ -111,6 +121,7 @@ def parse_text(filename, text):
                             chord_sections.append((chord, lyric))
                     elif section:
                         chord_sections.append(("", section))
+
                 # throw error if chord not recognized
                 for chord, lyric in chord_sections:
                     if not check_chord(chord):
