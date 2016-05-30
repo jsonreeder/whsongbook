@@ -5,9 +5,15 @@ from . import failing_songs
 
 logging.basicConfig(filename="song_errors.log", level=logging.ERROR)
 
-# Initialive variables for acceptable song syntax
+# Initialize variables for acceptable song syntax
 
 SECTION_NAMES = ["header", "verse", "chorus", "bridge", "instrumental", "notes"]
+PITCHES = "[a-g]"
+ACCIDENTALS = ["f", "s"]
+DURATIONS = "^[0-9]+$"
+QUALITIES = ["maj", "m", "dim", "aug", "sus"]
+INTERVALS = "[1-9][0-3]"
+ADDS = "[0-9-]+"
 
 class Song:
 
@@ -36,6 +42,71 @@ def check_chord(chord):
             return False
 
     return True
+
+def parse_pitch(filename, pitch):
+    """Parse pitches in LilyPond syntax."""
+
+    pitch_temp = pitch
+    pitch_dict = {"note": "",
+                  "accidental": "",
+                  "duration": ""
+    }
+
+    # Parse note
+    if re.match(PITCHES, pitch_temp[0]):
+        pitch_dict["note"] = pitch_temp[0]
+        pitch_temp = pitch_temp[1:]
+    else:
+        logging.error("Unrecognized pitch (%s) in file (%s)." % (pitch, filename))
+        failing_songs.append(filename)
+        return pitch_dict
+
+    # Parse accidental and duration
+    if pitch_temp:
+        # Parse accidental
+        if pitch_temp[0] in ACCIDENTALS:
+            pitch_dict["accidental"] = pitch_temp[0]
+            pitch_temp = pitch_temp[1:]
+
+        # Parse duration
+        if pitch_temp:
+            if re.match(DURATIONS, pitch_temp):
+                pitch_dict["duration"] = pitch_temp
+            else:
+                logging.error("Unrecognized pitch duration (%s) in pitch (%s) in file (%s)." % (pitch_temp, pitch, filename))
+                failing_songs.append(filename)
+
+    return pitch_dict
+
+def parse_chord(filename, chord):
+    """Parse chords in LilyPond syntax."""
+
+    chord_list = re.split("[:/]", chord)
+    chord_dict = {"root": "",
+                  "accidental": "",
+                  "duration": "",
+                  "quality": "",
+                  "inversion": "",
+                  "inversion_accidental": ""
+    }
+
+
+    # Parse root
+    root_dict = parse_pitch(filename, chord_list.pop(0))
+    chord_dict["root"] = root_dict["note"]
+    chord_dict["accidental"] = root_dict["accidental"]
+    chord_dict["duration"] = root_dict["duration"]
+
+    # Parse quality
+    if ":" in chord:
+        chord_dict["quality"] = chord_list.pop(0)
+
+    # Parse inverstion
+    if "/" in chord:
+        inverstion_dict = parse_pitch(filename, chord_list.pop(0))
+        chord_dict["inversion"] = inverstion_dict["note"]
+
+    return chord_dict
 
 def parse_file(filename):
     songs_dir = "songs/production/"
