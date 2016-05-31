@@ -101,15 +101,15 @@ header:
         res = whsongbook.parse.parse_chord("GoodChordQuality", good_chord_quality)
         self.assertFalse("GoodChordQuality" in whsongbook.failing_songs)
 
-    def test_bad_chord_inverstion(self):
-        bad_chord_inverstion = "c/g:m"
-        res = whsongbook.parse.parse_chord("BadChordInverstion", bad_chord_inverstion)
-        self.assertTrue("BadChordInverstion" in whsongbook.failing_songs)
+    def test_bad_chord_inversion(self):
+        bad_chord_inversion = "c/g:m"
+        res = whsongbook.parse.parse_chord("BadChordInversion", bad_chord_inverstion)
+        self.assertTrue("BadChordInversion" in whsongbook.failing_songs)
 
-    def test_good_chord_inverstion(self):
-        good_chord_inverstion = "c/g"
-        res = whsongbook.parse.parse_chord("GoodChordInverstion", good_chord_inverstion)
-        self.assertFalse("GoodChordInverstion" in whsongbook.failing_songs)
+    def test_good_chord_inversion(self):
+        good_chord_inversion = "c/g"
+        res = whsongbook.parse.parse_chord("GoodChordInversion", good_chord_inverstion)
+        self.assertFalse("GoodChordInversion" in whsongbook.failing_songs)
 
     def test_bad_chord(self):
         # TODO: Revisit after incorporating the new function "parse_chord"
