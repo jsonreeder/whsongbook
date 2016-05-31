@@ -11,9 +11,10 @@ SECTION_NAMES = ["header", "verse", "chorus", "bridge", "instrumental", "notes"]
 PITCHES = "[a-g]"
 ACCIDENTALS = ["f", "s"]
 DURATIONS = "^[0-9]+$"
-QUALITIES = ["maj", "m", "dim", "aug", "sus"]
-INTERVALS = "[1-9][0-3]"
-ADDS = "[0-9-]+"
+QUALITIES = "^(maj|m|dim|aug|sus)$"
+INTERVALS = "^[1-9][0-3]?$"
+ADDS = "^\d+[+-]?$"
+FALSE_CHORDS = "\(.+\)|\s|\|"
 
 class Song:
 
@@ -53,7 +54,7 @@ def parse_pitch(filename, pitch):
     }
 
     # Parse note
-    if re.match(PITCHES, pitch_temp[0]):
+    if re.match(PITCHES, pitch_temp):
         pitch_dict["note"] = pitch_temp[0]
         pitch_temp = pitch_temp[1:]
     else:
@@ -86,10 +87,11 @@ def parse_chord(filename, chord):
                   "accidental": "",
                   "duration": "",
                   "quality": "",
+                  "interval": "",
+                  "add": "",
                   "inversion": "",
                   "inversion_accidental": ""
     }
-
 
     # Parse root
     root_dict = parse_pitch(filename, chord_list.pop(0))
@@ -99,12 +101,42 @@ def parse_chord(filename, chord):
 
     # Parse quality
     if ":" in chord:
-        chord_dict["quality"] = chord_list.pop(0)
+        temp_quality = chord_list.pop(0)
 
-    # Parse inverstion
+        # split off add
+        if "." in temp_quality:
+            temp_add_list = temp_quality.split(".")
+            temp_quality = temp_add_list[0]
+            temp_add = temp_add_list[1]
+            if re.match(ADDS, temp_add):
+                chord_dict["add"] = temp_add
+            else:
+                logging.error("Unparsable add (%s) in chord (%s) in file (%s)." % (temp_add, chord, filename))
+                failing_songs.append(filename)
+
+        # split off interval
+        if re.search("\d+", temp_quality):
+            temp_interval_list = re.split("(\d+)", temp_quality)
+            temp_quality = temp_interval_list[0]
+            temp_interval = temp_interval_list[1]
+            if re.match(INTERVALS, temp_interval):
+                chord_dict["interval"] = temp_interval
+            else:
+                logging.error("Unparsable interval (%s) in chord (%s) in file (%s)." % (temp_interval, chord, filename))
+                failing_songs.append(filename)
+
+        # remaining text should be the quality
+        if temp_quality:
+            if re.search(QUALITIES, temp_quality):
+                chord_dict["quality"] = temp_quality
+            else:
+                logging.error("Unparsable quality (%s) in chord (%s) in file (%s)." % (temp_quality, chord, filename))
+                failing_songs.append(filename)
+
+    # Parse inversion
     if "/" in chord:
-        inverstion_dict = parse_pitch(filename, chord_list.pop(0))
-        chord_dict["inversion"] = inverstion_dict["note"]
+        inversion_dict = parse_pitch(filename, chord_list.pop(0))
+        chord_dict["inversion"] = inversion_dict["note"]
 
     return chord_dict
 
@@ -174,11 +206,14 @@ def parse_text(filename, text):
                         chord_sections.append(("", section))
 
                 # Throw error if chord not recognized
-                # TODO: Add more robust chord parsing here
                 for chord, lyric in chord_sections:
-                    if not check_chord(chord):
-                        logging.error("Unparsable chord (%s) in file (%s)" % (chord, filename))
-                        failing_songs.append(filename)
+
+                    # ignore "false chords" eg (x2)
+                    if chord:
+                        if re.match(FALSE_CHORDS, chord):
+                            chord = chord
+                        else:
+                            chord = parse_chord(filename, chord)
                 line = chord_sections
 
             cur.append(line)

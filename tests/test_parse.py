@@ -13,7 +13,7 @@ class Tests(unittest.TestCase):
     def test_bad_section_name(self):
         bad_section_name = """
 chors:
-    [f]Down on the [c]corner, [gout in the [c]street
+    [f]Down on the [c]corner, [g]out in the [c]street
     Willy and the [f]Poorboys are [c]playin' """
 
         whsongbook.parse.parse_text("BadSectionName", bad_section_name)
@@ -91,31 +91,52 @@ header:
         res = whsongbook.parse.parse_chord("BadChordRoot", bad_chord_root)
         self.assertTrue("BadChordRoot" in whsongbook.failing_songs)
 
+    def test_bad_chord_add(self):
+        bad_chord_add = "c:m7.5?"
+        res = whsongbook.parse.parse_chord("BadChordAdd", bad_chord_add)
+        self.assertTrue("BadChordAdd" in whsongbook.failing_songs)
+
+    def test_good_chord_add(self):
+        good_chord_add = "c:m.5-"
+        res = whsongbook.parse.parse_chord("GoodChordAdd", good_chord_add)
+        self.assertFalse("GoodChordAdd" in whsongbook.failing_songs)
+
+    def test_bad_chord_interval(self):
+        bad_chord_interval = "g:14"
+        res = whsongbook.parse.parse_chord("BadChordInterval", bad_chord_interval)
+        self.assertTrue("BadChordInterval" in whsongbook.failing_songs)
+
+    def test_good_chord_interval(self):
+        good_chord_interval = "g:7"
+        res = whsongbook.parse.parse_chord("GoodChordInterval", good_chord_interval)
+        self.assertFalse("GoodChordInterval" in whsongbook.failing_songs)
+        # self.assertFalse(res)
+
     def test_bad_chord_quality(self):
-        bad_chord_quality = "am"
+        bad_chord_quality = "a:min"
         res = whsongbook.parse.parse_chord("BadChordQuality", bad_chord_quality)
         self.assertTrue("BadChordQuality" in whsongbook.failing_songs)
 
     def test_good_chord_quality(self):
-        good_chord_quality = "a:sus2"
+        good_chord_quality = "a:maj"
         res = whsongbook.parse.parse_chord("GoodChordQuality", good_chord_quality)
         self.assertFalse("GoodChordQuality" in whsongbook.failing_songs)
 
     def test_bad_chord_inversion(self):
         bad_chord_inversion = "c/g:m"
-        res = whsongbook.parse.parse_chord("BadChordInversion", bad_chord_inverstion)
+        res = whsongbook.parse.parse_chord("BadChordInversion", bad_chord_inversion)
         self.assertTrue("BadChordInversion" in whsongbook.failing_songs)
 
     def test_good_chord_inversion(self):
         good_chord_inversion = "c/g"
-        res = whsongbook.parse.parse_chord("GoodChordInversion", good_chord_inverstion)
+        res = whsongbook.parse.parse_chord("GoodChordInversion", good_chord_inversion)
         self.assertFalse("GoodChordInversion" in whsongbook.failing_songs)
 
     def test_bad_chord(self):
-        # TODO: Revisit after incorporating the new function "parse_chord"
         whsongbook.parse.parse_text("BadChord", """verse:
-    [h]Early in the evenin' [A#5]just about supper [c]time """)
-        self.assertEqual(whsongbook.failing_songs[-1], "BadChord")
+    [h]Early in the evenin' [a:m]just about supper [c]time """)
+        self.assertTrue("BadChord" in whsongbook.failing_songs)
+        # self.assertEqual(whsongbook.failing_songs[-1], "BadChord")
 
 if __name__ == "__main__":
     unittest.main()
