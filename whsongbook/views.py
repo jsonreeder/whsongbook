@@ -27,7 +27,7 @@ def browse():
         songs.append([no_extension, title, artist])
 
     return render_template("browse.html",
-                           songs = songs
+                           songs = sorted(songs, key=lambda song: song[1])
     )
 
 @app.route("/songs/<title>")
