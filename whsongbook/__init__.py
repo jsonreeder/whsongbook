@@ -1,22 +1,29 @@
-from logging import FileHandler, ERROR
-import logging
+# from logging import FileHandler, ERROR
 from flask import Flask
+from collections import defaultdict
 import os
 import re
+import logging
 
+logging.basicConfig(filename="errors.log", level=logging.ERROR)
 app = Flask(__name__)
 failing_songs = []
 
 from . import parse, display
 
+# Load songs
 songs_data = [parse.parse_file(file) for file in os.listdir("songs/production/")]
 
-from . import views
+# Die if any songs fail to parse
+if failing_songs:
+    import sys
+    sys.exit(1)
 
-# Configure logging
-file_handler = FileHandler("app_errors.log")
-file_handler.setLevel(ERROR)
-app.logger.addHandler(file_handler)
+artists = defaultdict(list)
+for s in songs_data:
+    artists[s.metadata["artist"]].append(s.metadata["title"])
+
+from . import views
 
 def check_type(data):
     return isinstance(data, list)

@@ -3,10 +3,7 @@ import ast
 import re
 from . import failing_songs
 
-logging.basicConfig(filename="song_errors.log", level=logging.ERROR)
-
 # Initialize variables for acceptable song syntax
-
 SECTION_NAMES = ["header", "verse", "chorus", "bridge", "instrumental", "notes"]
 PITCHES = "[a-g]"
 ACCIDENTALS = ["f", "s"]

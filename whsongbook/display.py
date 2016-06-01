@@ -2,8 +2,6 @@ import logging
 import re
 from . import failing_songs
 
-logging.basicConfig(filename="song_errors.log", level=logging.ERROR)
-
 # Initialize global display variables
 ACCIDENTALS = {"f": "b", "s": "#"}
 
