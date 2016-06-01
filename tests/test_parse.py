@@ -110,7 +110,6 @@ header:
         good_chord_interval = "g:7"
         res = whsongbook.parse.parse_chord("GoodChordInterval", good_chord_interval)
         self.assertFalse("GoodChordInterval" in whsongbook.failing_songs)
-        # self.assertFalse(res)
 
     def test_bad_chord_quality(self):
         bad_chord_quality = "a:min"
@@ -136,7 +135,6 @@ header:
         whsongbook.parse.parse_text("BadChord", """verse:
     [h]Early in the evenin' [a:m]just about supper [c]time """)
         self.assertTrue("BadChord" in whsongbook.failing_songs)
-        # self.assertEqual(whsongbook.failing_songs[-1], "BadChord")
 
 if __name__ == "__main__":
     unittest.main()
