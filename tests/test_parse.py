@@ -10,6 +10,12 @@ from whsongbook.parse import *
 
 class ParseTests(unittest.TestCase):
 
+    def test_all_songs_good(self):
+        """Parse all songs and make sure that none have failed."""
+
+        songs_data = [whsongbook.parse.parse_file(file) for file in os.listdir("songs/production/")]
+        self.assertFalse(whsongbook.failing_songs)
+
     def test_bad_section_name(self):
         bad_section_name = """
 chors:
