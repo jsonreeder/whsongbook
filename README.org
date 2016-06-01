@@ -1,3 +1,6 @@
+[[https://travis-ci.org/jlreeder/whsongbook.svg?branch=master][Build Status]]
+[[https://github.com/syl20bnr/spacemacs][file:https://cdn.rawgit.com/syl20bnr/spacemacs/442d025779da2f62fc86c2082703697714db6514/assets/spacemacs-badge.svg]]
+
 #+TITLE: West House Songbook
 #+SUBTITLE: An open-source songbook
 
