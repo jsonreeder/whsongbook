@@ -2,24 +2,19 @@
 #+SUBTITLE: Tasks for development
 
 * Now
-** TODO Refactor file parsing
-*** Consolidate in one function
-*** Replace "assert" statements with simple conditionals
-*** Add conditional tests and error logging to all parse operations
-**** Header / Metadata
-- incorrect data types such as
-  : artist = Death Cab for Cutie
-**** Sections
-** TODO Refactor testing
-*** Each error gets its own test (not each function)
-** TODO Refactor chord parsing
-*** Move from formatting to parsing
-*** Add conditional tests
-- chords that should be caught but are not yet
-- bad_chords = ["7", "e:m7b5"]
-
+** TODO Add instructions for installing locally
+** TODO Adjust song urls
+- Keep capitalization
+- Use metadata, not file name
+** TODO Add test for songs with duplicate titles and artists
+** TODO Test that songs have titles and artists
+** TODO Create artist pages
 * Soon
 
+** TODO Show all metadata on song pages
+- Now only the title and artist are shown
+
+** TODO Allow filters for Browse view
 ** TODO Update Python to 3.5.2
 ** TODO Create script for reformatting Word doc
 *** Coverting chords
@@ -34,16 +29,11 @@ And you ~need a helping ~hand,
 - If it contains more than 4 consecutive spaces
 **** Name the file
 **** Script should output the final file
-  
 ** TODO Add more songs from the Word doc
-
 ** TODO Change navbar to be fixed
-
 ** TODO Make navbar light
 
 ** TODO Change fonts
-
-** TODO Create artist pages
 
 ** TODO Add genres to TOC
 
@@ -52,8 +42,6 @@ And you ~need a helping ~hand,
 ** TODO Change song title formatting
 - Separator should not be "-" since this can occur in song titles and artist names
 - Maybe "--" instead ?
-** TODO Make sure that CI testing is stopping bad commits
-- Right now I believe that commits are getting through even when tests are failed
 ** TODO Add icon
 ** TODO Trasition to sub loggers
 - Right now I have parallel logs, not sub logs
@@ -61,8 +49,10 @@ And you ~need a helping ~hand,
 - sub loggers allow shared rules
 * Later
 
+** TODO Add times to Logging
+- logging format handler
+** TODO Add search
 ** TODO Allow transposition
-
 ** TODO Add lead sheet view
 - Chords only, with bar lines to indicate timing
 - This is how instrumental sections are formatted in the original print songbook (such as intros).
@@ -81,13 +71,6 @@ And you ~need a helping ~hand,
 ** Future logging
 
 **** Bad URL redirects
-
-** Future testing
-
-**** Unacceptable duplicates
-- :
-- /
-- slash chords with extensions
 
 * One Day
 

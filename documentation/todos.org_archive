@@ -204,3 +204,81 @@ CLOSED: [2016-05-26 Thu 21:55]
 :ARCHIVE_CATEGORY: todos
 :ARCHIVE_TODO: DONE
 :END:
+
+* DONE Refactor file parsing
+CLOSED: [2016-05-31 Tue 18:10]
+:PROPERTIES:
+:ARCHIVE_TIME: 2016-05-31 Tue 18:10
+:ARCHIVE_FILE: ~/Documents/Code/whsongbook/documentation/todos.org
+:ARCHIVE_OLPATH: Now
+:ARCHIVE_CATEGORY: todos
+:ARCHIVE_TODO: DONE
+:END:
+** Consolidate in one function
+** Replace "assert" statements with simple conditionals
+** Add conditional tests and error logging to all parse operations
+*** Header / Metadata
+- incorrect data types such as
+  : artist = Death Cab for Cutie
+*** Sections
+
+* DONE Refactor testing
+CLOSED: [2016-05-31 Tue 18:10]
+:PROPERTIES:
+:ARCHIVE_TIME: 2016-05-31 Tue 18:10
+:ARCHIVE_FILE: ~/Documents/Code/whsongbook/documentation/todos.org
+:ARCHIVE_OLPATH: Now
+:ARCHIVE_CATEGORY: todos
+:ARCHIVE_TODO: DONE
+:END:
+** Each error gets its own test (not each function)
+
+* DONE Refactor chord parsing
+CLOSED: [2016-05-31 Tue 18:10]
+:PROPERTIES:
+:ARCHIVE_TIME: 2016-05-31 Tue 18:10
+:ARCHIVE_FILE: ~/Documents/Code/whsongbook/documentation/todos.org
+:ARCHIVE_OLPATH: Now
+:ARCHIVE_CATEGORY: todos
+:ARCHIVE_TODO: DONE
+:END:
+** Move from formatting to parsing
+** Add conditional tests
+- chords that should be caught but are not yet
+- bad_chords = ["7", "e:m7b5"]
+
+
+* DONE Make sure that CI testing is stopping bad commits
+CLOSED: [2016-05-31 Tue 18:11]
+:PROPERTIES:
+:ARCHIVE_TIME: 2016-05-31 Tue 18:11
+:ARCHIVE_FILE: ~/Documents/Code/whsongbook/documentation/todos.org
+:ARCHIVE_OLPATH: Soon
+:ARCHIVE_CATEGORY: todos
+:ARCHIVE_TODO: DONE
+:END:
+- Right now I believe that commits are getting through even when tests are failed
+
+* Future testing
+:PROPERTIES:
+:ARCHIVE_TIME: 2016-05-31 Tue 18:14
+:ARCHIVE_FILE: ~/Documents/Code/whsongbook/documentation/todos.org
+:ARCHIVE_OLPATH: Later
+:ARCHIVE_CATEGORY: todos
+:END:
+
+*** Unacceptable duplicates
+- :
+- /
+- slash chords with extensions
+
+
+* DONE Alphabetize Browse view
+CLOSED: [2016-05-31 Tue 20:27]
+:PROPERTIES:
+:ARCHIVE_TIME: 2016-05-31 Tue 20:27
+:ARCHIVE_FILE: ~/Documents/Code/whsongbook/documentation/todos.org
+:ARCHIVE_OLPATH: Now
+:ARCHIVE_CATEGORY: todos
+:ARCHIVE_TODO: DONE
+:END:
