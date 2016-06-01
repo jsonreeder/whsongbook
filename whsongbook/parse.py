@@ -23,27 +23,6 @@ class Song:
         self.metadata = metadata
         self.content = content
 
-def check_chord(chord):
-    """Check that chords are in the right format."""
-
-    # Allow anything in parentheses (eg "(x3)")
-    if chord[:1] == "(":
-        pass
-
-    # Allow empty strings (for lyrics with no chords)
-    elif len(chord) == 0:
-        pass
-
-    # Reject unparsable characters
-    else:
-        try:
-            parsable = "[a-gsuim1-9:/\|]+"
-            assert(re.fullmatch(parsable, chord) != None)
-        except AssertionError:
-            return False
-
-    return True
-
 def parse_pitch(filename, pitch):
     """Parse pitches in LilyPond syntax."""
 
@@ -82,63 +61,72 @@ def parse_pitch(filename, pitch):
 def parse_chord(filename, chord):
     """Parse chords in LilyPond syntax."""
 
-    chord_list = re.split("[:/]", chord)
-    chord_dict = {"root": "",
-                  "accidental": "",
-                  "duration": "",
-                  "quality": "",
-                  "interval": "",
-                  "add": "",
-                  "inversion": "",
-                  "inversion_accidental": ""
-    }
+    # Ignore empty and "false chords" eg (x2)
+    if not chord:
+        return
 
-    # Parse root
-    root_dict = parse_pitch(filename, chord_list.pop(0))
-    chord_dict["root"] = root_dict["note"]
-    chord_dict["accidental"] = root_dict["accidental"]
-    chord_dict["duration"] = root_dict["duration"]
+    elif re.match(FALSE_CHORDS, chord):
+        return chord
 
-    # Parse quality
-    if ":" in chord:
-        temp_quality = chord_list.pop(0)
+    # Parse normal chords
+    else:
+        chord_list = re.split("[:/]", chord)
+        chord_dict = {"root": "",
+                      "accidental": "",
+                      "duration": "",
+                      "quality": "",
+                      "interval": "",
+                      "add": "",
+                      "inversion": "",
+                      "inversion_accidental": ""
+        }
 
-        # split off add
-        if "." in temp_quality:
-            temp_add_list = temp_quality.split(".")
-            temp_quality = temp_add_list[0]
-            temp_add = temp_add_list[1]
-            if re.match(ADDS, temp_add):
-                chord_dict["add"] = temp_add
-            else:
-                logging.error("Unparsable add (%s) in chord (%s) in file (%s)." % (temp_add, chord, filename))
-                failing_songs.append(filename)
+        # Parse root
+        root_dict = parse_pitch(filename, chord_list.pop(0))
+        chord_dict["root"] = root_dict["note"]
+        chord_dict["accidental"] = root_dict["accidental"]
+        chord_dict["duration"] = root_dict["duration"]
 
-        # split off interval
-        if re.search("\d+", temp_quality):
-            temp_interval_list = re.split("(\d+)", temp_quality)
-            temp_quality = temp_interval_list[0]
-            temp_interval = temp_interval_list[1]
-            if re.match(INTERVALS, temp_interval):
-                chord_dict["interval"] = temp_interval
-            else:
-                logging.error("Unparsable interval (%s) in chord (%s) in file (%s)." % (temp_interval, chord, filename))
-                failing_songs.append(filename)
+        # Parse quality
+        if ":" in chord:
+            temp_quality = chord_list.pop(0)
 
-        # remaining text should be the quality
-        if temp_quality:
-            if re.search(QUALITIES, temp_quality):
-                chord_dict["quality"] = temp_quality
-            else:
-                logging.error("Unparsable quality (%s) in chord (%s) in file (%s)." % (temp_quality, chord, filename))
-                failing_songs.append(filename)
+            # split off add
+            if "." in temp_quality:
+                temp_add_list = temp_quality.split(".")
+                temp_quality = temp_add_list[0]
+                temp_add = temp_add_list[1]
+                if re.match(ADDS, temp_add):
+                    chord_dict["add"] = temp_add
+                else:
+                    logging.error("Unparsable add (%s) in chord (%s) in file (%s)." % (temp_add, chord, filename))
+                    failing_songs.append(filename)
 
-    # Parse inversion
-    if "/" in chord:
-        inversion_dict = parse_pitch(filename, chord_list.pop(0))
-        chord_dict["inversion"] = inversion_dict["note"]
+            # split off interval
+            if re.search("\d+", temp_quality):
+                temp_interval_list = re.split("(\d+)", temp_quality)
+                temp_quality = temp_interval_list[0]
+                temp_interval = temp_interval_list[1]
+                if re.match(INTERVALS, temp_interval):
+                    chord_dict["interval"] = temp_interval
+                else:
+                    logging.error("Unparsable interval (%s) in chord (%s) in file (%s)." % (temp_interval, chord, filename))
+                    failing_songs.append(filename)
 
-    return chord_dict
+            # remaining text should be the quality
+            if temp_quality:
+                if re.search(QUALITIES, temp_quality):
+                    chord_dict["quality"] = temp_quality
+                else:
+                    logging.error("Unparsable quality (%s) in chord (%s) in file (%s)." % (temp_quality, chord, filename))
+                    failing_songs.append(filename)
+
+        # Parse inversion
+        if "/" in chord:
+            inversion_dict = parse_pitch(filename, chord_list.pop(0))
+            chord_dict["inversion"] = inversion_dict["note"]
+
+        return chord_dict
 
 def parse_file(filename):
     songs_dir = "songs/production/"
@@ -197,23 +185,18 @@ def parse_text(filename, text):
                         if " " in chord:
                             multi_chords = chord.split(" ")
                             for m in multi_chords:
-                                chord_sections.append((m,""))
+                                parsed_chord = parse_chord(filename, m)
+                                chord_sections.append((parsed_chord, ""))
+
+                        # Parse normal chords
                         else:
-                            chord_sections.append((chord, lyric))
+                            parsed_chord = parse_chord(filename, chord)
+                            chord_sections.append((parsed_chord, lyric))
 
                     # Parse lines with only lyrics
                     elif section:
                         chord_sections.append(("", section))
 
-                # Throw error if chord not recognized
-                for chord, lyric in chord_sections:
-
-                    # ignore "false chords" eg (x2)
-                    if chord:
-                        if re.match(FALSE_CHORDS, chord):
-                            chord = chord
-                        else:
-                            chord = parse_chord(filename, chord)
                 line = chord_sections
 
             cur.append(line)

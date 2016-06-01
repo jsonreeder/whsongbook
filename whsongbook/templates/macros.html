@@ -1,4 +1,4 @@
-{% macro render_section(type, content) %}
+{% macro render_section(type, content, filename) %}
 <section class={{ type }}>
     {% if not(content) %}
         <p>{{ display_section_name(type) }}</p>
@@ -11,10 +11,10 @@
                     {%-for chord, lyric in line-%}
                         <chunk>
                         {% if lyric %}
-                                <aside>{{ display_chords(chord) }}</aside>
+                                <aside>{{ display_chord(filename, chord) }}</aside>
                                 <p>{{ display_lyrics(lyric)}}</p>
                         {% else %}
-                                <aside>&nbsp;&nbsp;{{ display_chords(chord) }}</aside>
+                                <aside>&nbsp;&nbsp;{{ display_chord(filename, chord) }}</aside>
                                 <p>&nbsp;</p>
                         {% endif %}
                         </chunk>

@@ -4,6 +4,6 @@
 	    <h1>{{ title }}</h1>
 	    <h2>{{ artist }}</h2>
       {% for type, content in sections %}
-      {{ macros.render_section(type, content) }}
+      {{ macros.render_section(type, content, filename) }}
       {% endfor %}
 {% endblock %}

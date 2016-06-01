@@ -8,7 +8,7 @@ import unittest
 import whsongbook
 from whsongbook.parse import *
 
-class Tests(unittest.TestCase):
+class ParseTests(unittest.TestCase):
 
     def test_bad_section_name(self):
         bad_section_name = """

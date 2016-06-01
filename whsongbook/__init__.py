@@ -1,4 +1,5 @@
 from logging import FileHandler, ERROR
+import logging
 from flask import Flask
 import os
 import re
@@ -23,7 +24,7 @@ def check_type(data):
 app.jinja_env.globals.update(
     check_type = check_type,
     display_lyrics = display.display_lyrics,
-    display_chords = display.display_chords,
+    display_chord = display.display_chord,
     display_section_name = display.display_section_name
 )
 

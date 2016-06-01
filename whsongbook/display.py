@@ -1,7 +1,11 @@
 import logging
 import re
+from . import failing_songs
 
 logging.basicConfig(filename="song_errors.log", level=logging.ERROR)
+
+# Initialize global display variables
+ACCIDENTALS = {"f": "b", "s": "#"}
 
 def display_lyrics(lyrics):
     lyrics = lyrics or "\xA0"
@@ -12,42 +16,43 @@ def display_lyrics(lyrics):
 def display_lyrics(lyrics):
     return lyrics.replace(" ", "\xA0") or "\xA0\xA0"
 
-def display_chords(chord):
-    accidentals = {"f": "b", "s": "#"}
+def display_chord(filename, chord):
+    ret = ""
 
-    # parse repeat signs as chords, eg (x3)
-    if chord[:1] == "(":
+    # Do not alter false chords
+    if type(chord) != dict:
         ret = chord
 
-    # parse empty strings as chords
-    elif len(chord) == 0:
-        ret = chord
-
-    # parse all other chords
+    # Format chord dictionaries
     else:
+        # Throw error if no root
+        if not chord["root"]:
+            logging.error("Undisplayable chord (%s) in file (%s). No root." % (chord, filename))
+            failing_songs.append(filename)
 
-        note = chord[:1]
-        accidental = ""
-        extension = ""
-        slash = ""
-        if ":" in chord:
-            extension = re.split(":|/", chord)[1]
-        if len(chord) > 1:
-            for k,v in accidentals.items():
-                if chord[1] == k:
-                    accidental = v
-        if "/" in chord:
-            slash_note = ""
-            slash_accidental = ""
-            pre, slash_chord = chord.split("/")
-            slash_note = slash_chord[:1]
-            if len(slash_chord) > 1:
-                for k,v in accidentals.items():
-                    if slash_chord[1] == k:
-                        slash_accidental = v
-            slash = "/" + slash_note.upper() + slash_accidental
-
-        ret = note.upper() + accidental + extension + slash
+        else:
+            ret += chord["root"].upper()
+            if chord.get("accidental"):
+                for k,v in ACCIDENTALS.items():
+                    if chord["accidental"] == k:
+                        ret += v
+            if chord.get("quality"):
+                ret += chord["quality"]
+            if chord.get("interval"):
+                ret += chord["interval"]
+            if chord.get("add"):
+                if "-" in chord["add"]:
+                    ret += "(b%s)" % chord["add"][:-1]
+                elif "+" in chord["add"]:
+                    ret += "(#%s)" % chord["add"][:-1]
+                else:
+                    ret += "add" + chord["add"]
+            if chord.get("inversion"):
+                ret += "/" + chord["inversion"].upper()
+            if chord.get("inversion_accidental"):
+                for k,v in ACCIDENTALS.items():
+                    if chord["inversion_accidental"] == k:
+                        ret += v
 
     return ret
 

@@ -41,6 +41,7 @@ def song(title):
         return redirect("/browse")
 
     return render_template("song.html",
+                           filename=selection.filename,
                            title=selection.metadata['title'],
                            artist=selection.metadata['artist'],
                            sections=selection.content
