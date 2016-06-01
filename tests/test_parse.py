@@ -1,10 +1,6 @@
 import os
 import unittest
 
-# TODO: Determine if these two lines are necessary
-# if not "CONFIG_PATH" in os.environ:
-#     os.environ["CONFIG_PATH"] = "whsongbook.config.TestingConfig"
-
 import whsongbook
 from whsongbook.parse import *
 
