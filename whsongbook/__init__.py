@@ -1,11 +1,11 @@
 import os
 import re
 import logging
+import pprint
 from collections import defaultdict
 from flask import Flask
 
-# logging.basicConfig(filename="errors.log", level=logging.ERROR)
-logging.basicConfig(filename="errors.log", level=logging.DEBUG)
+logging.basicConfig(filename="errors.log", level=logging.ERROR)
 app = Flask(__name__)
 failing_songs = []
 
@@ -13,6 +13,7 @@ from . import parse, display
 
 # Load songs
 songs_data = [parse.parse_file(file) for file in os.listdir("songs/production/")]
+# Log whie debugging
 logging.debug("Songs Data:\n")
 for i in songs_data:
     logging.debug(i)
@@ -24,9 +25,12 @@ if failing_songs:
     sys.exit(1)
 
 # Build list of artists and their songs
-artists = defaultdict(list)
+artists_data = defaultdict(list)
+# Log whie debugging
 for s in songs_data:
-    artists[s.metadata["artist"]].append(s.metadata["title"])
+    artists_data[s.metadata["artist"]].append(s.metadata["title"])
+logging.debug("Artists_Data:\n")
+logging.debug(pprint.pformat(artists_data))
 
 from . import views
 
