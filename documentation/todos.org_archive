@@ -282,3 +282,25 @@ CLOSED: [2016-05-31 Tue 20:27]
 :ARCHIVE_CATEGORY: todos
 :ARCHIVE_TODO: DONE
 :END:
+
+* DONE Adjust song urls
+CLOSED: [2016-06-04 Sat 13:30]
+:PROPERTIES:
+:ARCHIVE_TIME: 2016-06-04 Sat 13:30
+:ARCHIVE_FILE: ~/Documents/Code/whsongbook/documentation/todos.org
+:ARCHIVE_OLPATH: Now
+:ARCHIVE_CATEGORY: todos
+:ARCHIVE_TODO: DONE
+:END:
+- Keep capitalization
+- Use metadata, not file name
+
+* DONE Create artist pages
+CLOSED: [2016-06-04 Sat 13:30]
+:PROPERTIES:
+:ARCHIVE_TIME: 2016-06-04 Sat 13:30
+:ARCHIVE_FILE: ~/Documents/Code/whsongbook/documentation/todos.org
+:ARCHIVE_OLPATH: Now
+:ARCHIVE_CATEGORY: todos
+:ARCHIVE_TODO: DONE
+:END:
