@@ -44,6 +44,7 @@ def song(artist_underscore, title_underscore):
     # test for urls to songs that do not exist
     try:
         selection = next(song for song in songs_data if song.metadata["title"]==title and song.metadata["artist"]==artist)
+        artist_link = "/browse/%s" % (artist.replace(" ", "_"))
     except StopIteration:
         return redirect("/browse")
 
@@ -51,6 +52,7 @@ def song(artist_underscore, title_underscore):
                            filename=selection.filename,
                            title=title,
                            artist=artist,
+                           artist_link=artist_link,
                            sections=selection.content
     )
 
