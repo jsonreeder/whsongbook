@@ -1,6 +1,7 @@
 import logging
 import ast
 import re
+import pprint
 from . import failing_songs
 
 # Initialize variables for acceptable song syntax
@@ -19,6 +20,13 @@ class Song:
         self.filename = filename
         self.metadata = metadata
         self.content = content
+
+    def __str__(self):
+        ret = "Song Object:\n"
+        ret += "Filename =  %s\n" % self.filename
+        ret += "Metadata = %s\n" % self.metadata
+        ret += "Content = %s\n" % pprint.pformat(self.content)
+        return ret
 
 def parse_pitch(filename, pitch):
     """Parse pitches in LilyPond syntax."""

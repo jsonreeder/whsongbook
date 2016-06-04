@@ -2,20 +2,6 @@
 #+SUBTITLE: Tasks for development
 
 * Now
-** TODO Add instructions for installing locally
-** TODO Adjust song urls
-- Keep capitalization
-- Use metadata, not file name
-** TODO Add test for songs with duplicate titles and artists
-** TODO Test that songs have titles and artists
-** TODO Create artist pages
-* Soon
-
-** TODO Show all metadata on song pages
-- Now only the title and artist are shown
-
-** TODO Allow filters for Browse view
-** TODO Update Python to 3.5.2
 ** TODO Create script for reformatting Word doc
 *** Coverting chords
 **** Convert WSIWYG chords to LilyPond
@@ -30,25 +16,25 @@ And you ~need a helping ~hand,
 **** Name the file
 **** Script should output the final file
 ** TODO Add more songs from the Word doc
-** TODO Change navbar to be fixed
-** TODO Make navbar light
+* Soon
 
-** TODO Change fonts
-
-** TODO Add genres to TOC
-
-** TODO Clean up CSS
-- Remove the extra bits from borrowed templates
-** TODO Change song title formatting
-- Separator should not be "-" since this can occur in song titles and artist names
-- Maybe "--" instead ?
+** TODO Add instructions for installing locally
+** TODO Add test for songs with duplicate titles and artists
+** TODO Add test for song filenames
+- File name should be artist + ~"_-_"~ + title, with spaces replaced by underscores
+** TODO Test that songs have titles and artists
 ** TODO Add icon
-** TODO Trasition to sub loggers
-- Right now I have parallel logs, not sub logs
-- Consider root logger separate from song logger
-- sub loggers allow shared rules
 * Later
 
+** TODO Change fonts
+** TODO Show all metadata on song pages
+- Now only the title and artist are shown
+** TODO Change navbar to be fixed
+** TODO Add genres to TOC
+** TODO Make navbar light
+** TODO Clean up CSS
+- Remove the extra bits from borrowed templates
+** TODO Allow filters for Browse view
 ** TODO Add times to Logging
 - logging format handler
 ** TODO Add search
@@ -68,12 +54,11 @@ And you ~need a helping ~hand,
 - Add an option to download the songook as a PDF or plain text
 
 ** TODO Add better documentation for song syntax
-** Future logging
-
-**** Bad URL redirects
+** TODO Log bad URL redirects
 
 * One Day
 
+** TODO Update Python to 3.5.2
 ** TODO Allow community editing
 - Users can suggest corrections or additions from inside the app
   
