@@ -14,9 +14,10 @@ def about():
 
 @app.route("/random")
 def random():
-    # TODO: Refactor with new song urls
-    selection = choice(songs_data).filename
-    return redirect("/songs/%s" % (selection[:-5]))
+    selection = choice(songs_data)
+    artist_underscore = selection.metadata["artist"].replace(" ", "_")
+    title_underscore = selection.metadata["title"].replace(" ", "_")
+    return redirect("/browse/%s/%s" % (artist_underscore, title_underscore))
 
 @app.route("/browse")
 def browse():
