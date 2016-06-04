@@ -33,7 +33,7 @@
 {% endmacro %}
 
 {% macro list_song(song) %}
-<a href="songs/{{song[0]}}">{{ song[1] }} ({{ song[2] }})</a>
+<a href="{{song[0]}}">{{ song[1] }} ({{ song[2] }})</a>
 {% endmacro %}
 
 {% macro nav_link(endpoint, name) %}
@@ -58,7 +58,7 @@
 <tbody>
     {% for song in songs %}
     <tr>
-        <td><a href="songs/{{song[0]}}">{{ song[1] }}</td>
+        <td><a href="{{song[0]}}">{{ song[1] }}</td>
         <td>{{ song[2] }}</td>
     </tr>
     {% endfor %}

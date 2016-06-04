@@ -1,8 +1,8 @@
-from . import app, songs_data, artists
-from flask import render_template, redirect
+import ast
 from os import listdir
 from random import choice
-import ast
+from flask import render_template, redirect
+from . import app, songs_data, artists
 
 @app.route("/")
 def home():
@@ -14,21 +14,9 @@ def about():
 
 @app.route("/random")
 def random():
+    # TODO: Refactor with new song urls
     selection = choice(songs_data).filename
     return redirect("/songs/%s" % (selection[:-5]))
-
-@app.route("/browse_old")
-def browse_old():
-    songs = []
-    for song in songs_data:
-        no_extension = song.filename[:-5]
-        title = song.metadata["title"]
-        artist = song.metadata["artist"]
-        songs.append([no_extension, title, artist])
-
-    return render_template("browse.html",
-                           songs = sorted(songs, key=lambda song: song[1])
-    )
 
 @app.route("/browse")
 def browse():
@@ -36,35 +24,18 @@ def browse():
     for song in songs_data:
         title = song.metadata["title"]
         artist = song.metadata["artist"]
-        link = "%s__-__%s" % (title.replace(" ", "_"), artist.replace(" ", "_"))
+        link = "/browse/%s/%s" % (artist.replace(" ", "_"), title.replace(" ", "_"))
         songs.append([link, title, artist])
 
     return render_template("browse.html",
                            songs = sorted(songs, key=lambda song: song[1])
     )
-@app.route("/songs_old/<title>")
-def song_old(title):
 
-    # test for urls to songs that do not exist
-    try:
-        selection = next(song for song in songs_data if song.filename[:-5]==title)
-    except StopIteration:
-        # return redirect({{ url_for(browse) }})
-        return redirect("/browse")
+@app.route("/browse/<artist_underscore>/<title_underscore>")
+def song(artist_underscore, title_underscore):
 
-    return render_template("song.html",
-                           filename=selection.filename,
-                           title=selection.metadata['title'],
-                           artist=selection.metadata['artist'],
-                           sections=selection.content
-    )
-
-@app.route("/songs/<title_artist>")
-def song(title_artist):
-
-    title_nospace, artist_nospace = title_artist.split("__-__")
-    title = title_nospace.replace("_", " ")
-    artist = artist_nospace.replace("_", " ")
+    artist = artist_underscore.replace("_", " ")
+    title = title_underscore.replace("_", " ")
 
     # test for urls to songs that do not exist
     try:
