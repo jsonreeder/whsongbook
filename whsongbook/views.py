@@ -1,8 +1,9 @@
 import ast
 from os import listdir
 from random import choice
+from collections import defaultdict
 from flask import render_template, redirect
-from . import app, songs_data, artists
+from . import app, songs_data, artists_data
 
 @app.route("/")
 def home():
@@ -23,13 +24,15 @@ def random():
 def browse():
     songs = []
     for song in songs_data:
-        title = song.metadata["title"]
-        artist = song.metadata["artist"]
-        link = "/browse/%s/%s" % (artist.replace(" ", "_"), title.replace(" ", "_"))
-        songs.append([link, title, artist])
+        cur = defaultdict(list)
+        cur["artist"] = song.metadata["artist"]
+        cur["title"] = song.metadata["title"]
+        cur["artist_link"] = "/browse/%s" % (cur["artist"].replace(" ", "_"))
+        cur["song_link"] = "%s/%s" % (cur["artist_link"], cur["title"].replace(" ", "_"))
+        songs.append(cur)
 
     return render_template("browse.html",
-                           songs = sorted(songs, key=lambda song: song[1])
+                           songs = sorted(songs, key=lambda song: song["title"])
     )
 
 @app.route("/browse/<artist_underscore>/<title_underscore>")
@@ -51,24 +54,26 @@ def song(artist_underscore, title_underscore):
                            sections=selection.content
     )
 
+@app.route("/browse/<artist_underscore>")
+def artist(artist_underscore):
 
-@app.route("/artists/<name>")
-def artist(name):
-    # TODO: Return to this, it is incomplete
+    artist = artist_underscore.replace("_", " ")
 
-    # Test for urls to artists that do not exist
-    name = name.replace("_", " ")
-    # lower_case_artists = [a.replace(" ", "_").lower() for a in artists]
-    if name not in artists.keys():
+    # test for urls to artists that do not exist
+    if artist not in artists_data.keys():
         return redirect("/browse")
     else:
-        songs = artists[name]
+        songs = []
+        for song in artists_data[artist]:
+            cur = defaultdict(list)
+            cur["title"] = song
+            cur["link"] = "/browse/%s/%s" % (artist_underscore, song.replace(" ", "_"))
+            songs.append(cur)
+
         return render_template("artist.html",
-                                artist = name,
-                                songs = songs
+                            artist = artist,
+                            songs = songs
         )
-
-
 
 @app.route("/songs_list")
 def songs_list():

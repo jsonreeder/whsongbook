@@ -4,7 +4,7 @@
     <h1>{{ artist }}</h1>
         <ul>
             {% for song in songs %}
-            <li><a href="songs/{{song[0]}}">{{ song[1] }}</a></li>
+            <li><a href="{{ song["link"] }}">{{ song["title"] }}</a></li>
             {% endfor %}
         </ul>
 {% endblock %}

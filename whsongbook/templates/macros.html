@@ -58,8 +58,8 @@
 <tbody>
     {% for song in songs %}
     <tr>
-        <td><a href="{{song[0]}}">{{ song[1] }}</td>
-        <td>{{ song[2] }}</td>
+        <td><a href = "{{  song["song_link"] }}">{{ song["title"] }}</a></td>
+        <td><a href = "{{ song["artist_link"] }}">{{ song["artist"] }}</a></td>
     </tr>
     {% endfor %}
     <tr>
