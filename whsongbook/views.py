@@ -1,4 +1,4 @@
-from . import app, songs_data
+from . import app, songs_data, artists
 from flask import render_template, redirect
 from os import listdir
 from random import choice
@@ -46,6 +46,24 @@ def song(title):
                            artist=selection.metadata['artist'],
                            sections=selection.content
     )
+
+@app.route("/artists/<name>")
+def artist(name):
+    # TODO: Return to this, it is incomplete
+
+    # Test for urls to artists that do not exist
+    name = name.replace("_", " ")
+    # lower_case_artists = [a.replace(" ", "_").lower() for a in artists]
+    if name not in artists.keys():
+        return redirect("/browse")
+    else:
+        songs = artists[name]
+        return render_template("artist.html",
+                                artist = name,
+                                songs = songs
+        )
+
+
 
 @app.route("/songs_list")
 def songs_list():
