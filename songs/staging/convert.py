@@ -2,6 +2,7 @@
 infile = "junk_in.txt"
 outfile = "junk_out.txt"
 out_text = ""
+delimeter = "\\"
 
 # Read file
 with open(infile, "r") as f:
@@ -37,6 +38,31 @@ with open(infile, "r") as f:
                 type = "chorus"
                 content = ""
 
+            # Parse chords
+            if delimeter in str(content):
+                new_content = []
+                i = 0
+                while i < len(content) - 1:
+                    chord_line = content[i]
+                    lyric_line = content[i+1]
+                    if delimeter in lyric_line:
+                        chords = chord_line.split()
+                        lyrics = lyric_line
+                        while len(chords) > 0:
+                            chord = chords.pop(0)
+                            lyrics = lyrics.replace(delimeter, "[%s]" % (chord), 1)
+
+                    # Throw error if chords are not placed
+                    # if len(chords) > 0:
+                    #     print("ERROR: Chords (%s) have not been placed" % str(chords))
+
+                    # Throw error if delimeter remains in line
+
+                    new_content.append(lyrics)
+                    i += 2
+
+                content = new_content
+
             parsed_parts.append((type, content))
 
     # Format
@@ -53,8 +79,6 @@ with open(infile, "r") as f:
         # Chorus
         elif content == "":
             out_text += "%s\n" % type
-
-
 
         # Others
         else:
