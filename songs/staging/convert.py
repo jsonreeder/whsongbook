@@ -49,8 +49,13 @@ with open(infile, "r") as f:
                     lyric_line = content[i+1]
                     if delimeter in lyric_line:
 
-                        # Parse chords
                         chords = chord_line.split()
+                        # Check to see that all chords have a place to go
+                        if lyric_line.count(delimeter) != len(chords):
+                            print("ERROR: Unparsable line. No. of chords (%d) != no. of delimeters (%d).\n - Chords: %s\n - Line: %s" % (len(chords), lyric_line.count(delimeter), chords, lyric_line))
+
+
+                        # Parse chords
                         new_chords = []
                         for c in chords:
                             new_chord = ''
@@ -70,12 +75,6 @@ with open(infile, "r") as f:
                         while len(chords) > 0:
                             chord = chords.pop(0)
                             lyrics = lyrics.replace(delimeter, "[%s]" % (chord), 1)
-
-                    # Throw error if chords are not placed
-                    # if len(chords) > 0:
-                    #     print("ERROR: Chords (%s) have not been placed" % str(chords))
-
-                    # Throw error if delimeter remains in line
 
                     new_content.append(lyrics)
                     i += 2
@@ -110,9 +109,14 @@ with open(infile, "r") as f:
                 out_text += "    %s\n" % line
         out_text += "\n"
 
-
 # Write output
 outfile = "%s - %s.song" % (title, artist)
 outfile = outfile.replace(" ", "_")
 with open(outfile, "w") as f:
     f.write(out_text)
+
+# Final check
+if delimeter in out_text:
+    print("ERROR: A delimeter was not parsed.")
+else:
+    print("SUCCESS: wrote %s" % (outfile))
