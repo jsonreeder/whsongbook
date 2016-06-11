@@ -7,6 +7,11 @@ out_text = ""
 with open(infile, "r") as f:
     text = f.read()
 
+    # Strip whitespace
+    text_stripped_list = [line.strip() for line in text.splitlines()]
+    text_stripped = "\n".join(text_stripped_list)
+    text = text_stripped
+
     # Split into parts
     sections = text.split("\n\n")
     parts = []
@@ -28,8 +33,7 @@ with open(infile, "r") as f:
                 type = "header"
 
             # Parse choruses
-            stripped = [c.strip() for c in content]
-            if "(Chorus)" in stripped:
+            if "(Chorus)" in content:
                 type = "chorus"
                 content = ""
 
