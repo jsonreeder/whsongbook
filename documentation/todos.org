@@ -3,18 +3,17 @@
 
 * Now
 ** TODO Create script for reformatting Word doc
-*** Coverting chords
-**** Convert WSIWYG chords to LilyPond
-**** Decide on symbol to mark chord insertion points (~)
-***** Eg
-                       Em           B7
-When you're ~down and ~troubled, 
-              Em       B7       Em
-And you ~need a helping ~hand,
-**** Recognize a line of chords
-- If it contains more than 4 consecutive spaces
-**** Name the file
-**** Script should output the final file
+*** TODO Handle lines with only some chords
+- Example
+  #+BEGIN_EXAMPLE
+                                    Bm(7)                          A  
+  It wears her \out, it wears her \out
+  It wears her out, it wears her out.
+  #+END_EXAMPLE
+
+*** TODO Handle blocks of chords
+- Example
+  ~| Bm7 | Bm7 | A | A |~
 ** TODO Add more songs from the Word doc
 * Soon
 
