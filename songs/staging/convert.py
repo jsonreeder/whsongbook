@@ -1,8 +1,10 @@
 # Initialize gloabls
 infile = "junk_in.txt"
-outfile = "junk_out.txt"
+artist = ""
+title = ""
 out_text = ""
 delimeter = "\\"
+accidentals = {"#": "s", "b": "f"}
 
 # Read file
 with open(infile, "r") as f:
@@ -38,7 +40,7 @@ with open(infile, "r") as f:
                 type = "chorus"
                 content = ""
 
-            # Parse chords
+            # Align chords with lyrics
             if delimeter in str(content):
                 new_content = []
                 i = 0
@@ -46,7 +48,24 @@ with open(infile, "r") as f:
                     chord_line = content[i]
                     lyric_line = content[i+1]
                     if delimeter in lyric_line:
+
+                        # Parse chords
                         chords = chord_line.split()
+                        new_chords = []
+                        for c in chords:
+                            new_chord = ''
+                            for q, c in enumerate(list(c)):
+                                if q == 0:
+                                    new_chord += c.lower()
+                                elif c in accidentals.keys():
+                                    new_chord += accidentals[c]
+                                elif c:
+                                    if ":" not in new_chord:
+                                        new_chord += ":"
+                                    new_chord += "%s" % (c)
+                            new_chords.append(new_chord)
+                        chords = new_chords
+
                         lyrics = lyric_line
                         while len(chords) > 0:
                             chord = chords.pop(0)
@@ -74,6 +93,10 @@ with open(infile, "r") as f:
             out_text += "%s:\n" % (type)
             header_types = {0: "title", 1: "artist", 2: "capo"}
             for i, c in enumerate(content):
+                if i == 0:
+                    title = c
+                elif i == 1:
+                    artist = c
                 out_text += "    %s = \"%s\"\n" % (header_types[i], c)
 
         # Chorus
@@ -89,9 +112,7 @@ with open(infile, "r") as f:
 
 
 # Write output
-# with open(outfile, "w") as f:
-    # for p in parts:
-    #     line = str(p) + "\n\n"
-    #     f.write(line)
-
-print(out_text)
+outfile = "%s - %s.song" % (title, artist)
+outfile = outfile.replace(" ", "_")
+with open(outfile, "w") as f:
+    f.write(out_text)
