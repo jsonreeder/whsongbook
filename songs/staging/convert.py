@@ -1,3 +1,5 @@
+import re
+
 # Initialize gloabls
 infile = "junk_in.txt"
 artist = ""
@@ -41,14 +43,21 @@ with open(infile, "r") as f:
                 content = ""
 
             # Align chords with lyrics
+            # Find sections with any chords
             if delimeter in str(content):
                 new_content = []
                 i = 0
                 while i < len(content) - 1:
                     chord_line = content[i]
                     lyric_line = content[i+1]
-                    if delimeter in lyric_line:
 
+                    # For initial lines without delimeters, write straight away
+                    if delimeter not in lyric_line or not lyric_line:
+                        new_content.append(chord_line)
+                        new_content.append(lyric_line)
+
+                    # For the lines with delimeters, align
+                    else:
                         chords = chord_line.split()
                         # Check to see that all chords have a place to go
                         if lyric_line.count(delimeter) != len(chords):
@@ -59,15 +68,17 @@ with open(infile, "r") as f:
                         new_chords = []
                         for c in chords:
                             new_chord = ''
+                            c = re.sub("[()]", "", c)
                             for q, c in enumerate(list(c)):
                                 if q == 0:
-                                    new_chord += c.lower()
+                                    new_chord += c
                                 elif c in accidentals.keys():
                                     new_chord += accidentals[c]
                                 elif c:
                                     if ":" not in new_chord:
                                         new_chord += ":"
                                     new_chord += "%s" % (c)
+                                new_chord = new_chord.lower()
                             new_chords.append(new_chord)
                         chords = new_chords
 
