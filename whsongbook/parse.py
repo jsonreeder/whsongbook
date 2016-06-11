@@ -149,7 +149,7 @@ def parse_text(filename, text):
 
     for line in text.splitlines():
 
-        # Strip initial white space
+        # Strip trailing white space
         line = line.rstrip()
 
         # Ignore blank lines
