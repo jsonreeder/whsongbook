@@ -1,8 +1,8 @@
 header:
-  title = "Bare Necessities"
-  artist = "Terry Gilkyson"
-  year = 1967
-  genres = ["disney", "musical", "ragtime"]
+    title = "Bare Necessities"
+    artist = "Terry Gilkyson"
+    year = 1967
+    genres = ["disney", "musical", "ragtime"]
 
 chorus:
     Look for the [c] bare ne[c]cessities, the [f]simple bare ne[f]cessities
