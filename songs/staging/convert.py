@@ -45,6 +45,9 @@ with open(infile, "r") as f:
             # Align chords with lyrics
             # Find sections with any chords
             if delimeter in str(content):
+                if len(content) % 2 == 1:
+                    print("WARNING: Uneven number of lines. Check chords here:")
+                    [print("    " + line) for line in content]
                 new_content = []
                 i = 0
                 while i < len(content) - 1:
@@ -52,9 +55,12 @@ with open(infile, "r") as f:
                     lyric_line = content[i+1]
 
                     # For initial lines without delimeters, write straight away
-                    if delimeter not in lyric_line or not lyric_line:
+                    if delimeter not in lyric_line:
                         new_content.append(chord_line)
                         new_content.append(lyric_line)
+
+                    if delimeter in chord_line:
+                        print("ERROR: This line was expected to be a lyric line:\n - %s" % (lyric_line))
 
                     # For the lines with delimeters, align
                     else:
@@ -126,7 +132,7 @@ outfile = outfile.replace(" ", "_")
 with open(outfile, "w") as f:
     f.write(out_text)
 
-# Final check
+# # Final check
 if delimeter in out_text:
     print("ERROR: A delimeter was not parsed.")
 else:
