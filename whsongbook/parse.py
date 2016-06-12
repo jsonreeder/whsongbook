@@ -128,8 +128,9 @@ def parse_chord(filename, chord):
 
         # Parse inversion
         if "/" in chord:
-            inversion_dict = parse_pitch(filename, chord_list.pop(0))
+            inversion_dict = parse_pitch(filename, "".join(chord_list))
             chord_dict["inversion"] = inversion_dict["note"]
+            chord_dict["inversion_accidental"] = inversion_dict["accidental"]
 
         return chord_dict
 
