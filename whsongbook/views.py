@@ -52,6 +52,7 @@ def song(artist_underscore, title_underscore):
                            filename=selection.filename,
                            title=title,
                            artist=artist,
+                           metadata=selection.metadata,
                            artist_link=artist_link,
                            sections=selection.content
     )
