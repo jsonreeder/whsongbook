@@ -1,6 +1,12 @@
 {% import "macros.html" as macros %}
 {% extends "base.html" %}
 {% block content %}
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/song.css') }}">
+      {% if metadata["language"] %}
+          {% if metadata["language"] == "ar" %}
+            <link rel="stylesheet" href="{{ url_for('static', filename='css/rtl.css') }}">
+          {% endif %}
+      {% endif %}
 	    <h1>{{ title }}</h1>
 	    <h2><a href={{ artist_link }}>{{ artist }}</a></h2>
       {% if metadata["capo"] %}

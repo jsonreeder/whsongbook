@@ -1,0 +1,26 @@
+body {
+    direction: rtl;
+    unicode-bidi: embed;
+}
+
+p {
+    font-size: 1.25em;
+}
+
+.pre-chorus {
+    margin-left: 0;
+    font-style: normal;
+    margin-right: 2em;
+}
+
+.chorus {
+    font-weight: bold;
+    margin-left: 0;
+    margin-right: 4em;
+}
+
+.bridge {
+    margin-left: 0;
+    margin-right: 6em;
+    font-style: italic;
+}
