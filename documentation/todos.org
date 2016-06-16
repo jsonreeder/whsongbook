@@ -23,6 +23,8 @@
 - File name should be artist + ~"_-_"~ + title, with spaces replaced by underscores
 ** TODO Test that songs have titles and artists
 ** TODO Add icon
+** TODO Support line-initial spaces
+- See "Us - Regina Spektor"
 * Later
 
 ** TODO Change fonts
