@@ -4,7 +4,9 @@
 .verse,
 .bridge,
 .pre-chorus,
-.instrumental {
+.instrumental,
+.intro,
+.interlude {
     margin-top: 1em;
 }
 

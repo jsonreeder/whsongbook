@@ -5,7 +5,7 @@ import pprint
 from . import failing_songs
 
 # Initialize variables for acceptable song syntax
-SECTION_NAMES = ["header", "verse", "pre-chorus", "chorus", "bridge", "instrumental", "notes"]
+SECTION_NAMES = ["header", "verse", "pre-chorus", "chorus", "bridge", "instrumental", "notes", "intro", "interlude"]
 PITCHES = "[a-g]"
 ACCIDENTALS = ["f", "s"]
 DURATIONS = "^[0-9]+$"
