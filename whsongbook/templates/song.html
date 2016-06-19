@@ -4,7 +4,7 @@
       <link rel="stylesheet" href="{{ url_for('static', filename='css/song.css') }}">
       {% if metadata["language"] %}
           {% if metadata["language"] == "ar" %}
-            <link rel="stylesheet" href="{{ url_for('static', filename='css/rtl.css') }}">
+            <link rel="stylesheet" href="{{ url_for('static', filename='css/song_rtl.css') }}">
           {% endif %}
       {% endif %}
 	    <h1>{{ title }}</h1>
