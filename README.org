@@ -1,8 +1,12 @@
 #+TITLE: West House Songbook
 
+[[file:whsongbook/static/img/jar.png]]
+
+
 # Buttons
 [[https://travis-ci.org/jlreeder/whsongbook][https://travis-ci.org/jlreeder/whsongbook.svg?branch=master]]
 [[https://github.com/syl20bnr/spacemacs][file:https://cdn.rawgit.com/syl20bnr/spacemacs/442d025779da2f62fc86c2082703697714db6514/assets/spacemacs-badge.svg]]
+
 
 * Mission
 The West House Songbook is an open-source songbook. Its mission is to provide simple transcriptions of lyrics and chords to pop and folk songs for group singalongs. It began as a Word document, and in the early stages of conversion into a web app.
@@ -39,7 +43,9 @@ This songbook was born out of the West House community, and if it weren't for so
 
 For song transcription, I'm grateful to those members of West House who first began the songbook and those who have helped me to expand it.
 
-For the development, I have Chris Angelico aka Rosuav to thank for many hours of mentorship and for defining, editing, and correcting much of the digital machinery. More about Rosuav: [[https://github.com/rosuav][github.com/rosuav]].
+The mason jar illustration was created by Marguerite Preston. For more about her writing and her baking see [[margueritepreston.com][http://margueritepreston.com/]].
+
+I have Chris Angelico (aka Rosuav) to thank for many hours of Python mentorship and for defining, editing, and correcting much of the digital machinery. More about Rosuav: [[https://github.com/rosuav][github.com/rosuav]].
 
 As mentioned in ~Syntax~ above, particulars of the song markup syntax were inspired by LilyPond and Chordii. More info about LilyPond: [[http://lilypond.org/][lilypond.org]]. More info about Chordii: [[http://www.vromans.org/johan/projects/Chordii/chordpro/][vromans.org]].
 
