@@ -1,6 +1,7 @@
+#+TITLE: West House Songbook
+
 [[file:whsongbook/static/img/jar.png]]
 
-#+TITLE: West House Songbook
 
 # Buttons
 [[https://travis-ci.org/jlreeder/whsongbook][https://travis-ci.org/jlreeder/whsongbook.svg?branch=master]]
