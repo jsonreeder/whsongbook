@@ -1,7 +1,8 @@
 env
 *.pyc
-songs/.DS_Store
-songs/archives/.DS_Store
+**/.DS_Store
 /junk/*
 archives/
 *.log
+**/junk*
+.*

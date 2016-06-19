@@ -304,3 +304,24 @@ CLOSED: [2016-06-04 Sat 13:30]
 :ARCHIVE_CATEGORY: todos
 :ARCHIVE_TODO: DONE
 :END:
+
+* DONE Coverting chords
+CLOSED: [2016-06-11 Sat 16:01]
+:PROPERTIES:
+:ARCHIVE_TIME: 2016-06-11 Sat 16:01
+:ARCHIVE_FILE: ~/Documents/Code/whsongbook/documentation/todos.org
+:ARCHIVE_OLPATH: Now/Create script for reformatting Word doc
+:ARCHIVE_CATEGORY: todos
+:ARCHIVE_TODO: DONE
+:END:
+** Convert WSIWYG chords to LilyPond
+** Decide on symbol to mark chord insertion points (~)
+*** Eg
+                       Em           B7
+When you're ~down and ~troubled, 
+              Em       B7       Em
+And you ~need a helping ~hand,
+** Recognize a line of chords
+- If it contains more than 4 consecutive spaces
+** Name the file
+** Script should output the final file

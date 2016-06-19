@@ -5,7 +5,7 @@ import pprint
 from . import failing_songs
 
 # Initialize variables for acceptable song syntax
-SECTION_NAMES = ["header", "verse", "chorus", "bridge", "instrumental", "notes"]
+SECTION_NAMES = ["header", "verse", "pre-chorus", "chorus", "bridge", "instrumental", "notes", "intro", "interlude"]
 PITCHES = "[a-g]"
 ACCIDENTALS = ["f", "s"]
 DURATIONS = "^[0-9]+$"
@@ -128,8 +128,9 @@ def parse_chord(filename, chord):
 
         # Parse inversion
         if "/" in chord:
-            inversion_dict = parse_pitch(filename, chord_list.pop(0))
+            inversion_dict = parse_pitch(filename, "".join(chord_list))
             chord_dict["inversion"] = inversion_dict["note"]
+            chord_dict["inversion_accidental"] = inversion_dict["accidental"]
 
         return chord_dict
 
@@ -149,7 +150,7 @@ def parse_text(filename, text):
 
     for line in text.splitlines():
 
-        # Strip initial white space
+        # Strip trailing white space
         line = line.rstrip()
 
         # Ignore blank lines
