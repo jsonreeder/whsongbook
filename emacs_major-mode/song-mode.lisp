@@ -10,9 +10,9 @@
   ;; comment marker
   '("#")
   ;; keywords
-  '("title" "artist" "genres" "year" "capo")
+  '("title" "artist" "genres" "year" "capo" "language")
   ;; other faces
-  '(("header\\|verse\\|pre-chorus\\|chorus\\|bridge\\|instrumental\\|notes\\|intro\\\interlude" . 'font-lock-function-name-face)
+  '(("header\\|verse\\|pre-chorus\\|chorus\\|bridge\\|instrumental\\|notes\\|intro\\|interlude" . 'font-lock-function-name-face)
     ("\\[.+?\\]" . 'chord-face)
     )
   ;; file extension for which to activate this mode
