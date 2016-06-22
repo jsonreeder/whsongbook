@@ -35,6 +35,12 @@
     margin-bottom: -1em;
 }
 
+.intro,
+.interlude,
+.outro {
+    line-height: 75%;
+}
+
 /*Song title*/
 h1 {
     text-decoration: underline;
