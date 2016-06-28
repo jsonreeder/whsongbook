@@ -6,7 +6,8 @@
 .pre-chorus,
 .instrumental,
 .intro,
-.interlude {
+.interlude,
+.outro {
     margin-top: 1em;
 }
 
@@ -28,6 +29,16 @@
 .notes {
     font-style: italic;
     margin-top: 3em;
+}
+
+.intro {
+    margin-bottom: -1em;
+}
+
+.intro,
+.interlude,
+.outro {
+    line-height: 75%;
 }
 
 /*Song title*/

@@ -2,7 +2,7 @@ header:
     title = "Eight Days a Week"
     artist = "The Beatles"
 
-instrumental:
+intro:
     [| d | e | g | d |]
 
 verse:
@@ -52,5 +52,5 @@ chorus:
     Eight days a week
     Eight days a week
 
-instrumental:
+outro:
     [| d | e | g | d |]
