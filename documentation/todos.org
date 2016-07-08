@@ -2,19 +2,8 @@
 #+SUBTITLE: Tasks for development
 
 * Now
-** TODO Create script for reformatting Word doc
-*** TODO Handle lines with only some chords
-- Example
-  #+BEGIN_EXAMPLE
-                                    Bm(7)                          A  
-  It wears her \out, it wears her \out
-  It wears her out, it wears her out.
-  #+END_EXAMPLE
-
-*** TODO Handle blocks of chords
-- Example
-  ~| Bm7 | Bm7 | A | A |~
-** TODO Add more songs from the Word doc
+** Support time signatures
+- See "You've Got to Hide Your Love Away"
 * Soon
 
 ** TODO Add instructions for installing locally
@@ -76,3 +65,12 @@
 - Then other users can join the "singalong"
 - Users could add songs to a singalong queue like creating a playlist
 - Users could easily navigate to the song that was currently being sung
+* Unsorted
+** Max line length
+** Better handling for multi chords with no lyrics
+** Better handling for chords before lyrics
+- Now, I'm adding three spaces before lyrics that are preceded by a code. The goal is to make sure that the chord clearly appears /before/ the lyric. This technique works, but it adds unnecessary spaces in the data. Since this is a formatting issue, it would be better to handle this with css.
+** Punctuation
+- I think all punctuation can be removed
+** Add family friendly mode
+- Auto replace certain words with PG equivalents

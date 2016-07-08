@@ -325,3 +325,32 @@ And you ~need a helping ~hand,
 - If it contains more than 4 consecutive spaces
 ** Name the file
 ** Script should output the final file
+
+* TODO Create script for reformatting Word doc
+:PROPERTIES:
+:ARCHIVE_TIME: 2016-07-07 Thu 10:33
+:ARCHIVE_FILE: ~/Created/Projects/whsongbook/documentation/todos.org
+:ARCHIVE_OLPATH: Now
+:ARCHIVE_CATEGORY: todos
+:ARCHIVE_TODO: TODO
+:END:
+** TODO Handle lines with only some chords
+- Example
+  #+BEGIN_EXAMPLE
+                                    Bm(7)                          A  
+  It wears her \out, it wears her \out
+  It wears her out, it wears her out.
+  #+END_EXAMPLE
+
+** TODO Handle blocks of chords
+- Example
+  ~| Bm7 | Bm7 | A | A |~
+
+* TODO Add more songs from the Word doc
+:PROPERTIES:
+:ARCHIVE_TIME: 2016-07-07 Thu 10:34
+:ARCHIVE_FILE: ~/Created/Projects/whsongbook/documentation/todos.org
+:ARCHIVE_OLPATH: Now
+:ARCHIVE_CATEGORY: todos
+:ARCHIVE_TODO: TODO
+:END:
