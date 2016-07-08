@@ -74,3 +74,13 @@
 - I think all punctuation can be removed
 ** Add family friendly mode
 - Auto replace certain words with PG equivalents
+** Add metadata - related songs
+- For example "Wild World" and أوقات يا دنيا
+- Could start by hard coding this, and then later try and learn it / scrape it from elsewhere
+** Change "pre-chorus" and "chorus" for non-English
+- Spanish can have:
+  - pre-coro
+  - coro
+- Arabic can have:
+  - ما قبل اللازمة
+  - اللازمة
