@@ -31,14 +31,8 @@
     margin-top: 3em;
 }
 
-.intro {
+.interlude {
     margin-bottom: -1em;
-}
-
-.intro,
-.interlude,
-.outro {
-    line-height: 75%;
 }
 
 /*Song title*/
