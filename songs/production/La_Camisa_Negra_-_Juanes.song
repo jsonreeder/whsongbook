@@ -4,7 +4,6 @@ header:
     capo = 2
     language = "es"
 
-
 verse:
     [| e:m | b:7 | e:m | a:m b:7 |]
 
