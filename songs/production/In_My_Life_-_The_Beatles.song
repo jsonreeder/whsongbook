@@ -1,0 +1,32 @@
+header:
+    title = "In My Life"
+    artist = "The Beatles"
+    capo = 2
+
+interlude:
+    [| g g:sus g | d | (x2)|]
+
+verse:
+    There are [g]places [d]I'll [e:m]remember  [g:7]
+    All my [c]li-[c:m]ife though [g]some have changed
+    Some for[g]ever [d]not for [e:m]better [g:7]
+    Some have [c]go-[c:m]one, and [g]some remain
+
+chorus:
+    All these [e:m]places have their [c]moments
+    With [f]lovers and friends, I [g]still can recall
+    Some are [e:m]dead and some are [a:7]living
+    In [c]my [c:m]life, I've [g]loved them all
+
+verse:
+    But of all these friends and lovers
+    There is no one compared with you
+    And these memories lose their meaning
+    When I think of love as something new
+
+chorus:
+    Though I know I'll never lose affection
+    For people and things that went before
+    I know I'll often stop and think about them
+    In my life I'll love you more
+    In my life I'll love you more

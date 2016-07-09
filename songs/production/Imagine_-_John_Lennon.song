@@ -1,0 +1,49 @@
+header:
+    title = "Imagine"
+    artist = "John Lennon"
+
+interlude:
+    [| c c:maj7 | f f:sus4 f:.5- |]
+
+verse:
+    [c]   Imagine there's no [f]heaven
+    [c]   It's easy if you [f]try
+    [c]   No hell below [f]us
+    [c]   Above us only [f]sky
+
+chorus:
+    [a:m]   Imagine [d:m]all the [f]people
+    [g]Living for [g:7]today, ah-aah ah-ah-[c]ah
+
+verse:
+    Imagine there's no countries
+    It isn't hard to do
+    Nothing to kill or die for
+    And no religion too
+
+chorus:
+    [a:m]   Imagine [d:m]all the [f]people
+    [g]Living life in [g:7]peace, you-ooh ooh-ooh-[c]ooh
+
+bridge:
+    [f]   You may [g]say I'm a [c]dreamer [e]
+    [f]   But I'm [g]not the only [c]one [e]
+    [f]   I hope some[g]day you'll [c]join us [e]
+    [f]   And the [g]world will [c]be as one
+
+verse:
+    Imagine no possessions
+    I wonder if you can
+    No need for greed or hunger
+    A brotherhood of man
+
+chorus:
+    Imagine all the people
+    Sharing all the world
+
+bridge:
+    [f]   You may [g]say I'm a [c]dreamer [e]
+    [f]   But I'm [g]not the only [c]one [e]
+    [f]   I hope some[g]day you'll [c]join us [e]
+    [f]   And the [g]world will [c]live as one
+
