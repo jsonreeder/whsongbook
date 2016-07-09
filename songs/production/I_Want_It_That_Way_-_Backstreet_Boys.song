@@ -3,7 +3,7 @@ header:
     artist = "Backstreet Boys"
     capo = 2
 
-interlude:
+instrumental:
     [| e:m e:m.5+ | c g |]
 
 verse:

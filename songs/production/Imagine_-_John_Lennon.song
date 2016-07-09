@@ -2,7 +2,7 @@ header:
     title = "Imagine"
     artist = "John Lennon"
 
-interlude:
+instrumental:
     [| c c:maj7 | f f:sus4 f:.5- |]
 
 verse:
