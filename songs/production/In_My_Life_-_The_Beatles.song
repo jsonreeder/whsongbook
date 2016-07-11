@@ -3,7 +3,7 @@ header:
     artist = "The Beatles"
     capo = 2
 
-interlude:
+instrumental:
     [| g g:sus g | d | (x2)|]
 
 verse:
