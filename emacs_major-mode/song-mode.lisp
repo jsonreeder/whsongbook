@@ -10,7 +10,7 @@
   ;; comment marker
   '("#")
   ;; keywords
-  '("title" "artist" "genres" "year" "capo" "language")
+  '("title" "artist" "genres" "year" "capo" "language" "associated_artists" "associated_songs")
   ;; other faces
   '(("header\\|verse\\|pre-chorus\\|chorus\\|bridge\\|instrumental\\|notes\\|intro\\|interlude\\|outro" . 'font-lock-function-name-face)
     ("\\[.+?\\]" . 'chord-face)
