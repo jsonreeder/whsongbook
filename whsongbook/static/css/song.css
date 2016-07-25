@@ -63,6 +63,11 @@ h3 {
 }
 
 
+/* Chord formatting */
+aside {
+    padding-right: .5em;
+}
+
 /*Uncomment to hide the chords*/
 /*aside {*/
 /*	display: none;*/
