@@ -111,9 +111,16 @@ with open(infile, "r") as f:
             for i, c in enumerate(content):
                 if i == 0:
                     title = c
+                    out_text += "    %s = \"%s\"\n" % ("title", title)
                 elif i == 1:
                     artist = c
-                out_text += "    %s = \"%s\"\n" % (header_types[i], c)
+                    out_text += "    %s = \"%s\"\n" % ("artist", artist)
+                elif "apo" in c:
+                    digit = re.compile(r"[^\d]")
+                    capo = int(digit.sub("", c))
+                    out_text += "    %s = %d\n" % ("capo", capo)
+                else:
+                    out_text += "    %s = \"%s\"\n" % ("notes", c)
 
         # Chorus
         elif content == "":
