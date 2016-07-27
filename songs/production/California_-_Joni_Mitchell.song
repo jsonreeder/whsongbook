@@ -3,7 +3,7 @@ header:
     artist = "Joni Mitchell"
 
 instrumental:
-    [ e:m7 | a b | e e:sus |]
+    [e:m7 | a b | e e:sus |]
 
 verse:
     [e]Sitting in a park in Paris, France
