@@ -136,11 +136,20 @@ with open(infile, "r") as f:
 # Remove trailing blank lines
 out_text = out_text.strip()
 
+# Remove line-final punctution
+out_text_stripped = ""
+for line in out_text.splitlines():
+    if line.endswith(".") or line.endswith(","):
+        out_text_stripped += line[:-1]
+    else:
+        out_text_stripped += line
+    out_text_stripped += "\n"
+
 # Write output
 outfile = "%s - %s.song" % (title, artist)
 outfile = outfile.replace(" ", "_")
 with open(outfile, "w") as f:
-    f.write(out_text)
+    f.write(out_text_stripped)
 
 # # Final check
 if delimeter in out_text:
