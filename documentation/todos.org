@@ -84,3 +84,9 @@
 - Arabic can have:
   - ما قبل اللازمة
   - اللازمة
+** Reformat "add" chords
+- They look ugly
+- Consider brackets or superscript
+- See "Yoshimi"
+** Display all metadata
+** Consider different formatting for intros and outros

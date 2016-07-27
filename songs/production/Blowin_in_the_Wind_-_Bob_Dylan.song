@@ -1,0 +1,41 @@
+header:
+    title = "Blowin in the Wind"
+    artist = "Bob Dylan"
+
+verse:
+    [d]How many [g]roads must a [d]man walk down
+    Be[d]fore you [g]call him a [d]man?
+    Yes, 'n' [d]how many [g]seas must a [a]white dove [d]sail
+    Be[d]fore she [g]sleeps in the [a]sand?
+    Yes, 'n [d]how many [g]times must the [a]cannon balls [d]fly
+    Be[d]fore they're [g]forever [d]banned?
+
+chorus:
+    The [g]answer, my [a]friend, is [d]blowin' in the [b:m]wind,
+    The [g]answer is [a]blowin' in the [d]wind
+
+verse:
+    How many years can a mountain exist
+    Before it's washed to the sea?
+    Yes, 'n' how many years can some people exist
+    Before they're allowed to be free?
+    Yes, 'n' how many times can a man turn his head
+    Pretending he just doesn't see?
+
+chorus
+
+verse:
+    How many times must a man look up
+    Before he can see the sky?
+    Yes, 'n' how many ears must one man have
+    Before he can hear people cry?
+    Yes, 'n' how many deaths will it take till he knows
+    That too many people have died?
+
+chorus
+
+notes:
+    Original: Capo 9
+    Verse - | G C | D/A G | G C | D/A |
+    Chorus - | C D | G C | C D | G |
+    D/A: x00232

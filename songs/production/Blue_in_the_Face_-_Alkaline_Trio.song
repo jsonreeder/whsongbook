@@ -1,0 +1,50 @@
+header:
+    title = "Blue in the Face"
+    artist = "Alkaline Trio"
+    time = "6/8"
+
+instrumental:
+    [| e | e:sus4 | (x4)]
+
+verse:
+    Its about [e:5]time, [e:4] [e:3] [e:4]   that [cs:5.5+]I came [cs:5]clean with [a:5]you
+    No longer fine,          I'm no longer running smooth
+    I thought that I         found myself on to something new
+    Just one more [e:5]line [e:4] [e:3] [e:4]   I repeat [cs:5.5+]over and [cs:5]over a[b]gain
+
+chorus:
+    Till I'm blue in the [a:sus2]face with a [e]choking re[b]gret
+    Cause I talked in [a:sus2]circles 'round [e]you on my [b]bed
+    Can't say I [a:sus2]blame you one [e]bit when you [b]kept it all
+    In[gs:5.5+]side      [a:5]   when you [b:5]left that [e]night
+
+instrumental:
+    [| e:5 e:4 | e:3 e:4 | cs:5.5+ cs:5 | a:5 |]
+
+verse:
+    Its about time, that you got sick of me
+    No longer fun, and so far from interesting
+    I thought that I found me a cure for feeling old
+    Just one more line to keep me sleeping loudly and cold
+
+chorus:
+    In disgrace with a shameful regret
+    As I talk in tongues to myself in my bed
+    Can't say I blame you one bit when you kept it all
+    Inside, when you left that night
+
+instrumental:
+    [| e | e:sus4 | e | e:sus4 |]
+
+bridge:
+    And [e:5]all that followed [ds:5.5+]fell, like [b]mercury to [a]hell
+    So now we lost our heads for the last time
+    And all that followed fell, like mercury to hell
+    So now we lost our heads for the last time
+
+outro:
+    And [e]I don't [e:sus]dream since [e]I quit [gs:5.5+]sleeping [a:5]
+    And I haven't slept since I met you
+    And you can't breathe without coughing in daytime
+    Neither can [b]I       so what do you say?
+    [a]   [b]   Your coffin or [e]mine?

@@ -111,9 +111,16 @@ with open(infile, "r") as f:
             for i, c in enumerate(content):
                 if i == 0:
                     title = c
+                    out_text += "    %s = \"%s\"\n" % ("title", title)
                 elif i == 1:
                     artist = c
-                out_text += "    %s = \"%s\"\n" % (header_types[i], c)
+                    out_text += "    %s = \"%s\"\n" % ("artist", artist)
+                elif "apo" in c:
+                    digit = re.compile(r"[^\d]")
+                    capo = int(digit.sub("", c))
+                    out_text += "    %s = %d\n" % ("capo", capo)
+                else:
+                    out_text += "    %s = \"%s\"\n" % ("notes", c)
 
         # Chorus
         elif content == "":
@@ -126,11 +133,23 @@ with open(infile, "r") as f:
                 out_text += "    %s\n" % line
         out_text += "\n"
 
+# Remove trailing blank lines
+out_text = out_text.strip()
+
+# Remove line-final punctution
+out_text_stripped = ""
+for line in out_text.splitlines():
+    if line.endswith(".") or line.endswith(","):
+        out_text_stripped += line[:-1]
+    else:
+        out_text_stripped += line
+    out_text_stripped += "\n"
+
 # Write output
 outfile = "%s - %s.song" % (title, artist)
 outfile = outfile.replace(" ", "_")
 with open(outfile, "w") as f:
-    f.write(out_text)
+    f.write(out_text_stripped)
 
 # # Final check
 if delimeter in out_text:

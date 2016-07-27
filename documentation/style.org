@@ -1,0 +1,31 @@
+#+TITLE: Syle Guide
+* Chord Placement
+- Chord placement means the alignment of the chords with the lyrics.
+- The guiding principle with chord placement is to be as simple to read as possible while still being faithful to the original timing.
+- Chords should be placed immediately before the syllable during which they occur.
+- If the original line is synchopated, it can be hard to determine exactly where the chord should go. In cases of ambiguity, choose the alignment that will be simplest and easiest to read.
+- When the lyrics for a given line start after the first chord, the first lyric should be preceded by three spaces.
+  - Correct:
+    : [g]   I pulled into [b:m]Nazareth, was [c]feeling about half past [g]dead
+* Punctuation
+- The primary function of punctuation in the lyrics is to indicate rests within lines.
+- The guiding principle with punctuation is to remove it unless it is helpful to the singing.
+- The main exceptions are question marks (?) and exclamation marks (!). These may be included.
+* Quotations
+- Quotations should be indicated not by quotation marks, but by a comma and a capital.
+  - Correct:
+    : They said, How long can you hang around?
+    : I said, A week, maybe two
+  - Incorrect:
+    : They said, "How long can you hang around?"
+    : I said, "A week, maybe two"
+* Capitalization
+- The first word in each line should be capitalized.
+* Explicit Lyrics
+- The general philosophy for lyrics is that they should remain true to the original song, even when they are explicit.
+- Exceptions can be made if an offending line can easily be changed without significantly altering it.
+  - A line that was altered from the original:
+    : I'm a-gonna stay where you sleep all day where they hung the *jerk* that invented work
+  - The original:
+    : I'm a-gonna stay where you sleep all day where they hung the *Turk* that invented work
+

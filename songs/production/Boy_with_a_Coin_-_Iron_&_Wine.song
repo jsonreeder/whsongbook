@@ -1,0 +1,48 @@
+header:
+    title = "Boy with a Coin"
+    artist = "Iron & Wine"
+
+instrumental:
+    [| c:m7 c c:9 c c:m7 | e:m e:m7 e:m.5+ e:m | (x4)]
+
+verse:
+    Boy with a [c]coin he found in the [e:m]weeds
+    With bullets and [c]pages of trade maga[e:m]zines
+    Close to a [c]car that flipped on the [e:m]turn
+    When God left the [c]ground to circle the [e:m]world
+
+chorus:
+    [c]Heeey, [e:m]yaay, [c]yeah, [e:m]aah
+    [c]Aaah, [e:m]hah, [c]aaah, [e:m]uuh
+
+verse:
+    Girl with a bird she found in the snow
+    That flew up her gown, and that's how she knows
+    That God made her eyes for crying at birth
+    Then left the ground to circle the earth
+
+chorus
+
+instrumental:
+    [| a:m | a:m | e:m | e:m | (x2)]
+    [| c | e:m | c | e:m |]
+
+
+verse:
+    Boy with a coin he crammed in his jeans
+    Then making a wish, and tossed in the sea
+    Then walked to a town that all of us burned
+    When God left the ground to circle the world
+
+chorus
+
+instrumental
+    [| c | e:m | c | e:m | (x4)]
+
+notes:
+    CM7: x32000
+    C: x32010
+    C9: x32013
+    Em: 022000
+    Em7: 022030
+    Em#5: 022010
