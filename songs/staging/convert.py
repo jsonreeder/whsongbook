@@ -133,6 +133,9 @@ with open(infile, "r") as f:
                 out_text += "    %s\n" % line
         out_text += "\n"
 
+# Remove trailing blank lines
+out_text = out_text.strip()
+
 # Write output
 outfile = "%s - %s.song" % (title, artist)
 outfile = outfile.replace(" ", "_")
