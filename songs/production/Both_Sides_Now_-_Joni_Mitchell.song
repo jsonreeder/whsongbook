@@ -4,7 +4,7 @@ header:
     capo = 2
 
 instrumental:
-    | e e:sus | e gs:m fs:m | e:sus |
+    [| e e:sus | e gs:m fs:m | e:sus |]
 
 verse:
     [e]Rows and [gs:m]flows of [fs:m]angel [e]hair, [e]   and ice-cream [gs:m]castles [b]in the [e]air
