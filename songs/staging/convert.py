@@ -17,8 +17,8 @@ def count_remaining():
 
     total_songs = 351
     production_songs = len(os.listdir("../production"))
-    stagaing_songs = len(os.listdir(".")) - 5
-    converted = production_songs - stagaing_songs
+    staging_songs = len(os.listdir("../staging")) - 5
+    converted = production_songs + staging_songs
     percent = converted / total_songs
     percent = "{:.0%}".format(percent)
 
