@@ -1,0 +1,44 @@
+header:
+    title = "All You Need Is Love"
+    artist = "The Beatles"
+
+instrumental:
+    [| g d | g | a:m d:7 |]
+
+intro:
+    [g]Love, [d]love, [e:m]love
+    [g]Love, [d]love, [e:m]love
+    [c]Love, [g]love, [a:m]love [a:m] [d] [d]
+
+verse:
+    [g]   There's nothing you can [d]do that can't be [e:m]done
+    [g]   Nothing you can [d]sing that can't be [e:m]sung
+    [c]   Nothing you can [g]say but you can [a:m]learn how to play the game
+    It's [d]easy [d]
+
+verse:
+    Nothing you can make that can't be made
+    No one you can save that can't be saved
+    Nothing you can do but you can learn how to be you in time
+    It's easy
+
+chorus:
+    [g]   All you [a:sus]need is [d:7]love
+    [g]   All you [a:sus]need is [d:7]love
+    [g]   All you [b:7]need is [e:m]love, [d]love
+    [c]   Love is [d]all you [g]need
+
+intro:
+    Love, love, love
+    Love, love, love
+    Love, love, love
+
+chorus
+
+verse:
+    Nothing you can know that isn't known
+    Nothing you can see that isn't shown
+    Nowhere you can be that isn't where you're meant to be
+    It's easy
+
+chorus
