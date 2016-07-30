@@ -96,3 +96,11 @@
 ** Display all metadata
 ** Consider different formatting for intros and outros
 ** Lint the code
+** Restructure "artist" field
+- Allow either strings or lists
+- Strings would be most common
+- Lists would be for giving associated artists. The first member would be the primary (listed in the file name and other locations). The song would also show up on the artist pages for the other members of the list.
+- This can replace the "assocaited artists" field
+** Add genres/ tags
+** Add all songs to Spotify playlist
+- The only ones added sofar as the ones I've listened to while transcribing.
