@@ -12,7 +12,8 @@ def extract_name(input_file):
 
 def create_new(input_file):
     title, artist = extract_name(input_file)
-    formatted = "%s - %s.song".replace(" ", "_") % (title, artist)
+    formatted = "%s - %s.song" % (title, artist)
+    formatted = formatted.replace(" ", "_")
     with open (input_file, "r") as f:
         lines = f.read().splitlines()
     with open(formatted, "w") as f:
