@@ -1,0 +1,25 @@
+header:
+    title = "Have You Ever Seen the Rain?"
+    artist = "Creedence Clearwater Revival"
+
+instrumental
+    [| a:m | f | c | g | c |]
+
+verse:
+    [c]Someone told me long ago, [c]   there's a calm before the storm
+    I [g]know, [g]   it's been coming [c]for some time
+    [c]When its over, so they say, [c]   it'll rain a sunny day
+    I [g]know, [g]   shining down like [c]water
+
+chorus:
+    [f]   I want to [g]know, have you [c]ever [g:/b]seen the [a:m]rain? [a:m/g]
+    [f]   I want to [g]know, have you [c]ever [g:/b]seen the [a:m]rain? [a:m/g]
+    [f]   Coming [g]down on a sunny [c]day?
+
+verse:
+    Yesterday, and days before, sun is cold and rain is hot
+    I know, been that way for all my time
+    Til forever, on it goes through the circle, fast and slow
+    I know, it can't stop, I wonder
+
+chorus

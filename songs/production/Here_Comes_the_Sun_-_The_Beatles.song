@@ -1,0 +1,47 @@
+header:
+    title = "Here Comes the Sun"
+    artist = "The Beatles"
+    capo = 7
+
+instrumental:
+    [| d | d | g | a |]
+    [| d | d | g | a |]
+
+chorus:
+    [d]   Here comes the sun, doot-n-dudu
+    [g]   Here comes the [e:7]sun, and I say
+    [d]  It's all right [d] [a]
+
+verse:
+    [d]   Little darling, it's been a [g]long cold lonely [a:7]winter
+    [d]   Little darling, it feels like [g]years since it's been [a:7]here
+
+chorus
+
+verse:
+    Little darling, the smiles returning to the faces
+    Little darling, it seems like years since it's been here
+
+chorus
+
+instrumental:
+    [| d | a | f c | g | d | a:7 |]
+
+bridge:
+    [f]Sun, [c]sun, [g]sun, here it [d]comes [a:7] [a:/cs]
+    Sun, sun, sun, here it comes
+    Sun, sun, sun, here it comes
+    Sun, sun, sun, here it comes
+    Sun, sun, sun, here it comes
+
+instrumental:
+    [| a:7 | a:sus4 | a:7 | a:7 |]
+
+verse:
+    Little darling, I feel that ice is slowly melting
+    Little darling, it seems like years since it's been clear
+
+chorus
+
+outro:
+    It's all right [f] [c] [g] [d]

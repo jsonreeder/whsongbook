@@ -1,0 +1,39 @@
+header:
+    title = "Help!"
+    artist = "The Beatles"
+
+intro:
+    [b:m]Help! I need some[b:m/a]body
+    [g]Help! Not just any[d]body
+    [e:7]Help! You know I need someone, [a]help!
+
+verse:
+    [a]   When I was younger, so much [cs:m]younger than today
+    [fs:m]   I never needed anybody's [d]help in [g]any [a]way
+    [a]   But now these days are gone, I'm [cs:m]not so self-assured
+    [fs:m]  Now I find I've changed my mind I've [d]opened [g]up the [a]doors
+
+chorus:
+    [b:m]Help me if you can, I'm feeling [b:m/a]down
+    And I [g]do appreciate you being a[d]round
+    [e:7]Help me get my feet back on the [e:7]ground
+    Won't you [a]please, please help me?
+
+verse:
+    And now my life has changed in oh so many ways
+    My independence seems to vanish in the haze
+    But ev'ry now and then I feel so insecure
+    I know that I just need you like I've never done before
+
+chorus
+
+verse:
+    When I was younger, so much younger than today
+    I never needed anybody's help in any way
+    But now these days are gone, I'm not so self-assured
+    Now I find I've changed my mind I've opened up the doors
+
+chorus
+
+outro:
+    Won't you [a]please, please help [fs:m]me.  Help [a]me!  [a:6]Oooh
