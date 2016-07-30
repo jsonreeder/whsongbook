@@ -21,6 +21,17 @@
     : I said, "A week, maybe two"
 * Capitalization
 - The first word in each line should be capitalized.
+- Song titles should have title capitalization.
+  - Guide: [[http://aitech.ac.jp/~ckelly/midi/help/caps.html][ckelley]]
+  - Note that this conflicts with Spotify, which capitalizes every word in titles.
+  - Examples
+    - Correct
+      - Anyone Else but You
+    - Incorrect
+      - Anyone Else But You
+* File Naming
+- Song files should follow the convention "Title - Artist.song" with all spaces replaced by underscores "_".
+- The values for ~title~ and ~artist~ in file names should match the metadata within the song itself.
 * Explicit Lyrics
 - The general philosophy for lyrics is that they should remain true to the original song, even when they are explicit.
 - Exceptions can be made if an offending line can easily be changed without significantly altering it.
