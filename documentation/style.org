@@ -32,6 +32,14 @@
 * File Naming
 - Song files should follow the convention "Title - Artist.song" with all spaces replaced by underscores "_".
 - The values for ~title~ and ~artist~ in file names should match the metadata within the song itself.
+* Numbers
+- Numbers in lyrics should be spelled out instead of given as digits. This allows for more accurate chord placement.
+- Examples
+  - Correct
+    - Well she was just seventeen
+  - Incorrect
+    - Well she was just 17
+- Exceptions can be made if the line is long and the digit would save space.
 * Explicit Lyrics
 - The general philosophy for lyrics is that they should remain true to the original song, even when they are explicit.
 - Exceptions can be made if an offending line can easily be changed without significantly altering it.
