@@ -24,6 +24,7 @@ When a way to document licks (individual notes) is added, return to these. In ma
 - All You Need Is Love
 - Fuck You
 - The General
+- Here Comes the Sun
 
 * Songs to add
 - This train is bound for glory
@@ -97,3 +98,6 @@ When a way to document licks (individual notes) is added, return to these. In ma
 - Wayfaring Stranger - Traditional
 - St. James Infirmary
 - City of New Orleans - Steve Goodman
+- Mountain Dew
+- I Believe in a Thing Called Love
+- I Heard It Through the Grapevine
