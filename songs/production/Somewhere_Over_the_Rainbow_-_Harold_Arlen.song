@@ -1,0 +1,33 @@
+header:
+    title = "Somewhere Over the Rainbow"
+    artist = "Harold Arlen"
+
+verse:
+    [c]Somewhere, [e:m]over the rainbow
+    [f]Way up [c]high
+    [f]There's a [c]land that I heard of
+    [g]Once in a lulla[a:m]by [f]
+
+verse:
+    [c]Somewhere, [e:m]over the rainbow
+    [f]Skies are [c]blue
+    [f]And the [c]dreams that you dare to
+    [g]Dream really do come [c]true
+
+verse:
+    Some[c]day I'll wish upon a star
+    And [e:m]wake up where the clouds are far be[a:m]hind [f]me
+    Where [c]troubles melt like lemondrops
+    A[e:m]way above the chimney tops
+    That's [a:m]where you'll [f]find me
+
+verse:
+    [c]Somewhere, [e:m]over the rainbow
+    [f]Bluebirds [c]fly
+    If [f]birds fly [c]over the rainbow
+    [g]Why then, oh why can't [a:m]I? [f]
+
+verse:
+    If [c]happy little bluebirds fly
+    [f]Off beyond the rainbow
+    Why, oh [g]why can't [c]I?

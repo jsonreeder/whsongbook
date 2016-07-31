@@ -1,0 +1,47 @@
+header:
+    title = "Rocket Man"
+    artist = "Elton John"
+    associated_artists = ["Bernie Taupin"]
+    capo = 3
+
+verse:
+    [e:m]   She packed my bags last night [a]pre-flight
+    [e:m]   Zero hour nine [a]a.m
+    [c]  And I'm gonna be [g]hi-i-[a:m]igh as a kite by [d]then
+
+verse:
+    I miss the earth so much I miss my wife
+    It's lonely out in space
+    On such a ti-i-i-meless flight
+
+chorus:
+    [g]   And I think it's gonna be a long long [c]time
+    Till [c]touch down brings me round again to [g]find
+    I'm not the [g]man they think I am at [c]home, oh no no [g:/b]no
+    I'm a [a]rocket man, [c]rocket man, burning out his fuse up [g]here alone [c]
+
+chorus:
+    And I think it's gonna be a long long time
+    Till touch down brings me round again to find
+    I'm not the man they think I am at home, oh no no no
+    I'm a rocket man, rocket man, burning out his fuse up here alone
+
+verse:
+    Mars ain't the kind of place to raise your kids
+    In fact it's cold as hell
+    And there's no one there to raise them if you did
+
+verse:
+    And all this science I don't understand
+    It's just my job five days a week
+    A rocket man, a rocket man
+
+chorus
+
+outro:
+    [g]   And I think it's gonna be a long long [c]time (x4)
+
+notes:
+    Without Capo:
+    Verse: | Gm | C | Gm | C || Eb Bb | Cm | F | F |
+    Chorus: | Bb | Eb | Bb | Eb || C | Eb | Bb | Eb |
