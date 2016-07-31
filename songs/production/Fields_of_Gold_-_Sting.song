@@ -1,0 +1,49 @@
+header:
+    title = "Fields of Gold"
+    artist = "Sting"
+    associated_artists = ["Eva Cassidy"]
+    capo = 7
+
+instrumental:
+    [| d | d | b:m b:m/a | g | g | d | d:sus | d |]
+
+verse:
+    You'll [b:m]remember me when the [g]west wind moves
+    Among the [a]fields of [d]barley
+    You can [b:m]tell the [b:m/a]sun in his [g]jealous [d:/fs]sky
+    When we [e:m]walked in [a]fields of [d]gold
+
+verse:
+    So she took her love for to gaze awhile
+    Among the fields of barley
+    In his arms she fell as her hair came down
+    Among the fields of gold
+
+verse:
+    Will you stay with me will you be my love
+    Among the fields of barley?
+    And you can tell the sun in his jealous sky
+    When we walked in fields of gold
+
+chorus:
+    [g]   I never made [a]promises [d]lightly [d:/fs]
+    [g]   And there have been [a]some that I've [d]broken [d:/fs]
+    [g]   But I swear in the [a]days still [b:m]left
+    We will [g]walk in [a]fields of [b:m]gold [b:m/a]
+    We'll [g]walk in [a]fields of [d]gold
+
+verse:
+    Many years have passed since those summer days
+    Among the fields of barley
+    See the children run as the sun goes down
+    As you lie in fields of gold
+
+verse:
+    You'll remember me when the west wind moves
+    Among the fields of barley
+    You can tell the sun in his jealous sky
+    When we walked in fields of gold
+
+outro:
+    When we [g]walked in [a]fields of [b:m]gold [b:m/a]
+    When we [g]walked in [a]fields of [d]gold

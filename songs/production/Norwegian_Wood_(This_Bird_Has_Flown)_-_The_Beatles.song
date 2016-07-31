@@ -1,0 +1,42 @@
+header:
+    title = "Norwegian Wood (This Bird Has Flown)"
+    artist = "The Beatles"
+    capo = 7
+    time = "6/8"
+
+instrumental:
+    [| a:/e | a:9 a a:sus4 | a:/cs | g:4 gf:5 |]
+    [| a:/e | g:4 gf:5 | a:/e | a:/e |]
+
+verse:
+    [a]I [g]once had a [a]girl, [g]or should I [a]say, [g]she once had [a]me
+    [a]She [g]showed me her [a]room, [g]isn't it [a]good, [g]Norwegian [a]wood?
+
+chorus:
+    She [a:m]asked me to stay and she [a:m]told me to sit any[d]where
+    So [a:m]I looked around and I [a:m]noticed there wasn't a [b:m]chair [e]
+
+verse:
+    I sat on the rug, biding my time, drinking her wine
+    We talked until two and then she said, It's time for bed
+
+intro
+
+chorus:
+    She told me she worked in the morning and started to laugh
+    I told her I didn't and crawled off to sleep in the bath
+
+verse:
+    And when I awoke I was alone, this bird had flown
+    So I lit a fire, isn't it good, Norwegian wood?
+
+intro
+
+notes:
+    A/E: 002220
+    A9: 004220  or  002222
+    Asus4: 052220  or  002230
+    A/C#: 042220
+    GaddB: 32000x
+    GaddD: 32003x
+    G(b5): 32002x

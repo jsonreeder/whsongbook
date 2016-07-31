@@ -1,0 +1,52 @@
+header:
+    title = "All the Small Things"
+    artist = "Blink 182"
+
+verse:
+    [g:5 f:5 | c:5 | f:5/c | g:5 | f:5 |]
+    [| c:5 | f:5/c | g:5 | f:5 |]
+
+verse:
+    [c]   All the [g]   small things. [f]   True care [g]   truth brings
+    I'll take one lift. Your ride best trip
+    Always I know, you'll be at my show
+    Watching, waiting, commiserating
+
+chorus:
+    [c]   Say it ain't so, I will not [g]go
+    Turn the lights [f]off, carry me [c]home
+    [c]Na-na na-na na-na na-na na na
+    [g]Na-na na-na na-[f]na na-na na na
+    [c]Na-na na-na na-na na-na na na
+    [g]Na-na na-na na-[f]na na-na na na
+
+instrumental:
+    [| c:5 | f:5/c | g:5 | f:5 |]
+    [| c:5 | f:5/c | g:5 | f:5 |]
+
+verse:
+    Late night come home
+    Work sucks, I know
+    She left me roses by the stairs
+    Surprises let me know she cares
+
+chorus
+
+instrumental:
+    [| c | c | f | g |]
+
+verse:
+    Say it ain't so, I will not go
+    Turn the lights off, carry me home
+    Keep your head still, I'll be your thrill
+    The night will go on, my little windmill
+
+verse:
+    (Na-na na-na na-na na-na na na) Say it ain't so, I will not go
+    (Na-na na-na na-na na-na na na) Turn the lights off, carry me home
+    (Na-na na-na na-na na-na na na) Keep your head still, I'll be your thrill
+    (Na-na na-na na-na na-na na na) The night will go on, the night will go on, my little
+    windmill
+
+notes:
+    F5/C: x335xx

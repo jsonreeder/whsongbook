@@ -1,0 +1,44 @@
+header:
+    title = "Eleanor Rigby"
+    artist = "The Beatles"
+
+intro:
+    [c]Aaaah, look at all the lonely [e:m]people
+    [c]Aaaah, look at all the lonely [e:m]people
+
+verse:
+    [e:m]Eleanor Rigby picks up the rice in the church where a wedding has [c]been
+    Lives in a [e:m]dream
+    Waits at the window, wearing a face that she keeps in a jar by the [c]door
+    Who is it [e:m]for?
+
+chorus:
+    [e:m7]All the lonely [e:m6]people
+    Where [c:/e]do they all come [e:m]from?
+    [e:m7]All the lonely [e:m6]people
+    Where [c:/e]do they all be[e:m]long?
+
+verse:
+    Father McKenzie writing the words of a sermon that no one will hear
+    No one comes near
+    Look at him working, darning his socks in the night when theres nobody there
+    What does he care?
+
+chorus
+
+intro:
+    Aaaah, look at all the lonely people
+    Aaaah, look at all the lonely people
+
+verse:
+    Eleanor Rigby died in the church and was buried along with her name
+    Nobody came
+    Father McKenzie wiping the dirt from his hands as he walks from the grave
+    No one was saved
+
+chorus
+
+notes:
+    Em7: 022030
+    Em6: 022020
+    C/E: xx2010

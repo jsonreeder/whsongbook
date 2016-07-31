@@ -1,0 +1,34 @@
+header:
+    title = "Layla"
+    artist = "Eric Clapton"
+
+instrumental:
+    [| d:m c bf | bf c d:m | (x3)]
+    [| d:m c bf | c a c |]
+
+verse:
+    [cs:m]   What will you do when you get [gs:7]lonely
+    [cs:m]   And nobody's [c:7]waiting [b:7]by your [e:7]side?
+    [fs:m]   You've been [b:7]running and [e:7]hiding much too [a:7]long
+    [fs:m]   You know it's [b:7]just your foolish [e:7]pride, [a:7]Layla
+
+chorus:
+    [d:m] [c] [bf]  You [c]got me on my [d:m]knees, Layla
+    [d:m] [c] [bf]   I'm [c]begging darlin' [d:m]please, Layla
+    [d:m] [c] [bf]   [c]Darling won't you [d:m]ease my worried [d:m]mind? [c] [bf] [c] [a] [c]
+
+verse:
+    I tried to give you consolation
+    When your old man had let you down
+    Like a fool, I fell in love with you
+    You turned my whole world upside down, Layla
+
+chorus
+
+verse:
+    Let's make the best of the situation
+    Before I finally go insane
+    Please don't say we'll never find a way
+    Or tell me all my love's in vain, Layla
+
+chorus

@@ -1,0 +1,30 @@
+header:
+    title = "Dona Dona"
+    artist = "Aaron Zeitlin"
+    associated_artists = ["Joan Baez"]
+
+verse:
+    [a:m]On a [e]wagon [a:m]bound for [e]market
+    [a:m]   There's a [d:m]calf with a [a:m]mourn[e]ful [a:m]eye
+    [a:m]   High a[e]bove him [a:m]there's a [e]swallow
+    [a:m]   Winging [d:m]swiftly [a:m]through [e]the [a:m]sky
+
+chorus:
+    [g]   How the winds are [c]laughing
+    They [g]laugh with all their [a:m]might
+    [c]   Laugh and laugh the [a:m]whole day through
+    And [e]half the summer's [a:m]night
+    
+chorus:
+    [e]Dona, Dona, Dona, [a:m]Dona
+    [g]Dona, Dona, Dona, [c]Don
+    [e]Dona, Dona, Dona, [a:m]Dona
+    [d:m]Dona, Dona, [e]Dona, [a:m]Don
+
+verse:
+    Stop complaining, said the farmer
+    Who told you a calf to be;
+    Why don't you have wings to fly away
+    Like the swallow so proud and free?
+
+chorus

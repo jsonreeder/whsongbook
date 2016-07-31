@@ -1,0 +1,32 @@
+header:
+    title = "Dust in the Wind"
+    artist = "Kansas"
+
+verse:
+    [| c c:maj7 c:9 | a:m9 a:m4 a:m a:m9 | c:9 c c:maj7 c:9 | a:m a:m9 |]
+
+verse:
+    [g]I [c]close [g]my [a:m]eyes
+    [g]Only for a [d:m7]moment then the [a:m]moment's gone
+    [c]All [g]my [a:m]dreams
+    [g]Pass before my [d:m7]eyes are curi[a:m]osity
+
+chorus:
+    [d] [g]Dust in the [a:m]wind [g]
+    [d]All they are is [g]dust in the [a:m]wind
+
+verse:
+    Same old song
+    Just a drop of water in an endless sea
+    All we do
+    Crumbles to the ground though we refuse to see
+
+chorus
+
+verse:
+    Don't hang on
+    Nothing lasts forever but the earth and sky
+    Slips away
+    And all your money won't another minute buy
+
+chorus

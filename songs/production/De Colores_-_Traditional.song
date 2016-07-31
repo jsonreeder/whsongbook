@@ -1,0 +1,20 @@
+header:
+    title = "De Colores"
+    artist = "Traditional"
+    language = "es"
+
+verse:
+    [e]De colores, de colores se visten los campos en la prima[b:7]vera
+    [b]De colores, de colores son los pajaritos que vienen de a[e]fuera
+    [e]De colores, de colores es el arco iris que vemos luc[a]ir
+
+chorus:
+    Y por [a]eso los grandes a[e]mores de muchos co[b]lores me gustan a [e]mi
+    Y por [a]eso los grandes a[e]mores de muchos co[b]lores me gustan a [e]mi
+
+verse:
+    Canta el gallo, canta el gallo con el quiri quíri quirí quiri quíri
+    La gallina, la gallina con la cara cára cará cara cára
+    Los pollitos, los pollitos con el pio pío pió pio pío
+
+chorus

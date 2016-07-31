@@ -1,6 +1,7 @@
 header:
     title = "You Are my Sunshine"
     artist = "Traditional"
+    associated_artists = ["The Civil Wars"]
 
 verse:
     The other [d]night, dear, as I lay sleeping

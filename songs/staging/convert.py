@@ -1,4 +1,5 @@
 import re
+import os
 
 # Initialize gloabls
 infile = "junk_in.txt"
@@ -7,6 +8,21 @@ title = ""
 out_text = ""
 delimeter = "\\"
 accidentals = {"#": "s", "b": "f"}
+
+def count_remaining():
+    """
+    Look up how many songs are in production.
+    Return that number, and the percent that represents of the total no. of songs.
+    """
+
+    total_songs = 351
+    production_songs = len(os.listdir("../production"))
+    staging_songs = len(os.listdir("../staging")) - 5
+    converted = production_songs + staging_songs
+    percent = converted / total_songs
+    percent = "{:.0%}".format(percent)
+
+    return (converted, percent)
 
 # Read file
 with open(infile, "r") as f:
@@ -156,3 +172,5 @@ if delimeter in out_text:
     print("ERROR: A delimeter was not parsed.")
 else:
     print("SUCCESS: wrote %s" % (outfile))
+    print("%s done: %s" % (count_remaining()))
+    # print("%s done: %s" % (5, 3))
