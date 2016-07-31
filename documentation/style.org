@@ -39,7 +39,10 @@
     - Well she was just seventeen
   - Incorrect
     - Well she was just 17
-- Exceptions can be made if the line is long and the digit would save space.
+- Exceptions
+  - Years (it's too awkward to read these as words)
+    - ~[a:m]   I'd been that way since 19[d:m]56~
+  - If the line is long and the digit would save space
 * Explicit Lyrics
 - The general philosophy for lyrics is that they should remain true to the original song, even when they are explicit.
 - Exceptions can be made if an offending line can easily be changed without significantly altering it.
