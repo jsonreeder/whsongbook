@@ -50,4 +50,14 @@
     : I'm a-gonna stay where you sleep all day where they hung the *jerk* that invented work
   - The original:
     : I'm a-gonna stay where you sleep all day where they hung the *Turk* that invented work
-
+* Contractions
+- Contractions should be indicated by apostrophes (as in their standard spelling).
+- Examples
+  - Correct
+    - ~Flippin' your fins you don't get too far. Legs are required for jumpin', dancin'~
+  - Incorrect
+    - ~Flippin your fins you dont get too far. Legs are required for jumpin, dancin~
+* Repetition
+- The main goal of these transcriptions is to provide an outlines outline of the songs that it quick and easy to read while playing. That is more important than providing a perfectly faithful transcription.
+- Many songs end with double or triple repeats of choruses and outros. In most cases, it's preferable only to write that part twice. People can easily choose to sing the part more than once, but notating it twice can often prove boring or monotonous while singing.
+- This principle also applies to introductions. If there is an instrumental introduction that is the same as the first part of the song, it does not have to be notated, since it is natural to add these in anyways.
