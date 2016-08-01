@@ -2,7 +2,7 @@ header:
     title = "Dust in the Wind"
     artist = "Kansas"
 
-verse:
+instrumental:
     [| c c:maj7 c:9 | a:m9 a:m4 a:m a:m9 | c:9 c c:maj7 c:9 | a:m a:m9 |]
 
 verse:

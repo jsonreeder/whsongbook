@@ -4,7 +4,7 @@ header:
     capo = 3
     time = "3/4"
 
-verse:
+instrumental:
     [| d:/fs | d:/fs d:6 d:/fs | a | a d:/fs | a | (x2)]
 
 verse:

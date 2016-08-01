@@ -3,7 +3,7 @@ header:
     artist = "James Taylor"
     capo = 2
 
-verse:
+instrumental:
     [| d d:sus2 | b:m7 a | e:m9 b:m7 | c g |]
 
 verse:
