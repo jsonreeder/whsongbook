@@ -39,7 +39,8 @@
 /*Song title*/
 h1 {
     text-decoration: underline;
-    margin-bottom: 0;
+    margin-bottom: .15em;
+    font-size: 1.8em;
 }
 
 /*Other data*/
