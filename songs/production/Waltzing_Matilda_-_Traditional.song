@@ -1,0 +1,42 @@
+header:
+    title = "Waltzing Matilda"
+    artist = "Traditional"
+
+verse:
+    [c]Once a jolly [g]swagman [a:m]camped by a [f]billabong
+    [c]Under the shade of a [g]Coolibah tree
+    And he [c]sang as he [g]watched and [a:m]waited till his [f]billy boil
+    [c]You'll come a Waltzing Ma[g]tilda with [c]me
+
+chorus:
+    [c]Waltzing Matilda, [f]Waltzing Matilda
+    [c]You'll come a Waltzing Ma[g]tilda with me
+    And he [c]sang as he [g]watched and [a:m]waited till his [f]billy boil
+    [c]You'll come a Waltzing Ma[g]tilda with [c]me
+
+verse:
+    Down came a jumbuck to drink at that billabong
+    Up jumped the swagman and grabbed him with glee
+    And he sang as he shoved that jumbuck in his tucker bag
+    You'll come a Waltzing Matilda with me
+
+chorus
+
+verse:
+    Up rode the squatter mounted on his thorough-bred
+    Down came the troopers One Two Three
+    Whose that jolly jumbuck you've got in your tucker bag
+    You'll come a Waltzing Matilda with me
+
+chorus
+
+verse:
+    Up jumped the swagman sprang in to the billabong
+    You'll never catch me alive said he
+    And his ghost may be heard as you pass by that billabong
+    You'll come a Waltzing Matilda with me
+
+chorus
+
+notes:
+    Third line of chorus is third line of previous verse

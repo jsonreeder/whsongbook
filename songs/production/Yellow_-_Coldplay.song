@@ -1,0 +1,52 @@
+header:
+    title = "Yellow"
+    artist = "Coldplay"
+    capo = 2
+
+instrumental:
+    [| a | a:sus | a | a:sus |]
+    [| a | a:sus a  | e:10 | e:9 | fs:sus | fs:m | a | a:sus a |]
+
+verse:
+    [a]Look at the stars, [a]   look how they shine for [e]you
+    [e]   And everything you [d:maj7]do. Yeah they were all [a]yellow
+
+verse:
+    I came along. I wrote a song for you
+    And all the things you do, and it was called yellow
+
+verse:
+    [a]   So then I took my [e]turn
+    [e]   Oh what a thing to've [d:maj7]done. And it was all [a]yellow [a:sus] [a]
+
+chorus:
+    [d]   Your skin, [fs:m]   oh yeah your [e]skin and bones
+    Turn into something beautiful
+    D'you know you know I love you so
+    [d:maj7]  You know I love you so
+
+instrumental:
+    [| a | a:sus a  | e:10 | e:9 | fs:sus | fs:m | a | a:sus a |]
+
+verse:
+    I swam across. I jumped across for you
+    Oh all the things you do, cause you were all yellow
+
+verse:
+    I drew a line. I drew a line for you
+    Oh what a thing to do, and it was all yellow
+
+chorus
+    [d]   Your skin, [fs:m]   oh yeah your [e]skin and bones
+    Turn into something beautiful
+    D'you know for you I bleed myself dry
+    For you I bleed myself dry
+
+instrumental:
+    [| a | a:sus a  | e:10 | e:9 | fs:sus | fs:m | a | a:sus a |]
+
+outro:
+    Its [a]true look how they shine for [e]you,  look how they shine for [d:maj7]you
+    Look how they shine for, [a]   look how they shine for [e]you
+    Look how they shine for [d:maj7]you, look how they shine
+    [a]Look at the stars look how they shine for [g]you, and all the things that [d:maj7]you do
