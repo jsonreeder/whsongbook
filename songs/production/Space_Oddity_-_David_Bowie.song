@@ -1,0 +1,50 @@
+header:
+    title = "Space Oddity"
+    artist = "David Bowie"
+
+instrumental
+    [| f | e | f | e |]
+
+intro:
+    [c]Ground control to Major [e:m]Tom. [c]Ground control to Major [e:m]Tom:
+    [a:m]   Take your [a:m7/g]protein pills and [d:7]put your helmet on
+    [c]Ground control to Major [e:m]Tom: [c]Commencing countdown engine's [e:m]on
+    [a:m]   Check ig[a:m7/g]nition and may [d:7]God's love be with you [d:7]
+
+verse:
+    [c]This is ground control to Major [e:7]Tom, you've really made the [f]grade
+    And the [f:m]papers want to [c:/e]know whose shirts you [f]wear
+    Now it's [f:m]time to leave the [c:/e]capsule if you [f]dare
+
+verse:
+    [c]This is Major Tom to ground con[e:7]trol, I'm stepping through the [f]door
+    And I'm [f:m]floating in the [c:/e]most peculiar [f]way
+    And the [f:m]stars look very [c:/e]different to[f]day
+
+chorus:
+    For [f:maj7]here am I [e:m7]sitting in a tin can, [f:maj7]far above the [e:m7]world
+    [bf:maj7]Planet Earth is [a:m]blue and there's [g]nothing I can [f]do
+
+instrumental:
+    [| c f g a a | c f g a a |]
+    [| f:maj7 | e:m7 | a | c | d | e]
+
+verse:
+    [c]Though I'm passed one hundred thousand [e:7]miles, I'm feeling very [f]still
+    And I [f:m]think my spaceship [c:/e]knows which way to [f]go
+    Tell my [f:m]wife I love her [c]very much, she [f]knows
+
+verse:
+    [g]Ground control to [e:7]Major Tom:
+    Your [a:m]circuit's dead, there's [a:m7/g]something wrong
+    Can you [d:7]hear me Major Tom?
+    Can you [c:/g]hear me Major Tom?
+    Can you [g]hear me Major Tom? Can you
+
+chorus:
+    [f:maj7]Here am I [e:m7]floating round my tin can, [f:maj7]far above the [e:m7]moon
+    [bf:maj7]Planet Earth is [a:m]blue and there's [g]nothing I can [f]do
+
+instrumental:
+    [| c f g a a | c f g a a |]
+    [| f:maj7 | e:m7 | a | c | d | e]

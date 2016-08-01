@@ -2,7 +2,7 @@ header:
     title = "Get Back"
     artist = "The Beatles"
 
-verse:
+instrumental:
     [| a | a | a | g d |]
 
 verse:

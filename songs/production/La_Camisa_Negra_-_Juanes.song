@@ -4,7 +4,7 @@ header:
     capo = 2
     language = "es"
 
-verse:
+instrumental:
     [| e:m | b:7 | e:m | a:m b:7 |]
 
 verse:

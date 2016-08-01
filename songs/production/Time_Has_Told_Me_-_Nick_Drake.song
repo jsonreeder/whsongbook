@@ -1,0 +1,53 @@
+header:
+    title = "Time Has Told Me"
+    artist = "Nick Drake"
+    capo = 3
+    time = "3/4"
+
+instrumental:
+    [| d:/fs | d:/fs d:6 d:/fs | a | a d:/fs | a | (x2)]
+
+verse:
+    [d:/fs]   Time has [a]told me, [d:/fs]   you're a rare rare [a]find
+    [a:7]   A troubled [d]cure, [b:m7]   for a troubled [e]mind
+
+verse:
+    And time has told me, not to ask for more
+    Someday our ocean, will find its shore
+
+chorus:
+    [cs:7]   So I'll leave the ways [c:7]   that are making me be
+    [f]   What I really don't [b]    want to be [e]
+    [cs:7]   Leave the ways [c:7]   that are making me love
+    [f]   What I really don't [b]   want to love [e]
+
+verse:
+    Time has told me, you came with the dawn
+    A soul with no footprint, a rose with no thorn
+
+verse:
+    Your tears they tell me, there's really no way
+    Of ending your troubles, with things you can say
+
+verse:
+    And time will tell you, to stay by my side
+    To keep on trying, 'til there's no more to hide
+
+chorus:
+    So leave the ways that are making you be
+    What you really don't want to be
+    Leave the ways that are making you love
+    What you really don't want to love
+
+verse:
+    Time has told me, you're a rare rare find
+    A troubled cure, for a troubled mind
+
+verse:
+    And time has told me, not to ask for more
+    For some day our ocean, will find it's shore
+
+notes:
+    D/F#: 00423x
+    D6: 00443x
+    A7: x02223

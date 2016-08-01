@@ -1,0 +1,40 @@
+header:
+    title = "What a Wonderful World"
+    artist = "David Weiss and Bob Thiele"
+    associated_artists = ["Louis Armstrong"]
+
+verse:
+    I see [f]trees of [a:m]green, [bf]   red roses [a:m]too
+    [g:m7]   I see them [f]bloom [a:7]   for me and [d:m]you
+    And I [df]think to my[bf]self
+    [c]   What a [c:7]wonderful [f]world [f:aug] [bf:maj7] [c:7]
+
+verse:
+    I see skies of blue and clouds of white
+    The bright blessed day, the dark sacred night
+    And I think to myself
+    What a wonderful world
+
+bridge:
+    The [c:7]colors of the rainbow, so [f]pretty in the sky
+    Are [c:7]also the faces of the [f]people goin' by
+    I see [d:m]friends shakin' [c:/e]hands, sayin', [d:m/f]How do you [c:/g]do?
+    [d:m/f]They're really [fs:dim]sayin', [g:m7]I [fs:dim]love [c:7]you
+
+verse:
+    I hear babies cry, I watch them grow
+    They'll learn much more than I'll ever know
+    And I [df]think to my[c:11]self
+    [c]   What a [c:7]wonderful [f]world [a:m7.5-] [d:7]
+    Yes I [g:m7]think to myself
+    [c:7]   What a wonderful [f]world [bf] [f]
+
+verse:
+    Chords:
+    C11: x33333
+    F+:  xx3221
+    BbMaj7: x12321
+    Dm/F: xx3231
+    F#dim: xx1212
+    Am7-5: x01213
+    C7-9:  x31320

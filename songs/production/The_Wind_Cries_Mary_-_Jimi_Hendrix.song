@@ -1,0 +1,47 @@
+header:
+    title = "The Wind Cries Mary"
+    artist = "Jimi Hendrix"
+    capo = 1
+
+instrumental:
+    [| d ds e | d:/fs ds:/f e:/g | (x2)]
+
+verse:
+    [b]   After all the [a]jacks are in their [e]boxes
+    And the [b]clowns have [a]all gone to [e]bed
+    You can hear [b]happiness [a]standin' on [e]down the street
+    [fs]Footprints [a]dressed in [d]red [ds] [e]
+
+chorus:
+    And the [fs]wind [a]whispers [d]Mary [ds] [e] [d:/fs] [ds:/f] [e:/g]
+
+verse:
+    A broom is drearily sweeping
+    Up the broken pieces of yesterday's life
+    Somewhere a queen is weeping
+    Somewhere a king has no wife
+
+chorus:
+    And the wind it cries Mary
+
+instrumental:
+    [| e d | a g | (x3)]
+    [| g | a | c | e | e |]
+
+verse:
+    The traffic lights they turn blue tomorrow
+    And shine the emptiness down on my bed
+    The tiny island sends downstream
+    Because the light that there was is dead
+
+chorus:
+    And the wind screams Mary
+
+verse:
+    Will the wind ever remember
+    The names it has blown in the past?
+    And with its crutch, its old age, and its wisdom
+    It whispers, No, this will be the last
+
+chorus:
+    And the wind cries Mary
