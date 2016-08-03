@@ -2,7 +2,7 @@ header:
     title = "Eight Days a Week"
     artist = "The Beatles"
 
-intro:
+instrumental:
     [| d | e | g | d |]
 
 verse:
