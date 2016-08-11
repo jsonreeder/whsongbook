@@ -49,4 +49,4 @@ I have Chris Angelico (aka Rosuav) to thank for many hours of Python mentorship 
 
 As mentioned in ~Syntax~ above, particulars of the song markup syntax were inspired by LilyPond and Chordii. More info about LilyPond: [[http://lilypond.org/][lilypond.org]]. More info about Chordii: [[http://www.vromans.org/johan/projects/Chordii/chordpro/][vromans.org]].
 
-I first learned about folk fakebooks at the Lair of the Golden Bear, and I modeled my own work here on the Lair Songbook. More about the Lair: [[http://alumni.berkeley.edu/lair][alumni.berkeley.edu]].
+I first learned about folk fake books at the Lair of the Golden Bear, and I modeled my own work here on the Lair Songbook. More about the Lair: [[http://alumni.berkeley.edu/lair][alumni.berkeley.edu]].
