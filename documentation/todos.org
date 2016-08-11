@@ -66,10 +66,6 @@
 - Users could add songs to a singalong queue like creating a playlist
 - Users could easily navigate to the song that was currently being sung
 * Unsorted
-** TODO Fix bug - unrecognized chords
-- When chords are not recognized sometimes they are returning "None" and this is getting into the display:
-  - [[file:~/Created/Projects/whsongbook/songs/production/You_Can_Close_Your_Eyes_-_James_Taylor.song][You Can Close Your Eyes]]
-  - I think that this has something to do with the spaces
 ** Max line length
 - Certain lines are always wrapped: [[file:~/Created/Projects/whsongbook/songs/production/Buy_You_a_Drank_-_T-Pain.song][Buy You a Drank]]
 ** Better handling for multi chords with no lyrics
@@ -104,3 +100,26 @@
 ** Add genres/ tags
 ** Add all songs to Spotify playlist
 - The only ones added sofar as the ones I've listened to while transcribing.
+** Add "Help Needed" Section
+- Or maybe this could be "Assorted Tasks"
+- The point is to make a clear list of ways others can help besides adding to the code
+- Content
+  - Complete Spotify playlist
+  - Create playlist on other platforms
+  - Find / correct errors in songs
+  - Suggest / transcribe new songs
+  - Add metadata to songs (genres, years, other artists)
+** Add dates to metadata
+- First added
+- Last modified
+- Since the songs are stored as text files, I wonder if I can extract this information from their git commit history
+- I would rather /not/ make a database just to keep track of this
+- If possible, stick to the principle: all information about each song is contained in its ".song" file
+** Sort by difficulty
+- Add degrees of difficulty
+- Allow people to easily find songs of similar difficulty
+- Maybe allow users to rank difficulty
+** Add buttons "similar" and "different"
+- Based on genre
+- Based on difficulty
+- Based on chord progression
