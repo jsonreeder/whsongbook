@@ -1,5 +1,4 @@
 body {
-    /* margin: 2em; */
   padding-top: 50px;
   padding: 50px 15px;
 }
@@ -11,7 +10,6 @@ body {
 }
 
 chunk {
-    /* display: inline-block; */
     display: inline-block;
 }
 
@@ -23,5 +21,3 @@ p {
 .line {
     display: block;
 }
-
-
