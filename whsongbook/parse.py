@@ -229,7 +229,7 @@ def parse_text(filename, text):
 
                         # Parse multi chords (chords separated by spaces)
                         if " " in chord:
-                            multi_chords = chord.split(" ")
+                            multi_chords = chord.split()
                             for m in multi_chords:
                                 parsed_chord = parse_chord(filename, m)
                                 chord_sections.append((parsed_chord, ""))
