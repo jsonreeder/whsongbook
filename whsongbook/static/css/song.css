@@ -11,6 +11,11 @@
     margin-top: 1em;
 }
 
+.intro,
+.outro {
+    font-style: italic;
+}
+
 .pre-chorus {
     margin-left: 1em;
     font-style: italic;
