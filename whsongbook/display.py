@@ -1,5 +1,10 @@
+"""
+Display
+
+This module formats the parsed data for proper display.
+"""
+
 import logging
-import re
 from . import failing_songs
 
 # Initialize global display variables
@@ -18,6 +23,10 @@ def display_lyrics(lyrics):
 
 
 def display_chord(filename, chord):
+    """
+    Convert chords from LilyPond syntax (a:m) into display (Am)
+    """
+
     ret = ""
 
     # Do not alter false chords
