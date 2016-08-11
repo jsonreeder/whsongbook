@@ -1,3 +1,9 @@
+"""
+Init for WH Songbook
+
+When the application is started, parse and load the songs to memory.
+"""
+
 import os
 import re
 import logging
