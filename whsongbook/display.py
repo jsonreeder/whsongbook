@@ -1,20 +1,32 @@
+"""
+Display
+
+This module formats the parsed data for proper display.
+"""
+
 import logging
-import re
 from . import failing_songs
 
 # Initialize global display variables
 ACCIDENTALS = {"f": "b", "s": "#"}
 
+
 def display_lyrics(lyrics):
     lyrics = lyrics or "\xA0"
     if lyrics.endswith(" "):
-        lyrics = lyrics[:-1]+"\xA0"
+        lyrics = lyrics[:-1] + "\xA0"
     return lyrics
+
 
 def display_lyrics(lyrics):
     return lyrics.replace(" ", "\xA0") or "\xA0\xA0"
 
+
 def display_chord(filename, chord):
+    """
+    Convert chords from LilyPond syntax (a:m) into display (Am)
+    """
+
     ret = ""
 
     # Do not alter false chords
@@ -25,13 +37,14 @@ def display_chord(filename, chord):
     else:
         # Throw error if no root
         if not chord["root"]:
-            logging.error("Undisplayable chord (%s) in file (%s). No root." % (chord, filename))
+            logging.error("Undisplayable chord (%s) in file (%s). No root." %
+                          (chord, filename))
             failing_songs.append(filename)
 
         else:
             ret += chord["root"].upper()
             if chord.get("accidental"):
-                for k,v in ACCIDENTALS.items():
+                for k, v in ACCIDENTALS.items():
                     if chord["accidental"] == k:
                         ret += v
             if chord.get("quality"):
@@ -48,11 +61,12 @@ def display_chord(filename, chord):
             if chord.get("inversion"):
                 ret += "/" + chord["inversion"].upper()
             if chord.get("inversion_accidental"):
-                for k,v in ACCIDENTALS.items():
+                for k, v in ACCIDENTALS.items():
                     if chord["inversion_accidental"] == k:
                         ret += v
 
     return ret
+
 
 def display_section_name(name):
     ret = "(%s)" % (name.title())
