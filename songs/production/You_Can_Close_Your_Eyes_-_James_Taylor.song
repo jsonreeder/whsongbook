@@ -4,7 +4,7 @@ header:
     capo = 2
 
 instrumental:
-    [| b:m | e:m  d:/fs  g a | d g a:sus a | d g e:m a |]
+    [| b:m | e:m d:/fs g a | d g a:sus a | d g e:m a |]
 
 verse:
     Oh the [d]sun is surely [g]sin[d:/fs]king [a]down
@@ -24,7 +24,7 @@ chorus:
     [a]When I'm [b:m]gone
 
 instrumental:
-    [| e:m  d:/fs  g a |]
+    [| e:m d:/fs g a |]
 
 verse:
     It [d]won't be long be[g]fore a[d:/fs]nother [a]day [e] [a]
@@ -35,4 +35,4 @@ verse:
 chorus
 
 instrumental:
-    [| e:m  d:/fs  g a | d g a:sus a | d g e:m a | d |]
+    [| e:m d:/fs g a | d g a:sus a | d g e:m a | d |]
