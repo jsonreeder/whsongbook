@@ -1,6 +1,7 @@
 header:
     title = "Angel from Montgomery"
     artist = "John Prine"
+    associated_artists = ["Bonnie Raitt", "Susan Tedeschi"]
 
 verse:
     [e]   I am an old [a]woman [e]   named after my [a]mother
