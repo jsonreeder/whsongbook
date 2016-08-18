@@ -39,6 +39,12 @@ class Song:
         ret += "Content = %s\n" % pprint.pformat(self.content)
         return ret
 
+    def get_json(self):
+        """
+        Return the content of the song object formatted for JSON
+        """
+
+        return {self.filename: {"metadata": self.metadata, "content": self.content}}
 
 def parse_pitch(filename, pitch):
     """
