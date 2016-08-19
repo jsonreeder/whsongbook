@@ -16,26 +16,26 @@ If any of this is confusing, get in touch.
 4. Unzip the folder
 *** Option 2: From the command line
 1. Clone the repository using git:
-  > ~git clone https://github.com/jlreeder/whsongbook.git~
+   - ~git clone https://github.com/jlreeder/whsongbook.git~
 ** 2. Start a Virtual Environment (Optional)
 Starting a virtual environment will contain the packages installed later
 1. Make sure you have ~virtualenv~:
    1. Check:
-     > ~virtualenv --version~
+     - ~virtualenv --version~
    2. If you don't have it, install it:
-     > ~pip install virtualenv~
+     - ~pip install virtualenv~
 2. Create the environment:
-  > ~virtualenv env~
+  - ~virtualenv env~
 3. Start the environment:
-  > ~source env/bin/activate~
+  - ~source env/bin/activate~
 ** 3. Install the requirements
 1. Open up a terminal emulator and make sure that you are in the directory you downloaded in the step above
 2. Make sure that you have a version of Python 3
 3. Install the requirements listed in ~requirements.txt~:
-   > ~pip install -r requirements.txt~
+   - ~pip install -r requirements.txt~
 ** 4. Run the app
 - Execute the ~run.py~ script:
-  > ~python run.py~
+  - ~python run.py~
 ** 5. Use the app in your browser
 - Go to the following URL in any browser: ~http://0.0.0.0:8080/~
 - You should see the app
