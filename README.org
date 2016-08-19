@@ -13,26 +13,8 @@ The West House Songbook is an open-source songbook. Its mission is to provide si
 
 * Browsing
 To view the songbook go to [[http://whsongbook.jasonreeder.com/][whsongbook.jasonreeder.com]].
-
 * Contributing
 Corrections, suggestions, additions, and other contributions are welcome. For details on how to contribute, see the following page: [[file:documentation/contribute.org][Contribute]].
-* Syntax
-The songs are documented in a basic syntax following these parameters:
-- Lyrics are displayed as written. Currently no markup is supported.
-- Chords are written in the syntax defined by LilyPond, a spectacular music engraving markup language:
-  - LilyPond ~chord-mode~ syntax: [[http://lilypond.org/doc/v2.19/Documentation/notation/chord-mode][LilyPond documentation]]
-- For a chord to be aligned above a given word, that chord should be in brackets immediately preceding it:
-  : [c]Love of mine some day [a:m]you will die
-  - This syntax was inspired by Chordii
-- Metadata is documented in line with Python variable definitions:
-  : title = "I Will Follow You Into the Dark"
-  : artist = "Death Cab for Cutie"
-  : capo = 5
-  : year = 2005
-  : genres = ["indie"]
-
-The Emacs Major Mode provides basic syntax highlighting in line with the specifications above: [[file:emacs_major-mode/song-mode.lisp][song-mode.lisp]].
-
 * Acknowledgments
 This songbook was born out of the West House community, and if it weren't for so many open dinners and Friday singalongs, I would have had neither the idea nor the motivation to put in so many hours to improve the book. More about West House: [[https://brownwesthouse.wordpress.com/][brownwesthouse.wordpress.com]]
 
