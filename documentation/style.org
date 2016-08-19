@@ -15,7 +15,7 @@ The songs are documented in a basic syntax following these parameters:
   : year = 2005
   : genres = ["indie"]
 * Emacs
-The Emacs Major Mode provides basic syntax highlighting in line with the specifications above: [[file:emacs_major-mode/song-mode.lisp][song-mode.lisp]].
+The Emacs Major Mode provides basic syntax highlighting in line with the specifications above: [[file:../emacs_major-mode/song-mode.lisp][song-mode.lisp]].
 * Chord Placement
 - Chord placement means the alignment of the chords with the lyrics.
 - The guiding principle with chord placement is to be as simple to read as possible while still being faithful to the original timing.

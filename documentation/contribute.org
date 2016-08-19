@@ -5,9 +5,9 @@ The West House Songbook is free software, which means that anyone is free to enj
 
 This page is meant to help you figure out how to contribute. If you're at all interested please read through, but also feel free to email Jason (~info [at] jasonreeder.com~) with your ideas and questions.
 * Help Wanted
-There are many ways to help, from adding new songs and correcting lyrics in existing songs, to adding new features and improving the UI. Notes for future tasks are documented and organized in [[file:documentation/todos.org][documentation/todos.org]].
+There are many ways to help, from adding new songs and correcting lyrics in existing songs, to adding new features and improving the UI. Notes for future tasks are documented and organized in [[file:todos.org][todos.org]].
 
-The source code for the songs is available in the directory [[file:songs/production][songs/production/]], and any changes to the chords or lyrics there will be reflected in the app.
+The source code for the songs is available in the directory [[file:../songs/production][songs/production/]], and any changes to the chords or lyrics there will be reflected in the app.
 * Running Locally
 Running locally is a good way to get to know your neighborhood and exercise. Running this application locally is a good way to test and see what your changes and additions look like. Here are instructions for how to do the latter.
 
