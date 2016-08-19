@@ -15,12 +15,7 @@ The West House Songbook is an open-source songbook. Its mission is to provide si
 To view the songbook go to [[http://whsongbook.jasonreeder.com/][whsongbook.jasonreeder.com]].
 
 * Contributing
-Corrections, suggestions, additions, and other contributions are welcome. At the moment, pull requests are the best means for contributing.
-
-The source code for the songs is available in the directory [[file:songs/production][songs/production/]], and any changes to the chords or lyrics there will be reflected in the app.
-
-Notes for future work are documented and organized in [[file:documentation/todos.org][documentation/todos.org]].
-
+Corrections, suggestions, additions, and other contributions are welcome. For details on how to contribute, see the following page: [[file:documentation/contribute.org][Contribute]].
 * Syntax
 The songs are documented in a basic syntax following these parameters:
 - Lyrics are displayed as written. Currently no markup is supported.
