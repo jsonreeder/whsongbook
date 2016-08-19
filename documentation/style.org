@@ -1,8 +1,21 @@
 #+TITLE: Syle Guide
-* Chord Syntax
-The transcriptions use the chord syntax defined by LilyPond. Here are a few useful links:
-- LilyPond: [[http://lilypond.org/doc/v2.19/Documentation/notation/common-chord-modifiers][Common Chord Modifiers]]
-- LilyPond: [[http://lilypond.org/doc/v2.19/Documentation/notation/chord-mode][Chord Mode]]
+* Song Format
+The songs are documented in a basic syntax following these parameters:
+- Lyrics are displayed as written. Currently no markup is supported.
+- Chords are written in the syntax defined by LilyPond, a spectacular music engraving markup language:
+  - LilyPond: [[http://lilypond.org/doc/v2.19/Documentation/notation/common-chord-modifiers][Common Chord Modifiers]]
+  - LilyPond: [[http://lilypond.org/doc/v2.19/Documentation/notation/chord-mode][Chord Mode]]
+- For a chord to be aligned above a given word, that chord should be in brackets immediately preceding it:
+  : [c]Love of mine some day [a:m]you will die
+  - This syntax was inspired by Chordii
+- Metadata is documented in line with Python variable definitions:
+  : title = "I Will Follow You Into the Dark"
+  : artist = "Death Cab for Cutie"
+  : capo = 5
+  : year = 2005
+  : genres = ["indie"]
+* Emacs
+The Emacs Major Mode provides basic syntax highlighting in line with the specifications above: [[file:../emacs_major-mode/song-mode.lisp][song-mode.lisp]].
 * Chord Placement
 - Chord placement means the alignment of the chords with the lyrics.
 - The guiding principle with chord placement is to be as simple to read as possible while still being faithful to the original timing.
