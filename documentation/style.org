@@ -1,4 +1,8 @@
 #+TITLE: Syle Guide
+* Chord Syntax
+The transcriptions use the chord syntax defined by LilyPond. Here are a few useful links:
+- LilyPond: [[http://lilypond.org/doc/v2.19/Documentation/notation/common-chord-modifiers][Common Chord Modifiers]]
+- LilyPond: [[http://lilypond.org/doc/v2.19/Documentation/notation/chord-mode][Chord Mode]]
 * Chord Placement
 - Chord placement means the alignment of the chords with the lyrics.
 - The guiding principle with chord placement is to be as simple to read as possible while still being faithful to the original timing.
