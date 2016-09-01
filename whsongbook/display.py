@@ -101,10 +101,11 @@ def connect_arabic(parsed_line):
     """
     ret = parsed_line
 
-    for chunk_num, chunk in enumerate(parsed_line):
-        if len(chunk) > 1:
+    # Ignore lines with no chords
+    if isinstance(parsed_line, list):
+        for chunk_num, chunk in enumerate(parsed_line):
             chord, lyric = chunk
-            new_lyric = "banana"
+            new_lyric = lyric + "‍"
             ret[chunk_num] = (chord, new_lyric)
 
     return ret
