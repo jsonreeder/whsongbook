@@ -1,31 +1,37 @@
-{% macro render_section(type, content, filename) %}
+{% macro render_line(type, line, filename, language) %}
+{% if check_type(line) %}
+    <div class="line">
+        {%-for chord, lyric in line-%}
+            <chunk>
+            {% if lyric %}
+                    <aside>{{ display_chord(filename, chord) }}</aside>
+                    <p>{{ display_lyrics(lyric)}}</p>
+            {% else %}
+                    <aside>{{ display_chord(filename, chord) }}</aside>
+                    <p>&nbsp;</p>
+            {% endif %}
+            </chunk>
+        {%-endfor %}
+    </div>
+
+{% else %}
+    <p>{{ line }}</p>
+
+{% endif %}
+{% endmacro %}
+
+{% macro render_section(type, content, filename, language) %}
 <section class={{ type }}>
     {% if not(content) %}
-        <p>{{ display_section_name(type) }}</p>
+        <p>{{ display_section_name(type, language) }}</p>
 
     {% else %}
         {% for line in content %}
-
-            {% if check_type(line) %}
-                <div class="line">
-                    {%-for chord, lyric in line-%}
-                        <chunk>
-                        {% if lyric %}
-                                <aside>{{ display_chord(filename, chord) }}</aside>
-                                <p>{{ display_lyrics(lyric)}}</p>
-                        {% else %}
-                                <aside>{{ display_chord(filename, chord) }}</aside>
-                                <p>&nbsp;</p>
-                        {% endif %}
-                        </chunk>
-                    {%-endfor %}
-                </div>
-
+            {% if language == "ar" %}
+                {{ render_line(type, connect_arabic(line), filename, language) }}
             {% else %}
-                <p>{{ line }}</p>
-
+                {{ render_line(type, line, filename, language) }}
             {% endif %}
-
         {% endfor %}
 
     {% endif %}
