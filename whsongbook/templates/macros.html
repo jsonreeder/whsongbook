@@ -1,29 +1,23 @@
-{% macro render_line(type, content, filename, language) %}
-        {% for line in content %}
-
-            {% if check_type(line) %}
-                <div class="line">
-                    {%-for chord, lyric in line-%}
-                        <chunk>
-                        {% if lyric %}
-                                <aside>{{ display_chord(filename, chord) }}</aside>
-                                <p>{{ display_lyrics(lyric)}}</p>
-                        {% else %}
-                                <aside>{{ display_chord(filename, chord) }}</aside>
-                                <p>&nbsp;</p>
-                        {% endif %}
-                        </chunk>
-                    {%-endfor %}
-                </div>
-
+{% macro render_line(type, line, filename, language) %}
+{% if check_type(line) %}
+    <div class="line">
+        {%-for chord, lyric in line-%}
+            <chunk>
+            {% if lyric %}
+                    <aside>{{ display_chord(filename, chord) }}</aside>
+                    <p>{{ display_lyrics(lyric)}}</p>
             {% else %}
-                <p>{{ line }}</p>
-
+                    <aside>{{ display_chord(filename, chord) }}</aside>
+                    <p>&nbsp;</p>
             {% endif %}
+            </chunk>
+        {%-endfor %}
+    </div>
 
-        {% endfor %}
+{% else %}
+    <p>{{ line }}</p>
 
-</section>
+{% endif %}
 {% endmacro %}
 
 {% macro render_section(type, content, filename, language) %}
@@ -32,9 +26,12 @@
         <p>{{ display_section_name(type, language) }}</p>
 
     {% else %}
-        {{ render_line(type, content, filename, language) }}
+        {% for line in content %}
+            {{ render_line(type, line, filename, language) }}
+        {% endfor %}
 
     {% endif %}
+</section>
 {% endmacro %}
 
 {% macro list_song(song) %}
