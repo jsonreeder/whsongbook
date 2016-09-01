@@ -1,7 +1,7 @@
-{% macro render_section(type, content, filename) %}
+{% macro render_section(type, content, filename, language) %}
 <section class={{ type }}>
     {% if not(content) %}
-        <p>{{ display_section_name(type) }}</p>
+        <p>{{ display_section_name(type, language) }}</p>
 
     {% else %}
         {% for line in content %}

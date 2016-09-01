@@ -13,6 +13,6 @@
       <h3>Capo {{ metadata["capo"] }}</h3>
       {% endif %}
       {% for type, content in sections %}
-      {{ macros.render_section(type, content, filename) }}
+      {{ macros.render_section(type, content, filename, metadata["language"]) }}
       {% endfor %}
 {% endblock %}

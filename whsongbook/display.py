@@ -9,6 +9,17 @@ from . import failing_songs
 
 # Initialize global display variables
 ACCIDENTALS = {"f": "b", "s": "#"}
+LANGUAGE_INDICES = {"en": 0, "es": 1, "ar": 2}
+SECTION_TRANSLATIONS = {"header": ("header", "header", "header"),
+                        "verse": ("verse", "verso", "كوبليه"),
+                        "pre-chorus": ("pre-chorus", "pre-coro", "ما قبل اللازمة"),
+                        "chorus": ("chorus", "coro", "اللازمة"),
+                        "bridge": ("bridge", "puente", "bridge"),
+                        "instrumental": ("instrumental", "instrumental", "instrumental"),
+                        "notes": ("notes", "notes", "notes"),
+                        "intro": ("intro", "intro", "intro"),
+                        "interlude": ("interlude", "interludio", "interlude"),
+                        "outro": ("outro", "outro", "outro")}
 
 
 def display_lyrics(lyrics):
@@ -68,6 +79,12 @@ def display_chord(filename, chord):
     return ret
 
 
-def display_section_name(name):
-    ret = "(%s)" % (name.title())
-    return ret
+def display_section_name(name, language):
+    """
+    Find the proper display name for an abbreviated section
+    given a song's language
+    """
+
+    language_index = LANGUAGE_INDICES[language]
+    ret = SECTION_TRANSLATIONS[name][language_index]
+    return "(%s)" % (ret.title())
