@@ -5,8 +5,6 @@
 ** Support time signatures
 - See "You've Got to Hide Your Love Away"
 * Soon
-
-** TODO Add instructions for installing locally
 ** TODO Add test for songs with duplicate titles and artists
 ** TODO Add test for song filenames
 - File name should be artist + ~"_-_"~ + title, with spaces replaced by underscores
@@ -15,7 +13,6 @@
 ** TODO Support line-initial spaces
 - See "Us - Regina Spektor"
 * Later
-
 ** TODO Change fonts
 ** TODO Show all metadata on song pages
 - Now only the title and artist are shown
@@ -47,7 +44,6 @@
 ** TODO Log bad URL redirects
 
 * One Day
-
 ** TODO Update Python to 3.5.2
 ** TODO Allow community editing
 - Users can suggest corrections or additions from inside the app
@@ -78,13 +74,6 @@
 ** Add metadata - related songs
 - For example "Wild World" and أوقات يا دنيا
 - Could start by hard coding this, and then later try and learn it / scrape it from elsewhere
-** Change "pre-chorus" and "chorus" for non-English
-- Spanish can have:
-  - pre-coro
-  - coro
-- Arabic can have:
-  - ما قبل اللازمة
-  - اللازمة
 ** Reformat "add" chords
 - They look ugly
 - Consider brackets or superscript
@@ -123,3 +112,4 @@
 - Based on genre
 - Based on difficulty
 - Based on chord progression
+** Bug: Arabic artist pages are not working
