@@ -15,7 +15,8 @@ SECTION_TRANSLATIONS = {"header": ("header", "header", "header"),
                         "pre-chorus": ("pre-chorus", "pre-coro", "ما قبل اللازمة"),
                         "chorus": ("chorus", "coro", "اللازمة"),
                         "bridge": ("bridge", "puente", "bridge"),
-                        "instrumental": ("instrumental", "instrumental", "instrumental"),
+                        "instrumental": ("instrumental", "instrumental",
+                                         "instrumental"),
                         "notes": ("notes", "notes", "notes"),
                         "intro": ("intro", "intro", "intro"),
                         "interlude": ("interlude", "interludio", "interlude"),
@@ -23,14 +24,19 @@ SECTION_TRANSLATIONS = {"header": ("header", "header", "header"),
 
 
 def display_lyrics(lyrics):
-    lyrics = lyrics or "\xA0"
-    if lyrics.endswith(" "):
-        lyrics = lyrics[:-1] + "\xA0"
-    return lyrics
+    """
+    Format lyrics for display
 
+    By replacing spaces with nonbreaking spaces, this method ensures that
+    chords that have no associated lyrics are still displayed above the
+    lyric line
+    """
 
-def display_lyrics(lyrics):
-    return lyrics.replace(" ", "\xA0") or "\xA0\xA0"
+    ret = lyrics
+
+    # Replace spaces with nonbreaking spaces
+    ret = ret.replace(" ", "\xA0") or "\xA0\xA0"
+    return ret
 
 
 def display_chord(filename, chord):
