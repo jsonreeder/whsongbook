@@ -1,9 +1,4 @@
-{% macro render_section(type, content, filename, language) %}
-<section class={{ type }}>
-    {% if not(content) %}
-        <p>{{ display_section_name(type, language) }}</p>
-
-    {% else %}
+{% macro render_line(type, content, filename, language) %}
         {% for line in content %}
 
             {% if check_type(line) %}
@@ -28,8 +23,18 @@
 
         {% endfor %}
 
-    {% endif %}
 </section>
+{% endmacro %}
+
+{% macro render_section(type, content, filename, language) %}
+<section class={{ type }}>
+    {% if not(content) %}
+        <p>{{ display_section_name(type, language) }}</p>
+
+    {% else %}
+        {{ render_line(type, content, filename, language) }}
+
+    {% endif %}
 {% endmacro %}
 
 {% macro list_song(song) %}
