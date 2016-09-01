@@ -27,7 +27,11 @@
 
     {% else %}
         {% for line in content %}
-            {{ render_line(type, line, filename, language) }}
+            {% if language == "ar" %}
+                {{ render_line(type, connect_arabic(line), filename, language) }}
+            {% else %}
+                {{ render_line(type, line, filename, language) }}
+            {% endif %}
         {% endfor %}
 
     {% endif %}

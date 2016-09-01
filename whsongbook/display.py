@@ -38,7 +38,6 @@ def display_lyrics(lyrics):
     ret = ret.replace(" ", "\xA0") or "\xA0\xA0"
     return ret
 
-
 def display_chord(filename, chord):
     """
     Convert chords from LilyPond syntax (a:m) into display (Am)
@@ -94,3 +93,42 @@ def display_section_name(name, language):
     language_index = LANGUAGE_INDICES[language]
     ret = SECTION_TRANSLATIONS[name][language_index]
     return "(%s)" % (ret.title())
+
+def connect_arabic(parsed_line):
+    """
+    For Arabic lyrics, add connecting character when connections are
+    otherwise broken by HTML sections
+    """
+    ret = parsed_line
+
+    # Ignore lines with no chords
+    if isinstance(parsed_line, list):
+        line_length = len(parsed_line)
+        add_lam = False
+
+        for chunk_num, chunk in enumerate(parsed_line):
+            # Ignore chunks at the end of lines
+            if chunk_num + 1 < line_length:
+
+                # Ignore chunks followed only by a chord
+                next_lyric = parsed_line[chunk_num + 1][1]
+                if next_lyric:
+
+                    chord, lyric = chunk
+                    new_lyric = lyric
+
+                    # Check for lam + alif (these cannot be joined simply by JOINER)
+                    if add_lam:
+                        new_lyric = "ل" + new_lyric
+                        add_lam = False
+
+                    if new_lyric[-1] == "ل" and next_lyric[0] in "اآأإ":
+                        new_lyric = new_lyric[:-1]
+                        add_lam = True
+
+                    # Add ZERO WIDTH JOINER
+                    new_lyric += "‍"
+
+                    ret[chunk_num] = (chord, new_lyric)
+
+    return ret

@@ -260,6 +260,10 @@ def parse_text(filename, text):
             cur.append(line)
 
     # Convert header section to dictionary
+
+    # Assign "en" as default language
+    metadata["language"] = "en"
+
     if sections[0][0] == "header":
         for line in sections.pop(0)[1]:
 
