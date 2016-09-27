@@ -368,3 +368,29 @@ CLOSED: [2016-08-11 Thu 08:21]
 - When chords are not recognized sometimes they are returning "None" and this is getting into the display:
   - [[file:~/Created/Projects/whsongbook/songs/production/You_Can_Close_Your_Eyes_-_James_Taylor.song][You Can Close Your Eyes]]
   - I think that this has something to do with the spaces
+
+* DONE Change "pre-chorus" and "chorus" for non-English
+CLOSED: [2016-09-01 Thu 15:47]
+:PROPERTIES:
+:ARCHIVE_TIME: 2016-09-01 Thu 15:47
+:ARCHIVE_FILE: ~/Created/Projects/whsongbook/documentation/todos.org
+:ARCHIVE_OLPATH: Unsorted
+:ARCHIVE_CATEGORY: todos
+:ARCHIVE_TODO: DONE
+:END:
+- Spanish can have:
+  - pre-coro
+  - coro
+- Arabic can have:
+  - ما قبل اللازمة
+  - اللازمة
+
+* DONE Add instructions for installing locally
+CLOSED: [2016-09-01 Thu 15:47]
+:PROPERTIES:
+:ARCHIVE_TIME: 2016-09-01 Thu 15:47
+:ARCHIVE_FILE: ~/Created/Projects/whsongbook/documentation/todos.org
+:ARCHIVE_OLPATH: Soon
+:ARCHIVE_CATEGORY: todos
+:ARCHIVE_TODO: DONE
+:END:
