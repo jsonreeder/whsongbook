@@ -2,6 +2,7 @@ header:
     title = "I'll Fly Away"
     artist = "Albert E. Brumley"
     genres = ["bluegrass", "gospel"]
+    associated_artists = ["Allison Krauss", "Gillian Welch"]
 
 verse:
     [a]Some bright morning [a]when this life is over
@@ -21,12 +22,14 @@ verse:
     Like a bird that prison bars has flown
     I'll fly away
 
-chorus
+verse:
+    Oh, how glad and happy when we meet
+    I'll fly away
+    No more cold iron shackles on my feet
+    I'll fly away
 
 verse:
     Just a few more weary days and then
     I'll fly away
     To a land where joys will never end
     I'll fly away
-
-chorus
