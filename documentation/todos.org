@@ -113,3 +113,4 @@
 - Based on difficulty
 - Based on chord progression
 ** Bug: Arabic artist pages are not working
+** Add GL for proper input format for genres
