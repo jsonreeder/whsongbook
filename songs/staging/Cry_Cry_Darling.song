@@ -1,0 +1,55 @@
+header:
+    title = "Cry Cry Darling"
+    artist = "Bill Monroe"
+    associated_artists = ["Chris Thile", "Michael Daves"]
+    genres = ["bluegrass"]
+    capo = 2
+    time = "3/4"
+
+verse:
+    [g]Cry [g]cry
+    [c]Darling [c]
+    That's what I'll [g]do if you should [g]leave me
+    With the [d]blues [d]
+    
+chorus:
+    [g]Cry [g]cry
+    [c]Darling [c]
+    That's all I [g]do, cause you're the [d]one
+    That's in my [g]heart [g]
+
+bridge:
+    For [d]me there'll [d]be
+    No [g]moonlight [g]
+    If [a]ever [a]we
+    Should [d]part [d]
+    
+chorus:
+    [g]Cry [g]cry
+    [c]Darling [c]
+    That's all I [g]do, cause you're the [d]one
+    That's in my [g]heart [g]
+
+verse:
+    Cry cry
+    Darling
+    My eyes will cry and never dry
+    If you should go
+    
+chorus:
+    Cry cry
+    Darling
+    When shadows creep I'll just weep
+    All night I know
+
+bridge:
+    You know how much
+    I'd miss you
+    If ever we
+    should part
+
+chorus:
+    Cry cry
+    Darling
+    That's all I do, cause you're the one
+    That's in my heart
