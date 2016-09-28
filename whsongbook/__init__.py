@@ -11,7 +11,7 @@ import pprint
 from collections import defaultdict
 from flask import Flask
 
-logging.basicConfig(filename="errors.log", level=logging.DEBUG)
+logging.basicConfig(filename="errors.log", level=logging.ERROR)
 app = Flask(__name__)
 failing_songs = []
 
@@ -36,11 +36,11 @@ if failing_songs:
 
 # Build list of artists and their songs
 artists_data = defaultdict(list)
+for s in songs_data:
+    artists_data[s.metadata["artist"]].append(s.metadata["title"])
 # Log whie debugging
-# for s in songs_data:
-#     artists_data[s.metadata["artist"]].append(s.metadata["title"])
-# logging.debug("Artists_Data:\n")
-# logging.debug(pprint.pformat(artists_data))
+logging.debug("Artists_Data:\n")
+logging.debug(pprint.pformat(artists_data))
 
 from . import views
 
