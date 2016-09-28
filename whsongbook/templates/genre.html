@@ -1,0 +1,10 @@
+{% import "macros.html" as macros %}
+{% extends "base.html" %}
+{% block content %}
+    <h1>{{ genre }}</h1>
+    <ul>
+        {% for song in songs %}
+        <li><a href="{{ song["link"] }}">{{ song["display"] }}</a></li>
+        {% endfor %}
+        </ul>
+{% endblock %}
