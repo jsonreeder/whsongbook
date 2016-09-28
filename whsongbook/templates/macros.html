@@ -72,3 +72,11 @@
     </tr>
 </tbody>
 {% endmacro %}
+
+{% macro genre_links(genres) %}
+<ul id="genre_list"">
+{% for genre in genres %}
+    <li><a href = "/genre/{{genre}}">{{genre.title()}}</a></li>
+{% endfor %}
+</ul>
+{% endmacro %}

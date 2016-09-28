@@ -75,6 +75,25 @@ aside {
     font-size: .85em;
 }
 
+/* Genre list - comma separated */
+#genre_list {
+    display: inline;
+    list-style: none;
+    padding-left: 0;
+}
+
+#genre_list li {
+  display: inline;
+}
+
+#genre_list li:after {
+  content: ", ";
+}
+
+#genre_list li:last-child:after {
+    content: "";
+}
+
 /*Uncomment to hide the chords*/
 /*aside {*/
 /*	display: none;*/
