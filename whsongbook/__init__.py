@@ -11,7 +11,7 @@ import pprint
 from collections import defaultdict
 from flask import Flask
 
-logging.basicConfig(filename="errors.log", level=logging.DEBUG)
+logging.basicConfig(filename="errors.log", level=logging.ERROR)
 app = Flask(__name__)
 failing_songs = []
 
@@ -42,12 +42,12 @@ for s in songs_data:
     try:
         for genre in s.metadata["genres"]:
             genres_data[genre].append((s.metadata["title"], s.metadata["artist"]))
-    except:
-        TypeError
+    except KeyError:
+        pass
 
 # Log whie debugging
-# logging.debug("Artists_Data:\n")
-# logging.debug(pprint.pformat(artists_data))
+logging.debug("Artists_Data:\n")
+logging.debug(pprint.pformat(artists_data))
 logging.debug("Genres_Data:\n")
 logging.debug(pprint.pformat(genres_data))
 
