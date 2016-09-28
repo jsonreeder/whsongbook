@@ -1,0 +1,64 @@
+header:
+    title = "I Am a Pilgrim"
+    artist = "Traditional"
+    associated_artists = ["Johnny Cash", "The Byrds", "Doc Watson", "Merle Travis", "Willie Nelson"]
+    genres = ["bluegrass", "gospel", "country"]
+
+verse:
+    I am a [e]pilgrim [e]
+    And a [a]stranger [a]
+    Traveling [d]through [d]
+    This wearisome [a]land [a]
+    
+chorus:
+    And I've got a [a]home in [a]
+    That yonder [d]city, good [d]Lord
+    And it's [a]not [e]
+    Not made by [a]hand [a]
+
+verse:
+    I got a mother
+    A sister and a brother
+    Who have gone this way
+    Before
+
+chorus:
+    I am determined
+    To go and see them, good Lord
+    Over on
+    That distant shore
+
+verse:
+    I'm going down to
+    That river Jordan
+    Just to bathe
+    My weary soul
+
+chorus:
+    If I can just touch
+    The hem of His garment, good Lord
+    Then I know
+    He'll take me home
+
+verse:
+    Now when I'm dead
+    Laying in my coffin
+    All of my friends all gather round
+
+chorus:
+    They can say that
+    He's just laying there sleeping, good Lord
+    Sweet peace
+    His soul has found
+    
+verse:
+    I am a pilgrim 
+    And a stranger 
+    Traveling through 
+    This wearisome land 
+    
+chorus:
+    And I've got a home in 
+    That yonder city, good Lord
+    And it's not 
+    Not made by hand 
