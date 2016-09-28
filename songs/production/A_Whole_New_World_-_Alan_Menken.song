@@ -1,6 +1,7 @@
 header:
     title = "A Whole New World"
     artist = "Alan Menken"
+    genres = ["disney", "musical"]
 
 verse:
     [d]I can show you the world, shining, shimmering, [g]splen[a]did
