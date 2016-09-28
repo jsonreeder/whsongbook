@@ -1,6 +1,7 @@
 header:
     title = "Wagon Wheel"
     artist = "Old Crow Medicine Show"
+    genres = ["bluegrass", "folk"]
 
 verse:
     [g]Headed down south to the [d]land of the pines
