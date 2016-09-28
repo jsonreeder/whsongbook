@@ -132,3 +132,15 @@ def connect_arabic(parsed_line):
                     ret[chunk_num] = (chord, new_lyric)
 
     return ret
+
+def display_genres(genres):
+    """
+    Format genres for display
+
+    Takes a list of one or more genres
+    Returns an alphabetical list of genres in title caps
+    """
+
+    genres = sorted(genres)
+
+    return ", ".join(genres).title()
