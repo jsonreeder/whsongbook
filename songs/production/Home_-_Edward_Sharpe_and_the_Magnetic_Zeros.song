@@ -1,6 +1,7 @@
 header:
     title = "Home"
     artist = "Edward Sharpe and the Magnetic Zeros"
+    tags = ["modern"]
 
 instrumental:
     [| b:m | d d:/fs | d g | (x2)]

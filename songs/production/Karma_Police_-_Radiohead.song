@@ -1,6 +1,7 @@
 header:
     title = "Karma Police"
     artist = "Radiohead"
+    tags = ["modern"]
 
 verse:
     [a:m]   Kar[a:m/fs]ma po[e:m]lice, ar[g]rest this man

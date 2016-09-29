@@ -1,6 +1,7 @@
 header:
     title = "Fat Lip"
     artist = "Sum 41"
+    tags = ["modern"]
 
 instrumental:
     [| e gs:m | e fs:m | e gs:m | e fs:m e | (x2)]

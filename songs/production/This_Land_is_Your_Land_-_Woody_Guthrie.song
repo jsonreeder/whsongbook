@@ -1,6 +1,7 @@
 header:
     title = "This Land is Your Land"
     artist = "Woody Guthrie"
+    tags = ["americana", "sing-along"]
 
 chorus:
     This land is [c]your land, this land is [g]my land,

@@ -1,6 +1,7 @@
 header:
     title = "Bridge Over Troubled Water"
     artist = "Simon & Garfunkel"
+    tags = ["sing-along"]
 
 verse:
     When you're [d]weary [g]

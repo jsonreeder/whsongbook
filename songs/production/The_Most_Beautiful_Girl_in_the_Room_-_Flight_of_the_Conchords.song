@@ -1,6 +1,7 @@
 header:
     title = "The Most Beautiful Girl in the Room"
     artist = "Flight of the Conchords"
+    tags = ["modern"]
 
 verse:
     [d:maj7]   Lookin' round the [a:maj7]room, I can tell that [b:m7]you are the most [a:maj7]beautiful [a:7]girl in the

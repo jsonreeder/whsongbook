@@ -1,6 +1,7 @@
 header:
     title = "Hallelujah"
     artist = "Leonard Cohen"
+    tags = ["sing-along", "modern"]
     associated_artists = ["Jeff Buckley", "John Cale"]
 
 verse:

@@ -1,6 +1,7 @@
 header:
     title = "Fuck You"
     artist = "Cee Lo Green"
+    tags = ["sing-along", "modern"]
 
 instrumental:
     [| c | d:7 | f | c |]

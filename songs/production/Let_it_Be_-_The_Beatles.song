@@ -1,6 +1,7 @@
 header:
     title = "Let it Be"
     artist = "The Beatles"
+    tags = ["sing-along"]
 
 verse:
     When I [c]find myself in [g]times of trouble, [a:m]Mother Mary [f]comes to me

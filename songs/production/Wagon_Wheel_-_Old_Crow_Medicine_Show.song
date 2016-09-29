@@ -1,6 +1,7 @@
 header:
     title = "Wagon Wheel"
     artist = "Old Crow Medicine Show"
+    tags = ["americana", "sing-along", "modern"]
     genres = ["bluegrass", "folk"]
 
 verse:

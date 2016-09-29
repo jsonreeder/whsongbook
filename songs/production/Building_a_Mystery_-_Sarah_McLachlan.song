@@ -1,6 +1,7 @@
 header:
     title = "Building a Mystery"
     artist = "Sarah McLachlan"
+    tags = ["modern"]
 
 verse:
     You [b:m]come out at night, [g] [d]   that's when the energy [a]comes

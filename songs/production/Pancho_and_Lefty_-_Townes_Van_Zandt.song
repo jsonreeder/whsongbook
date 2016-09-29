@@ -1,6 +1,7 @@
 header:
     title = "Pancho and Lefty"
     artist = "Townes Van Zandt"
+    tags = ["americana"]
     associated_artists = ["Willie Nelson", "Merle Haggard"]
 
 verse:

@@ -1,6 +1,7 @@
 header:
     title = "I've Been Workin' on the Railroad"
     artist = "Traditional"
+    tags = ["americana"]
     associated_artists = ["The Sandhills Sixteen"]
 
 verse:

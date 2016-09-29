@@ -1,6 +1,7 @@
 header:
     title = "Pictures of You"
     artist = "The Cure"
+    tags = ["modern"]
 
 instrumental:
     [| e | d | e | d |]

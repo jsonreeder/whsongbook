@@ -1,6 +1,7 @@
 header:
     title = "Brown Eyed Girl"
     artist = "Van Morrison"
+    tags = ["sing-along"]
 
 verse:
     [g]   Hey where did [c]we go, [g]   days when the [d]rains came,

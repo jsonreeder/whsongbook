@@ -1,6 +1,7 @@
 header:
     title = "Ob-La-Di, Ob-La-Da"
     artist = "The Beatles"
+    tags = ["sing-along"]
     capo = 3
 
 verse:

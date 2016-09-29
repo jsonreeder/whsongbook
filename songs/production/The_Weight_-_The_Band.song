@@ -1,6 +1,7 @@
 header:
     title = "The Weight"
     artist = "The Band"
+    tags = ["americana", "sing-along"]
 
 verse:
     [g]   I pulled into [b:m]Nazareth, was [c]feeling about half past [g]dead

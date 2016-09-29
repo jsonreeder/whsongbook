@@ -1,6 +1,7 @@
 header:
     title = "That Thing You Do!"
     artist = "The Wonders"
+    tags = ["modern"]
 
 instrumental:
     [| e | a:m |]

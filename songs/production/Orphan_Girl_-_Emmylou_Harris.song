@@ -1,6 +1,7 @@
 header:
     title = "Orphan Girl"
     artist = "Emmylou Harris"
+    tags = ["americana", "modern"]
     associated_artists = ["Gillian Welch"]
     capo = 1
 

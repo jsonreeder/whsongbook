@@ -1,6 +1,7 @@
 header:
     title = "Look at Miss Ohio"
     artist = "Gillian Welch"
+    tags = ["americana"]
     associated_artists = ["David Rawlings"]
 
 chorus:

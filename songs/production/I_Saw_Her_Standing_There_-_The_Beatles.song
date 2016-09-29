@@ -1,6 +1,7 @@
 header:
     title = "I Saw Her Standing There"
     artist = "The Beatles"
+    tags = ["sing-along"]
 
 verse:
     Well she was [e:7]just seven[e:7]teen

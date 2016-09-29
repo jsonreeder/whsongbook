@@ -1,6 +1,7 @@
 header:
     title = "Bare Necessities"
     artist = "Terry Gilkyson"
+    tags = ["modern"]
     year = 1967
     genres = ["disney", "musical", "ragtime"]
 

@@ -1,6 +1,7 @@
 header:
     title = "Naive"
     artist = "The Kooks"
+    tags = ["modern"]
     capo = 4
 
 verse:

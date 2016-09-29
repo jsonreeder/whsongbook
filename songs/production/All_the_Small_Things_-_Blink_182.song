@@ -1,6 +1,7 @@
 header:
     title = "All the Small Things"
     artist = "Blink 182"
+    tags = ["modern"]
 
 instrumental:
     [g:5 f:5 | c:5 | f:5/c | g:5 | f:5 |]

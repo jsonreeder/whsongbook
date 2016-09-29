@@ -1,6 +1,7 @@
 header:
     title = "Your Body is a Wonderland"
     artist = "John Mayer"
+    tags = ["modern"]
 
 verse:
     [f]  We [c]got the [bf]after[c]noon

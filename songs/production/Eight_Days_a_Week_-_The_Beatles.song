@@ -1,6 +1,7 @@
 header:
     title = "Eight Days a Week"
     artist = "The Beatles"
+    tags = ["sing-along"]
 
 instrumental:
     [| d | e | g | d |]

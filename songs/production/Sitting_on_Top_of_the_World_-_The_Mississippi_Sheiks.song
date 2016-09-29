@@ -1,6 +1,7 @@
 header:
     title = "Sitting on Top of the World"
     artist = "The Mississippi Sheiks"
+    tags = ["americana"]
     associated_artists = ["Doc Watson", "Big Bill Broonzy"]
 
 verse:

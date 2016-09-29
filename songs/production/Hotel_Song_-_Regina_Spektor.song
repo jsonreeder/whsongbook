@@ -1,6 +1,7 @@
 header:
     title = "Hotel Song"
     artist = "Regina Spektor"
+    tags = ["modern"]
 
 intro:
     Come in, come in

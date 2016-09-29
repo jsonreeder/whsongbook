@@ -1,6 +1,7 @@
 header:
     title = "Chicken Fried"
     artist = "Zac Brown Band"
+    tags = ["modern"]
 
 chorus:
     You know I like my [g]chicken fried, cold beer on a [d]Friday night

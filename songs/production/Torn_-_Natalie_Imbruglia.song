@@ -1,6 +1,7 @@
 header:
     title = "Torn"
     artist = "Natalie Imbruglia"
+    tags = ["modern"]
 
 verse:
     [f]   I thought I [f]saw a man brought to life

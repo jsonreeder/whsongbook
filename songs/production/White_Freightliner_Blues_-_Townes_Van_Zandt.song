@@ -1,6 +1,7 @@
 header:
     title = "White Freightliner Blues"
     artist = "Townes Van Zandt"
+    tags = ["americana"]
     genres = ["bluegrass", "country"]
 
 verse:

@@ -1,6 +1,7 @@
 header:
     title = "Whisky in the Jar"
     artist = "Traditional"
+    tags = ["americana"]
     associated_artists = ["The Dubliners", "The Pogues", "Metallica"]
 
 verse:

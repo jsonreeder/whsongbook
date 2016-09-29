@@ -1,6 +1,7 @@
 header:
     title = "Angel from Montgomery"
     artist = "John Prine"
+    tags = ["americana"]
     associated_artists = ["Bonnie Raitt", "Susan Tedeschi"]
 
 verse:

@@ -1,6 +1,7 @@
 header:
     title = "Circle Game"
     artist = "Joni Mitchell"
+    tags = ["sing-along"]
 
 verse:
     [d]Yesterday a [g]child came out to [d]wonder

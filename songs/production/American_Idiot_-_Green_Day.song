@@ -1,6 +1,7 @@
 header:
     title = "American Idiot"
     artist = "Green Day"
+    tags = ["modern"]
 
 verse:
     Don't want to be an American idiot [a d g d a g]

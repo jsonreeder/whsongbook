@@ -1,6 +1,7 @@
 header:
     title = "Mushaboom"
     artist = "Feist"
+    tags = ["modern"]
 
 verse:
     [d]Helping the kids out of their coats

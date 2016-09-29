@@ -1,6 +1,7 @@
 header:
     title = "This Love"
     artist = "Maroon 5"
+    tags = ["modern"]
 
 verse:
     [g]   I was so high I did not [c:m]recognize

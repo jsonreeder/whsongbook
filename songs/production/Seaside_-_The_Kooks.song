@@ -1,6 +1,7 @@
 header:
     title = "Seaside"
     artist = "The Kooks"
+    tags = ["modern"]
     capo = 1
 
 verse:

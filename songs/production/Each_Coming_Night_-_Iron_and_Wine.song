@@ -1,6 +1,7 @@
 header:
     title = "Each Coming Night"
     artist = "Iron and Wine"
+    tags = ["modern"]
 
 verse:
     [c]Will [b:m]you [a:m]say [a:m/e]when I've [f:sus]gone [g]away

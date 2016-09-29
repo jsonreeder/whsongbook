@@ -1,6 +1,7 @@
 header:
     title = "Mary Jane's Last Dance"
     artist = "Tom Petty"
+    tags = ["modern"]
 
 verse:
     [a:m]She grew up in an [g]Indiana town

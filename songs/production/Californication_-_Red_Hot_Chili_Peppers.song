@@ -1,6 +1,7 @@
 header:
     title = "Californication"
     artist = "Red Hot Chili Peppers"
+    tags = ["modern"]
 
 instrumental
     [| a:m | f f:6 f | a:m | f f:6 f |]
