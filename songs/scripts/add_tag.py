@@ -31,8 +31,19 @@ def validate_song(song):
 
     return True
 
+def add_tag(tag, song):
+    """
+    Insert a tag into the header of a song
+    """
 
-def add_tag(tag, songs):
+    lines = song.splitlines()
+    tag_to_insert = '    tags = ["%s"]' % tag
+    insertion_location = 3
+    lines.insert(insertion_location, tag_to_insert)
+
+    return "\n".join(lines)
+
+def main(tag, songs):
     """
     Add a given tag to a given set of songs
     """
@@ -45,6 +56,10 @@ def add_tag(tag, songs):
         if not validate_song(song):
             print("ERROR: Invalid song")
             return False
+
+        else:
+            with open("../production/" + song, "w") as f:
+                file = f.read()
 
     return True
 
@@ -60,5 +75,18 @@ def test_invalid_song():
 def test_valid_song():
     assert validate_song("Wildwood_Flower_-_Maud_Irving.song") == True
 
-def test_simple_tag_song():
-    assert add_tag("americana", ["Wildwood_Flower_-_Maud_Irving.song"]) == True
+def test_add_a_tag():
+    sample_in = """header:
+    title = "Wildwood Flower"
+    artist = "Maud Irving"
+    associated_artists = ["Joseph Philbrick Webster", "The Carter Family", "June Carter", "Johnny Cash"]
+    genres = ["folk", "country", "bluegrass"]"""
+
+    desired_out = """header:
+    title = "Wildwood Flower"
+    artist = "Maud Irving"
+    tags = ["americana"]
+    associated_artists = ["Joseph Philbrick Webster", "The Carter Family", "June Carter", "Johnny Cash"]
+    genres = ["folk", "country", "bluegrass"]"""
+
+    assert add_tag("americana", sample_in) == desired_out
