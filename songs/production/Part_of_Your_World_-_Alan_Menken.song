@@ -1,6 +1,7 @@
 header:
     title = "Part of Your World"
     artist = "Alan Menken"
+    tags = ["sing-along", "modern"]
 
 verse:
     [c]Look at this stuff! [d]Isn't it neat? [c]Wouldn't you think my col[d]lection's complete?

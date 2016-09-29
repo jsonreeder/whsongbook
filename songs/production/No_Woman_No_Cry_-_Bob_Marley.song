@@ -1,6 +1,7 @@
 header:
     title = "No Woman No Cry"
     artist = "Bob Marley"
+    tags = ["sing-along"]
 
 chorus:
     [c]   No [g:/b]woman no [a:m]cry [f]

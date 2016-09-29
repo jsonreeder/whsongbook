@@ -1,6 +1,7 @@
 header:
     title = "Soul Meets Body"
     artist = "Death Cab for Cutie"
+    tags = ["modern"]
     genres = ["indie"]
 
 verse:

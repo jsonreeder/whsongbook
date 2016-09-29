@@ -1,6 +1,7 @@
 header:
     title = "A Whole New World"
     artist = "Alan Menken"
+    tags = ["sing-along", "modern"]
     genres = ["disney", "musical"]
 
 verse:

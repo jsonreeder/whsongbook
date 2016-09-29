@@ -1,6 +1,7 @@
 header:
     title = "Stewball"
     artist = "Traditional"
+    tags = ["americana"]
 
 chorus:
     Stewball was a [g]racehorse

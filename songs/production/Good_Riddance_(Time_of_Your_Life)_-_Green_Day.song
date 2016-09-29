@@ -1,6 +1,7 @@
 header:
     title = "Good Riddance (Time of Your Life)"
     artist = "Green Day"
+    tags = ["sing-along", "modern"]
 
 verse:
     [g]   Another turning point a [c]fork stuck in the [d]road

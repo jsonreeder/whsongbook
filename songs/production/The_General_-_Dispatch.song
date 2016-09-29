@@ -1,6 +1,7 @@
 header:
     title = "The General"
     artist = "Dispatch"
+    tags = ["modern"]
     capo = 1
 
 verse:

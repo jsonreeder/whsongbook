@@ -1,6 +1,7 @@
 header:
     title = "What Ever Happened?"
     artist = "The Strokes"
+    tags = ["modern"]
 
 instrumental:
     [| b | b | b | b |]

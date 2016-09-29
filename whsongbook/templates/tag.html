@@ -1,7 +1,7 @@
 {% import "macros.html" as macros %}
 {% extends "base.html" %}
 {% block content %}
-    <h1>Genre: {{ genre }}</h1>
+<h1><a href="/tags">Tag</a>: {{ tag }}</h1>
     <ul>
         {% for song in songs %}
         <li><a href="{{ song["link"] }}">{{ song["display"] }}</a></li>

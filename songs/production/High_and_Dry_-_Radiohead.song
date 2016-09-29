@@ -1,6 +1,7 @@
 header:
     title = "High and Dry"
     artist = "Radiohead"
+    tags = ["sing-along", "modern"]
 
 instrumental:
     [| gs:m fs:m | gs:m a | e e:sus4 | e |]

@@ -1,6 +1,7 @@
 header:
     title = "Guaranteed"
     artist = "Eddie Vedder"
+    tags = ["modern"]
 
 verse:
     [g]On bended knee is no [b:m]way to be free

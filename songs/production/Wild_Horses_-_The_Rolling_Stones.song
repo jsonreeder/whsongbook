@@ -1,6 +1,7 @@
 header:
     title = "Wild Horses"
     artist = "The Rolling Stones"
+    tags = ["americana"]
 
 instrumental:
     [| g | a:m | g | a:m |]

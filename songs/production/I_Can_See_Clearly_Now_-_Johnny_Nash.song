@@ -1,6 +1,7 @@
 header:
     title = "I Can See Clearly Now"
     artist = "Johnny Nash"
+    tags = ["sing-along"]
 
 verse:
     [d]   I can see [g]clearly now, the [d]rain is gone

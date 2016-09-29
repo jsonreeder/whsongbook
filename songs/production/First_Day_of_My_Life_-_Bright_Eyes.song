@@ -1,6 +1,7 @@
 header:
     title = "First Day of My Life"
     artist = "Bright Eyes"
+    tags = ["modern"]
     capo = 4
 
 verse:

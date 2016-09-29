@@ -7,7 +7,7 @@ This module defines the endpoints of the Flask app.
 from random import choice
 from collections import defaultdict
 from flask import render_template, redirect
-from . import app, songs_data, artists_data, genres_data
+from . import app, songs_data, artists_data, genres_data, tags_data
 
 
 @app.route("/")
@@ -130,6 +130,40 @@ def genre_page(genre):
 
         return render_template("genre.html", genre=genre.title(), songs=songs)
 
+@app.route("/tags")
+def tags_page():
+    """
+    Display a single page containing all tags with links to their individual
+    tag pages
+    """
+
+    tags = []
+    for tag in sorted(tags_data.keys()):
+        cur = defaultdict(list)
+        cur["display"] = tag.title()
+        cur["link"] = "/tags/%s" % tag
+        tags.append(cur)
+
+    return render_template("tags.html", tags=tags)
+
+@app.route("/tags/<tag>")
+def tag_page(tag):
+    """
+    Display a page for each tag, with a list of all songs in that tag.
+    """
+
+    if tag not in tags_data.keys():
+        return redirect("/browse")
+    else:
+        songs = []
+        for song in tags_data[tag]:
+            title, artist = song
+            cur = defaultdict(list)
+            cur["display"] = "%s - %s" % (title, artist)
+            cur["link"] = "/browse/%s/%s" % (artist.replace(" ", "_"), title.replace(" ", "_"))
+            songs.append(cur)
+
+        return render_template("tag.html", tag=tag.title(), songs=songs)
 
 @app.route("/songs_list")
 def songs_list():

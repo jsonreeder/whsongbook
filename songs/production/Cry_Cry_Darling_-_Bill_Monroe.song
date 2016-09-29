@@ -1,6 +1,7 @@
 header:
     title = "Cry Cry Darling"
     artist = "Bill Monroe"
+    tags = ["americana"]
     associated_artists = ["Chris Thile", "Michael Daves"]
     genres = ["bluegrass"]
     capo = 2

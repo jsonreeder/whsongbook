@@ -1,6 +1,7 @@
 header:
     title = "Boulevard of Broken Dreams"
     artist = "Green Day"
+    tags = ["modern"]
 
 verse:
     [e:m]   I walk a [g]lonely road

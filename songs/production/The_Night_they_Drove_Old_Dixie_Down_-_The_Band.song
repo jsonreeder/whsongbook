@@ -1,6 +1,7 @@
 header:
     title = "The Night they Drove Old Dixie Down"
     artist = "The Band"
+    tags = ["americana"]
 
 verse:
     [a:m]   Virgil [c]Caine is my name, and I [f]served on the [f:/e]Danville [d:m]train

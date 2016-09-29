@@ -1,6 +1,7 @@
 header:
     title = "If I Had a Boat"
     artist = "Lyle Lovett"
+    tags = ["modern"]
     capo = 4
 
 chorus:

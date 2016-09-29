@@ -1,6 +1,7 @@
 header:
     title = "Big Rock Candy Mountain"
     artist = "Harry McClintock"
+    tags = ["americana"]
     associated_artists = ["Burl Ives", "Pete Seeger"]
     genres = ["bluegrass", "folk"]
 

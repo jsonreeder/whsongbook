@@ -1,6 +1,7 @@
 header:
     title = "Such Great Heights"
     artist = "The Postal Service"
+    tags = ["modern"]
     capo = 5
 
 verse:

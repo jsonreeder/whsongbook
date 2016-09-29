@@ -1,6 +1,7 @@
 header:
     title = "Boy with a Coin"
     artist = "Iron & Wine"
+    tags = ["modern"]
 
 instrumental:
     [| c:m7 c c:9 c c:m7 | e:m e:m7 e:m.5+ e:m | (x4)]

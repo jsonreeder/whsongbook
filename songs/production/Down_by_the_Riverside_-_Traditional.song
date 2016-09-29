@@ -1,6 +1,7 @@
 header:
     title = "Down by the Riverside"
     artist = "Traditional"
+    tags = ["americana"]
     genres = ["folk", "gospel"]
 
 verse:

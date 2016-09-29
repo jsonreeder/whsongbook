@@ -1,6 +1,7 @@
 header:
     title = "Sex and Candy"
     artist = "Marcy Playground"
+    tags = ["modern"]
     capo = 2
 
 verse:

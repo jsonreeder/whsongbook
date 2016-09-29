@@ -1,6 +1,7 @@
 header:
     title = "Crash into Me"
     artist = "Dave Matthews"
+    tags = ["modern"]
 
 verse:
     [cs:m7]You've got your [a:9]ball you've [e:/b]got your [e:5]chain

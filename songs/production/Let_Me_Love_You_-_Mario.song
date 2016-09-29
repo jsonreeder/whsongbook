@@ -1,6 +1,7 @@
 header:
     title = "Let Me Love You"
     artist = "Mario"
+    tags = ["modern"]
     capo = 3
 
 intro:

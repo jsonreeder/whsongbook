@@ -1,6 +1,7 @@
 header:
     title = "Peaches"
     artist = "Presidents of the United States of America"
+    tags = ["modern"]
 
 verse:
     [g]Movin' to the [d]country gonna [a]eat a lot of [d]peaches

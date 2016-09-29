@@ -1,6 +1,7 @@
 header:
     title = "Bohemian Rhapsody"
     artist = "Queen"
+    tags = ["sing-along"]
 
 verse:
     [bf]   Is this the real life? [c]   Is this just fantasy? [f]   Caught in a landslide, no es[bf]cape from reality

@@ -1,6 +1,7 @@
 header:
     title = "I'll Make a Man Out of You"
     artist = "Matthew Wilder and David Zippel"
+    tags = ["sing-along", "modern"]
 
 verse:
     [e:m]   Let's get [d]down to [g]business to de[a:m]feat the [d]Huns

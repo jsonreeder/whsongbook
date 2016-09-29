@@ -1,6 +1,7 @@
 header:
     title = "In the Pines (Where Did You Sleep Last Night)"
     artist = "Lead Belly"
+    tags = ["americana"]
     associated_artists = ["Nirvana"]
     genres = ["folk", "bluegrass"]
     time = "3/4"

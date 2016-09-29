@@ -1,6 +1,7 @@
 header:
     title = "Crazy"
     artist = "Gnarles Barkley"
+    tags = ["modern"]
     capo = 3
 
 instrumental:

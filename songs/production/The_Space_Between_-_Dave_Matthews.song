@@ -1,6 +1,7 @@
 header:
     title = "The Space Between"
     artist = "Dave Matthews"
+    tags = ["modern"]
 
 verse:
     [e:/gs] [d:/fs]   You cannot quit me so quickly

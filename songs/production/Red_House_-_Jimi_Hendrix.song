@@ -1,6 +1,7 @@
 header:
     title = "Red House"
     artist = "Jimi Hendrix"
+    tags = ["americana"]
 
 verse:
     There's a [bf]red house over yonder

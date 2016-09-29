@@ -1,6 +1,7 @@
 header:
     title = "Joshua Fought the Battle of Jericho"
     artist = "Traditional"
+    tags = ["americana"]
     associated_artists = ["Mahalia Jackson"]
 
 chorus:

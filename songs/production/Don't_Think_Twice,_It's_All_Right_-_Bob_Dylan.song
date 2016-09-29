@@ -1,6 +1,7 @@
 header:
     title = "Don't Think Twice, It's All Right"
     artist = "Bob Dylan"
+    tags = ["americana"]
 
 verse:
     It [c]ain't no use to [g/b]sit and wonder [a:m]why, babe

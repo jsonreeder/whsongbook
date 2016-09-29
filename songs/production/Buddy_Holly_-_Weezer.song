@@ -1,6 +1,7 @@
 header:
     title = "Buddy Holly"
     artist = "Weezer"
+    tags = ["modern"]
     capo = 1
 
 verse:

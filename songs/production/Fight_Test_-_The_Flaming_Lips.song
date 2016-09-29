@@ -1,6 +1,7 @@
 header:
     title = "Fight Test"
     artist = "The Flaming Lips"
+    tags = ["modern"]
 
 verse:
     I thought I was [a]smart, I thought I was [cs:m]right

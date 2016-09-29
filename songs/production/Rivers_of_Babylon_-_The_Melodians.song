@@ -1,6 +1,7 @@
 header:
     title = "Rivers of Babylon"
     artist = "The Melodians"
+    tags = ["sing-along", "modern"]
     associated_artists = ["Sublime"]
 
 verse:

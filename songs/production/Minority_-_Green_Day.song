@@ -1,6 +1,7 @@
 header:
     title = "Minority"
     artist = "Green Day"
+    tags = ["modern"]
 
 instrumental:
     [| c g | f c | c g | f g c |]

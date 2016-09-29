@@ -1,6 +1,7 @@
 header:
     title = "The Scientist"
     artist = "Coldplay"
+    tags = ["modern"]
 
 verse:
     [d:m]   Come up to [bf]meet ya, tell you I'm [f]sorry, you don't know how [c]lovely you are

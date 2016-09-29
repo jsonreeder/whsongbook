@@ -1,6 +1,7 @@
 header:
     title = "New River Train"
     artist = "Traditional"
+    tags = ["americana"]
     associated_artists = ["Doc Watson"]
     genres = ["bluegrass"]
 

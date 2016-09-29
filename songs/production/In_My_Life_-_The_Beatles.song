@@ -1,6 +1,7 @@
 header:
     title = "In My Life"
     artist = "The Beatles"
+    tags = ["sing-along"]
     capo = 2
 
 instrumental:

@@ -1,6 +1,7 @@
 header:
     title = "With a Little Help from my Friends"
     artist = "The Beatles"
+    tags = ["sing-along"]
 
 verse:
     [e]What would you [b]do if I [fs:m]sang out of tune

@@ -1,6 +1,7 @@
 header:
     title = "Under the Sea"
     artist = "Alan Menken"
+    tags = ["sing-along", "modern"]
 
 verse:
     [a]   The seaweed is [e]always [a]greener in somebody [e]else's [a]lake

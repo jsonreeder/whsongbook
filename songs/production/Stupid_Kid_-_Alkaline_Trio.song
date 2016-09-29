@@ -1,6 +1,7 @@
 header:
     title = "Stupid Kid"
     artist = "Alkaline Trio"
+    tags = ["modern"]
 
 instrumental:
     [| b e ef df | gs e ef df |]

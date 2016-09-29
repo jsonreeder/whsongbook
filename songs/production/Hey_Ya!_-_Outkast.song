@@ -1,6 +1,7 @@
 header:
     title = "Hey Ya!"
     artist = "Outkast"
+    tags = ["modern"]
 
 intro:
     1 2 3 uh!

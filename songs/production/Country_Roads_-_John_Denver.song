@@ -1,6 +1,7 @@
 header:
     title = "Country Roads"
     artist = "John Denver"
+    tags = ["americana", "sing-along"]
     capo = 2
 
 verse:

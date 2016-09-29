@@ -1,6 +1,7 @@
 header:
     title = "Say it Ain't So"
     artist = "Weezer"
+    tags = ["modern"]
 
 intro:
     Oh, [cs:m7]yeah [gs:9+] [a] [e]

@@ -1,6 +1,7 @@
 header:
     title = "Blowin in the Wind"
     artist = "Bob Dylan"
+    tags = ["sing-along"]
 
 verse:
     [d]How many [g]roads must a [d]man walk down

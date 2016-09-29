@@ -1,6 +1,7 @@
 header:
     title = "What I Got"
     artist = "Sublime"
+    tags = ["modern"]
 
 verse:
     [d]Early in the [g]mornin'

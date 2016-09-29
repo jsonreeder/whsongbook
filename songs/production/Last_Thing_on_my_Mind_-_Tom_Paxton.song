@@ -1,6 +1,7 @@
 header:
     title = "Last Thing on my Mind"
     artist = "Tom Paxton"
+    tags = ["americana"]
     associated_artists = ["Doc Watson", "Tony Rice"]
     genres = ["folk", "bluegrass"]
     capo = 2

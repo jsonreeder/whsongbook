@@ -1,6 +1,7 @@
 header:
     title = "Long Black Veil"
     artist = "Lefty Frizzell"
+    tags = ["americana"]
     associated_artists = ["Johnny Cash"]
 
 verse:

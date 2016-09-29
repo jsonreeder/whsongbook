@@ -37,11 +37,17 @@ if failing_songs:
 # Build artist and genre lists
 artists_data = defaultdict(list)
 genres_data = defaultdict(list)
+tags_data = defaultdict(list)
 for s in songs_data:
     artists_data[s.metadata["artist"]].append(s.metadata["title"])
     try:
         for genre in s.metadata["genres"]:
             genres_data[genre].append((s.metadata["title"], s.metadata["artist"]))
+    except KeyError:
+        pass
+    try:
+        for tag in s.metadata["tags"]:
+            tags_data[tag].append((s.metadata["title"], s.metadata["artist"]))
     except KeyError:
         pass
 
@@ -50,6 +56,8 @@ logging.debug("Artists_Data:\n")
 logging.debug(pprint.pformat(artists_data))
 logging.debug("Genres_Data:\n")
 logging.debug(pprint.pformat(genres_data))
+logging.debug("Tags_Data:\n")
+logging.debug(pprint.pformat(tags_data))
 
 from . import views
 

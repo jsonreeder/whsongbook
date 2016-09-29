@@ -1,6 +1,7 @@
 header:
     title = "The Old Home Place"
     artist = "The Dillards"
+    tags = ["americana"]
     associated_artists = ["Tony Rice", "J.D. Crowe and the New South"]
     genres = ["bluegrass"]
     capo = 3

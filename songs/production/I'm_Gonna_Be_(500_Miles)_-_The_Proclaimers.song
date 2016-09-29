@@ -1,6 +1,7 @@
 header:
     title = "I'm Gonna Be (500 Miles)"
     artist = "The Proclaimers"
+    tags = ["sing-along", "modern"]
 
 verse:
     When I [e]wake up, well I know I'm gonna be,

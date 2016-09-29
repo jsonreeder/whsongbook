@@ -1,6 +1,7 @@
 header:
     title = "Deep River Blues"
     artist = "The Delmore Brothers"
+    tags = ["americana"]
     associated_artists = ["Doc Watson"]
     genres = ["bluegrass", "folk", "blues"]
 

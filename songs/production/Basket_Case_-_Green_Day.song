@@ -1,6 +1,7 @@
 header:
     title = "Basket Case"
     artist = "Green Day"
+    tags = ["modern"]
     capo = 1
 
 verse:

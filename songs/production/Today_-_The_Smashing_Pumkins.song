@@ -1,6 +1,7 @@
 header:
     title = "Today"
     artist = "The Smashing Pumkins"
+    tags = ["modern"]
 
 verse:
     [e]To[b]day is the [a]greatest day I've ever known

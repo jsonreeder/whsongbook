@@ -1,6 +1,7 @@
 header:
     title = "Hey There Delilah"
     artist = "Plain White Tees"
+    tags = ["sing-along"]
 
 instrumental:
     [| d | fs:m | d | fs:m |]

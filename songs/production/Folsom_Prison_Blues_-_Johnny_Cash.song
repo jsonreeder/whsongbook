@@ -1,6 +1,7 @@
 header:
     title = "Folsom Prison Blues"
     artist = "Johnny Cash"
+    tags = ["americana"]
 
 verse:
     I [e]hear the train a comin'

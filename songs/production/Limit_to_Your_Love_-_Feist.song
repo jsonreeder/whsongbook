@@ -1,6 +1,7 @@
 header:
     title = "Limit to Your Love"
     artist = "Feist"
+    tags = ["modern"]
     associated_artists = ["James Blake"]
 
 chorus:

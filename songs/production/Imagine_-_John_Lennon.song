@@ -1,6 +1,7 @@
 header:
     title = "Imagine"
     artist = "John Lennon"
+    tags = ["sing-along"]
 
 instrumental:
     [| c c:maj7 | f f:sus4 f:.5- |]

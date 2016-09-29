@@ -1,6 +1,7 @@
 header:
     title = "In the Aeroplane over the Sea"
     artist = "Neutral Milk Hotel"
+    tags = ["modern"]
 
 verse:
     [g]  What a beautiful [e:m]face I have found in this [c]place that is circling [d]all round the sun

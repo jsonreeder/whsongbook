@@ -1,6 +1,7 @@
 header:
     title = "Waiting on the World to Change"
     artist = "John Mayer"
+    tags = ["modern"]
 
 verse:
     [d]   Me and all my [b:m]friends, we're [g]all misunder[d]stood

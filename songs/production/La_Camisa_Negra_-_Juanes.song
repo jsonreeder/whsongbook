@@ -1,6 +1,7 @@
 header:
     title = "La Camisa Negra"
     artist = "Juanes"
+    tags = ["modern"]
     capo = 2
     language = "es"
 

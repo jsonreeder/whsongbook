@@ -1,6 +1,7 @@
 header:
     title = "Honky Tonk Women"
     artist = "The Rolling Stones"
+    tags = ["americana"]
 
 verse:
     I [g]met a gin soaked bar-room queen in [c]Memphis

@@ -1,6 +1,7 @@
 header:
     title = "Everlong"
     artist = "Foo Fighters"
+    tags = ["modern"]
     notes = "Drop D Tuning"
 
 verse:

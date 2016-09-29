@@ -1,6 +1,7 @@
 header:
     title = "Ring of Fire"
     artist = "Johnny Cash"
+    tags = ["americana"]
 
 verse:
     [g]Love is a [c]burning [g]thing [g]

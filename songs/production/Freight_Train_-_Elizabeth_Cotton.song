@@ -1,6 +1,7 @@
 header:
     title = "Freight Train"
     artist = "Elizabeth Cotton"
+    tags = ["americana"]
 
 verse:
     [c]Freight train, freight train, [g:7]goin' so fast,

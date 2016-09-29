@@ -1,6 +1,7 @@
 header:
     title = "Closing Time"
     artist = "Semisonic"
+    tags = ["modern"]
 
 verse:
     [g]Closing [d]time, [a:m]open all the [c]doors and [g]let you out [d]into the [a:m]world [c]

@@ -1,6 +1,7 @@
 header:
     title = "Mr. Jones"
     artist = "Counting Crows"
+    tags = ["modern"]
 
 verse:
     [a:m]   I was down at the New [f]Amsterdam [d:m]   staring at this [g]yellow-haired girl

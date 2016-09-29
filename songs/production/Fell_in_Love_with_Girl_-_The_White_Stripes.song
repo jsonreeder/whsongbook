@@ -1,6 +1,7 @@
 header:
     title = "Fell in Love with Girl"
     artist = "The White Stripes"
+    tags = ["modern"]
 
 verse:
     [b]   Fell in love with a [a]girl

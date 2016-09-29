@@ -1,6 +1,7 @@
 header:
     title = "Wildwood Flower"
     artist = "Maud Irving"
+    tags = ["americana"]
     associated_artists = ["Joseph Philbrick Webster", "The Carter Family", "June Carter", "Johnny Cash"]
     genres = ["folk", "country", "bluegrass"]
 
