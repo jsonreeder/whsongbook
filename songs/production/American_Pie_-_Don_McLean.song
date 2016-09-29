@@ -1,6 +1,7 @@
 header:
     title = "American Pie"
     artist = "Don McLean"
+    tags = ["sing-along"]
 
 verse:
     A [g]long, [d]long [e:m]time ago, [a:m]I can still re[c]member how that [e:m]music used to make me [d]smile
