@@ -12,7 +12,7 @@ def validate_tag(tag):
     Make sure that tag is among valid options
     """
 
-    valid_tags = ["americana", "singalong"]
+    valid_tags = ["americana", "sing-along", "modern"]
 
     if tag not in valid_tags:
         print("ERROR: Invalid tag -- %s" % tag)
