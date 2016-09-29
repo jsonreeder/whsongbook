@@ -80,3 +80,11 @@
 {% endfor %}
 </ul>
 {% endmacro %}
+
+{% macro tag_links(tags) %}
+<ul id="genre_list"">
+{% for tag in tags %}
+    <li><a href = "/tags/{{tag}}">{{tag.title()}}</a></li>
+{% endfor %}
+</ul>
+{% endmacro %}
