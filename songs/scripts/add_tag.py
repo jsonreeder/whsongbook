@@ -5,13 +5,14 @@ Add a given tag to a given set of songs
 """
 
 from os import listdir
+import argparse
 
 def validate_tag(tag):
     """
     Make sure that tag is among valid options
     """
 
-    valid_tags = ["americana"]
+    valid_tags = ["americana", "singalong"]
 
     if tag not in valid_tags:
         return False
@@ -54,22 +55,50 @@ def main(tag, songs):
 
     for song in songs:
         if not validate_song(song):
-            print("ERROR: Invalid song")
+            print("ERROR: Invalid song -- %s" % song)
             return False
 
-        else:
-            with open("../production/" + song, "r") as f:
-                old_text = f.read()
-            new_text = add_tag(tag, old_text)
-            with open("../production/" + song, "w") as f:
-                f.write(new_text)
+    for song in songs:
+        with open("../production/" + song, "r") as f:
+            old_text = f.read()
+        new_text = add_tag(tag, old_text)
+        with open("../production/" + song, "w") as f:
+            f.write(new_text)
 
     return True
 
 if __name__ == "__main__":
-    sample_in = ["Wildwood_Flower_-_Maud_Irving.song"]
 
-    main("americana", sample_in)
+    # Parse input
+    parser = argparse.ArgumentParser(description='Add tags to songs')
+    parser.add_argument('tag', metavar='T', type=str,
+                    help='The tag to be added')
+    args = parser.parse_args()
+
+    # Get songs
+    print("Enter/Paste songs. Ctrl-D to run (eshell: RET C-q C-d RET).\n")
+    songs = []
+    while True:
+        try:
+            line = input("")
+        except EOFError:
+            break
+        songs.append(line)
+
+    ## Allow for some poor formatting of songs
+    better_songs = []
+    for song in songs:
+        song = song.strip()
+        if song[-1] == ",":
+            song = song[:-1]
+        if song[-1] == "'":
+            song = song[:-1]
+        song = "%s" % song
+        better_songs.append(song)
+
+    # Add the tags
+    main(args.tag, better_songs)
+    print("Success")
 
 
 def test_invalid_tag():
