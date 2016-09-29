@@ -64,6 +64,8 @@ def main(tag, songs):
         new_text = add_tag(tag, old_text)
         with open("../production/" + song, "w") as f:
             f.write(new_text)
+            # Add a blank line at the end
+            f.write("\n")
 
     return True
 
