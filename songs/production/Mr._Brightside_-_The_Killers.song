@@ -1,6 +1,7 @@
 header:
     title = "Mr. Brightside"
     artist = "The Killers"
+    tags = ["modern"]
 
 verse:
     [d]   I'm coming out of my [a]cage and I've been doing just [g]fine

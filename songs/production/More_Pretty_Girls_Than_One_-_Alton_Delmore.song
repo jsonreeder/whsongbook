@@ -1,6 +1,7 @@
 header:
     title = "More Pretty Girls Than One"
     artist = "Alton Delmore"
+    tags = ["americana"]
     associated_artists = ["Arthur Smith", "Ricky Skaggs", "Tony Rice", "Doc Watson"]
     genres = ["bluegrass"]
 

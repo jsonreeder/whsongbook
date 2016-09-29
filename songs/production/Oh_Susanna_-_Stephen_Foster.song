@@ -1,6 +1,7 @@
 header:
     title = "Oh Susanna"
     artist = "Stephen Foster"
+    tags = ["americana"]
 
 verse:
     I [d]come from Alabama with a banjo on my [a:7]knee

@@ -1,6 +1,7 @@
 header:
     title = "The Grouch"
     artist = "Green Day"
+    tags = ["modern"]
 
 verse:
     [a]   I was a [e]young boy that [a]had big [d]plans

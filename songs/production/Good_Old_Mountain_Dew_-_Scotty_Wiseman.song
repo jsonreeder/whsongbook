@@ -1,6 +1,7 @@
 header:
     title = "Good Old Mountain Dew"
     artist = "Scotty Wiseman"
+    tags = ["americana"]
     associated_artists = ["Bascom Lamar Lunsford", "The Stanley Brothers", "Lester Flatt", "Earl Scruggs"]
     genres = ["bluegrass"]
 

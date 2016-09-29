@@ -1,6 +1,7 @@
 header:
     title = "What If"
     artist = "Colplday"
+    tags = ["modern"]
 
 verse:
     [fs:m]   What if [a]there was no [b:m7]light

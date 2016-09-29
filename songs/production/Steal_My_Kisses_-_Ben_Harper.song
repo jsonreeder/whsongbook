@@ -1,6 +1,7 @@
 header:
     title = "Steal My Kisses"
     artist = "Ben Harper"
+    tags = ["modern"]
 
 verse:
     [g]I put into Nashville, Tennes[c]see

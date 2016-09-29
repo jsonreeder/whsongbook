@@ -1,6 +1,7 @@
 header:
     title = "Boyz in da Hood"
     artist = "Easy-E"
+    tags = ["modern"]
     associated_artists = ["Dynamite Hack"]
 
 verse:

@@ -1,6 +1,7 @@
 header:
     title = "Stacy's Mom"
     artist = "Fountains of Wayne"
+    tags = ["modern"]
 
 verse:
     [e]Stacy's [a]mom has [b]got it goin' [a]on (x4)

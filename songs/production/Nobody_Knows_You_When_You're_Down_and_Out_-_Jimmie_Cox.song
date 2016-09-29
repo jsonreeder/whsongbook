@@ -1,6 +1,7 @@
 header:
     title = "Nobody Knows You When You're Down and Out"
     artist = "Jimmie Cox"
+    tags = ["americana"]
     associated_artists = ["Eric Clapton"]
 
 verse:

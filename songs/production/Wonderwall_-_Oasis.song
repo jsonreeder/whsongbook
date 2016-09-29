@@ -1,6 +1,7 @@
 header:
     title = "Wonderwall"
     artist = "Oasis"
+    tags = ["sing-along", "modern"]
     capo = 2
 
 verse:

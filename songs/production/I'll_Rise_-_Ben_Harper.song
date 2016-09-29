@@ -1,6 +1,7 @@
 header:
     title = "I'll Rise"
     artist = "Ben Harper"
+    tags = ["modern"]
 
 verse:
     You may [a:m7]write me down in history

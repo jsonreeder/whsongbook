@@ -1,6 +1,7 @@
 header:
     title = "Big Yellow Taxi"
     artist = "Joni Mitchell"
+    tags = ["sing-along"]
 
 instrumental:
     [| a | a | b | b |]

@@ -1,6 +1,7 @@
 header:
     title = "Blue in the Face"
     artist = "Alkaline Trio"
+    tags = ["modern"]
     time = "6/8"
 
 instrumental:

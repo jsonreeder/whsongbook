@@ -1,6 +1,7 @@
 header:
     title = "She Will be Loved"
     artist = "Maroon 5"
+    tags = ["modern"]
     capo = 3
 
 verse:

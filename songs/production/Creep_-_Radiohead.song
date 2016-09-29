@@ -1,6 +1,7 @@
 header:
     title = "Creep"
     artist = "Radiohead"
+    tags = ["modern"]
 
 instrumental:
     [| g | g:sus g | b | b:sus b |]

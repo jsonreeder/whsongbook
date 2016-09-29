@@ -1,6 +1,7 @@
 header:
     title = "Tribute"
     artist = "Tenacious D"
+    tags = ["modern"]
 
 verse:
     [a:m]   Long time ago me and my brother Kyle here

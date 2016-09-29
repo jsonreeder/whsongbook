@@ -1,6 +1,7 @@
 header:
     title = "Oh Freedom"
     artist = "Traditional"
+    tags = ["americana"]
     associated_artists = ["Odetta", "Joan Baez"]
 
 verse:

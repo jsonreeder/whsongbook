@@ -1,6 +1,7 @@
 header:
     title = "MMM Bop"
     artist = "Hanson"
+    tags = ["modern"]
 
 verse:
     [a]   You have so many re-[e]la-lationships (in) this [d]life, only [e]one or two will [a]last

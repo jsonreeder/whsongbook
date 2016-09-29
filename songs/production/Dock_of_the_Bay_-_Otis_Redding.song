@@ -1,6 +1,7 @@
 header:
     title = "Dock of the Bay"
     artist = "Otis Redding"
+    tags = ["sing-along"]
 
 verse:
     [g]Sittin' in the morning [b]sun

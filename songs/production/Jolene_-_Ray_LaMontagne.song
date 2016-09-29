@@ -1,6 +1,7 @@
 header:
     title = "Jolene"
     artist = "Ray LaMontagne"
+    tags = ["modern"]
 
 instrumental:
     [| g c | c g | (x2)]

@@ -1,6 +1,7 @@
 header:
     title = "Pride and Joy"
     artist = "Stevie Ray Vaughan"
+    tags = ["americana"]
 
 verse:
     Well you've [e]heard about love givin' sight to the blind

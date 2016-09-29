@@ -1,6 +1,7 @@
 header:
     title = "All Star"
     artist = "Smashmouth"
+    tags = ["modern"]
 
 verse:
     Some[g]body once [d]told me the [a:m]world is gonna [c]roll me

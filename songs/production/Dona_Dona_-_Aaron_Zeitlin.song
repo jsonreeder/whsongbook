@@ -1,6 +1,7 @@
 header:
     title = "Dona Dona"
     artist = "Aaron Zeitlin"
+    tags = ["americana"]
     associated_artists = ["Joan Baez"]
 
 verse:

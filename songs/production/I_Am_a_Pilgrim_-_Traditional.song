@@ -1,6 +1,7 @@
 header:
     title = "I Am a Pilgrim"
     artist = "Traditional"
+    tags = ["americana"]
     associated_artists = ["Johnny Cash", "The Byrds", "Doc Watson", "Merle Travis", "Willie Nelson"]
     genres = ["bluegrass", "gospel", "country"]
 

@@ -1,6 +1,7 @@
 header:
     title = "Hey Jude"
     artist = "The Beatles"
+    tags = ["sing-along"]
 
 verse:
     Hey [f]Jude, don't make it [c]bad

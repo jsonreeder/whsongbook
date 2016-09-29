@@ -1,6 +1,7 @@
 header:
     title = "Smoke Two Joints"
     artist = "The Toyes"
+    tags = ["modern"]
     associated_artists = ["Sublime"]
 
 instrumental:

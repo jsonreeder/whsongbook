@@ -1,6 +1,7 @@
 header:
     title = "Hotel California"
     artist = "The Eagles"
+    tags = ["sing-along"]
 
 verse:
     [b:m]   On a dark desert highway, [fs]   cool wind in my hair

@@ -1,6 +1,7 @@
 header:
     title = "Can You Feel the Love Tonight?"
     artist = "Elton John"
+    tags = ["sing-along", "modern"]
     capo = 1
 
 verse:

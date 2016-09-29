@@ -1,6 +1,7 @@
 header:
     title = "I Believe in a Thing Called Love"
     artist = "The Darkness"
+    tags = ["modern"]
 
 verse:
     [fs:m]   Can't explain [a]all the [b]feelings that you're making me [e]feel [b] [a]

@@ -1,6 +1,7 @@
 header:
     title = "New Slang"
     artist = "The Shins"
+    tags = ["modern"]
 
 intro:
     [a:m]Ooo oo-[c]oo oo [f]oo-oo-oo [c]ooooh

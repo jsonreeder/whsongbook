@@ -1,6 +1,7 @@
 header:
     title = "I Want It That Way"
     artist = "Backstreet Boys"
+    tags = ["sing-along", "modern"]
     capo = 2
 
 instrumental:

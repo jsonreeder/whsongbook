@@ -1,6 +1,7 @@
 header:
     title = "What a Wonderful World"
     artist = "David Weiss and Bob Thiele"
+    tags = ["sing-along"]
     associated_artists = ["Louis Armstrong"]
 
 verse:

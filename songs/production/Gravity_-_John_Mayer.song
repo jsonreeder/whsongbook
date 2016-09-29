@@ -1,6 +1,7 @@
 header:
     title = "Gravity"
     artist = "John Mayer"
+    tags = ["modern"]
 
 verse:
     [g]Gravity, [g:sus4] [g]   is working a[c]gainst me

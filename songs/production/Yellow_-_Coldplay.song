@@ -1,6 +1,7 @@
 header:
     title = "Yellow"
     artist = "Coldplay"
+    tags = ["modern"]
     capo = 2
 
 instrumental:

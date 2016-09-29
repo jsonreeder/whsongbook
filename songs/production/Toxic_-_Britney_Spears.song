@@ -1,6 +1,7 @@
 header:
     title = "Toxic"
     artist = "Britney Spears"
+    tags = ["modern"]
     capo = 3
 
 verse:

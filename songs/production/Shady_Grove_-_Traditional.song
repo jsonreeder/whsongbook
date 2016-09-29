@@ -1,6 +1,7 @@
 header:
     title = "Shady Grove"
     artist = "Traditional"
+    tags = ["americana"]
     associated_artists = ["Doc Watson", "Bill Monroe", "The Kingston Trio"]
 
 verse:

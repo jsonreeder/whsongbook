@@ -1,6 +1,7 @@
 header:
     title = "I Am a Man of Man of Constant Sorrow"
     artist = "John Hartford"
+    tags = ["americana"]
     capo = 1
     genres = ["bluegrass"]
 

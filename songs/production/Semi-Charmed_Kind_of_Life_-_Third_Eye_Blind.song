@@ -1,6 +1,7 @@
 header:
     title = "Semi-Charmed Kind of Life"
     artist = "Third Eye Blind"
+    tags = ["modern"]
 
 instrumental:
     [| g d d:sus | c:9 c c:m7 |]

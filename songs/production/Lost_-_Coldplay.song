@@ -1,6 +1,7 @@
 header:
     title = "Lost"
     artist = "Coldplay"
+    tags = ["modern"]
 
 verse:
     [e:m]Just because I'm [c]losing

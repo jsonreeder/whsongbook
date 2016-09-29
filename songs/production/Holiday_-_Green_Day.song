@@ -1,6 +1,7 @@
 header:
     title = "Holiday"
     artist = "Green Day"
+    tags = ["modern"]
 
 intro:
     Say! Hey!

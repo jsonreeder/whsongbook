@@ -1,6 +1,7 @@
 header:
     title = "You Are my Sunshine"
     artist = "Traditional"
+    tags = ["americana"]
     associated_artists = ["The Civil Wars"]
 
 verse:

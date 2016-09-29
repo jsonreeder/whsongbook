@@ -1,6 +1,7 @@
 header:
     title = "Dynamite"
     artist = "Taio Cruz"
+    tags = ["modern"]
     capo = 4
 
 verse:

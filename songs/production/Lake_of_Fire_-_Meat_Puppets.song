@@ -1,6 +1,7 @@
 header:
     title = "Lake of Fire"
     artist = "Meat Puppets"
+    tags = ["modern"]
 
 chorus:
     [fs:m]   Where do bad folks [e]go when they [a]die?

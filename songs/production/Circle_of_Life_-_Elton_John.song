@@ -1,6 +1,7 @@
 header:
     title = "Circle of Life"
     artist = "Elton John"
+    tags = ["sing-along", "modern"]
     capo = 1
 
 intro:

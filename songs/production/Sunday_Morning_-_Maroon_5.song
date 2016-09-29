@@ -1,6 +1,7 @@
 header:
     title = "Sunday Morning"
     artist = "Maroon 5"
+    tags = ["modern"]
 
 verse:
     [d:m]   Sunday [g]morning rain is [c]falling

@@ -1,6 +1,7 @@
 header:
     title = "Us"
     artist = "Regina Spektor"
+    tags = ["modern"]
     capo = 1
 
 verse:

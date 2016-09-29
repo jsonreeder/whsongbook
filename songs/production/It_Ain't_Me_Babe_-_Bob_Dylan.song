@@ -1,6 +1,7 @@
 header:
     title = "It Ain't Me Babe"
     artist = "Bob Dylan"
+    tags = ["americana"]
 
 verse:
     [g]Go 'way from my [c]window, [g]leave at your [d]own chosen [g]speed

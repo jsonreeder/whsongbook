@@ -1,6 +1,7 @@
 header:
     title = "I Believe I Can Fly"
     artist = "R. Kelly"
+    tags = ["modern"]
 
 verse:
     I [c]used to think that [f:m]I could not go on

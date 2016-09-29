@@ -1,6 +1,7 @@
 header:
     title = "Are You Gonna Be My Girl"
     artist = "Jet"
+    tags = ["modern"]
 
 instrumental:
     [| a a | a g c | a a | a g |]

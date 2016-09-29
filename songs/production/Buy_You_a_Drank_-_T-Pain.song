@@ -1,6 +1,7 @@
 header:
     title = "Buy You a Drank"
     artist = "T-Pain"
+    tags = ["modern"]
     capo = 1
 
 verse:

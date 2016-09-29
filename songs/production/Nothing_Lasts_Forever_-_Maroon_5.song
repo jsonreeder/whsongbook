@@ -1,6 +1,7 @@
 header:
     title = "Nothing Lasts Forever"
     artist = "Maroon 5"
+    tags = ["modern"]
 
 verse:
     [d]It is so easy to see, dys[d:maj7]function between you and me

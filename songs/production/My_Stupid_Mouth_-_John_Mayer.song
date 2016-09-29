@@ -1,6 +1,7 @@
 header:
     title = "My Stupid Mouth"
     artist = "John Mayer"
+    tags = ["modern"]
 
 verse:
     My stupid [d]mouth has [d:/cs]got me in [d:/fs]trouble. I said too [g]much again

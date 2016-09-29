@@ -1,6 +1,7 @@
 header:
     title = "Colors of the Wind"
     artist = "Alan Menken"
+    tags = ["sing-along", "modern"]
     capo = 1
 
 verse:

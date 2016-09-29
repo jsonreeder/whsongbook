@@ -1,6 +1,7 @@
 header:
     title = "Both Sides Now"
     artist = "Joni Mitchell"
+    tags = ["sing-along"]
     capo = 2
 
 instrumental:

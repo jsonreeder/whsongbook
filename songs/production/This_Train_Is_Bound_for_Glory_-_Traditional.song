@@ -1,6 +1,7 @@
 header:
     title = "This Train Is Bound for Glory"
     artist = "Traditional"
+    tags = ["americana"]
     genres = ["bluegrass", "folk"]
 
 verse:

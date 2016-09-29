@@ -1,6 +1,7 @@
 header:
     title = "Fake Plastic Trees"
     artist = "Radiohead"
+    tags = ["sing-along", "modern"]
 
 verse:
     Her [a]green plastic watering [d:sus/fs]can,

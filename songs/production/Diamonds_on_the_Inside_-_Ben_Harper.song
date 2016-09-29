@@ -1,6 +1,7 @@
 header:
     title = "Diamonds on the Inside"
     artist = "Ben Harper"
+    tags = ["modern"]
     capo = 1
 
 verse:

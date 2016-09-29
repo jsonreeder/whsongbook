@@ -1,6 +1,7 @@
 header:
     title = "Bury Me Beneath the Willow"
     artist = "Bradley Kincaid"
+    tags = ["americana"]
     associated_artists = ["The Carter Family", "Ricky Skaggs", "Tony Rice", "Chris Thile", "Michael Daves"]
     genres = ["bluegrass"]
 

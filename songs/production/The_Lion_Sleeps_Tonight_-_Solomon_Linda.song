@@ -1,6 +1,7 @@
 header:
     title = "The Lion Sleeps Tonight"
     artist = "Solomon Linda"
+    tags = ["sing-along"]
 
 chorus:
     A[g]wimbo-weh awimbo-weh, a[c]wimbo-weh awimbo-weh

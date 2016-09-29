@@ -1,6 +1,7 @@
 header:
     title = "I'll Fly Away"
     artist = "Albert E. Brumley"
+    tags = ["americana"]
     genres = ["bluegrass", "gospel"]
     associated_artists = ["Allison Krauss", "Gillian Welch"]
 
