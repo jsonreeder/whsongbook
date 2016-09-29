@@ -58,10 +58,19 @@ def main(tag, songs):
             return False
 
         else:
+            with open("../production/" + song, "r") as f:
+                old_text = f.read()
+            new_text = add_tag(tag, old_text)
             with open("../production/" + song, "w") as f:
-                file = f.read()
+                f.write(new_text)
 
     return True
+
+if __name__ == "__main__":
+    sample_in = ["Wildwood_Flower_-_Maud_Irving.song"]
+
+    main("americana", sample_in)
+
 
 def test_invalid_tag():
     assert validate_tag("Americana") == False
@@ -90,3 +99,8 @@ def test_add_a_tag():
     genres = ["folk", "country", "bluegrass"]"""
 
     assert add_tag("americana", sample_in) == desired_out
+
+def test_add_tag_to_file():
+    sample_in = ["Wildwood_Flower_-_Maud_Irving.song"]
+
+    assert main("americana", sample_in) == True
