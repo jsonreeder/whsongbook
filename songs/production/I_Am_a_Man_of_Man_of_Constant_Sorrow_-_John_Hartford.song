@@ -2,28 +2,39 @@ header:
     title = "I Am a Man of Man of Constant Sorrow"
     artist = "John Hartford"
     capo = 1
+    genres = ["bluegrass"]
 
 verse:
-    [e]I am a man of constant [a]sorrow, I've seen [b]trouble all my [e]days
-    [e]I bid farewell to old Ken[a]tucky, the place where [b]I was born and [e]raised
+    [e]I am a man of constant [a]sorrow
+    I've seen [b]trouble all my [e]days
+    [e]I bid farewell to old Ken[a]tucky
+    The place where [b]I was born and [e]raised
     (The place where [b]he was born and [e]raised)
 
 verse:
-    For six long years I've been in trouble, no pleasure here on Earth I've found
-    For in this world I'm bound to ramble, I have no friends to help me now
+    For six long years I've been in trouble
+    No pleasure here on Earth I've found
+    For in this world I'm bound to ramble
+    I have no friends to help me now
     (He has no friends to help him now)
 
 verse:
-    It's fare-thee-well, my own true lover, I never expect to see you again
-    For I'm bound to ride that Northern Railroad, perhaps I'll die upon this train
+    It's fare-thee-well, my own true lover
+    I never expect to see you again
+    For I'm bound to ride that Northern Railroad
+    Perhaps I'll die upon this train
     (Perhaps he'll die upon this train)
 
 verse:
-    You can bury me in some deep valley, for many years where I may lay
-    And you may learn to love another, while I am sleeping in my grave
+    You can bury me in some deep valley
+    For many years where I may lay
+    And you may learn to love another
+    While I am sleeping in my grave
     (While he is sleeping in his grave)
 
 verse:
-    May be your friends think I'm just a stranger, my face you never will see no more
-    But there is one promise that is given, I'll meet you on God's golden shore
+    May be your friends think I'm just a stranger
+    My face you never will see no more
+    But there is one promise that is given
+    I'll meet you on God's golden shore
     (He'll meet you on God's golden shore)

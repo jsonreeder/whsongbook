@@ -1,0 +1,57 @@
+header:
+    title = "Deep River Blues"
+    artist = "The Delmore Brothers"
+    associated_artists = ["Doc Watson"]
+    genres = ["bluegrass", "folk", "blues"]
+
+chorus:
+    [e]Let it rain, [e:dim]let it pour
+    [e]Let it rain a [a]whole lot more
+    [e]'Cause I got them [e]deep
+    River [b:7]blues [b:7]
+
+chorus:
+    [e]Let the rain [e:dim]drive right on
+    [e]Let the waves [a]sweep along
+    [e]'Cause I got them [b:7]deep
+    River [e]blues [e]
+
+verse:
+    My old gal's a good old pal
+    And she looks like a water fowl
+    When I get them deep
+    River blues
+
+verse:
+    Ain't no one to cry for me
+    And the fish all go out on a spree
+    When I get them deep
+    River blues
+
+verse:
+    Give me back my old boat
+    I'm gonna sail if she'll float
+    'Cause I got them deep
+    River blues
+
+verse:
+    I'm goin' back to Muscle Shoals
+    Times are better there I'm told
+    'Cause I got them deep
+    River blues
+
+chorus
+
+verse:
+    If my boat sinks with me
+    I'll go down, don't you see
+    'Cause I got them deep
+    River blues
+
+verse
+    Now I'm gonna say goodbye
+    And if I sink, just let me die
+    'Cause I got them deep
+    River blues
+
+chorus

@@ -1,6 +1,7 @@
 header:
     title = "Down by the Riverside"
     artist = "Traditional"
+    genres = ["folk", "gospel"]
 
 verse:
     Gonna [e]lay down my sword and shield, down by the riverside

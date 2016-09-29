@@ -1,23 +1,35 @@
 header:
     title = "I'll Fly Away"
     artist = "Albert E. Brumley"
+    genres = ["bluegrass", "gospel"]
+    associated_artists = ["Allison Krauss", "Gillian Welch"]
 
 verse:
-    [a]Some bright morning [a]when this life is over, [d]I'll fly a[a]way
-    [a]To that home on [a]God's celestial shore, [e]I'll fly a[a]way
+    [a]Some bright morning [a]when this life is over
+    [d]I'll fly a[a]way
+    [a]To that home on [a]God's celestial shore
+    [e]I'll fly a[a]way
 
 chorus:
-    [a]I'll fly a[a]way, oh glory, [d]I'll fly a[a]way (in the morning)
-    [a]When I die, halle[a]lujah by and by, [e]I'll fly a[a]way
+    [a]I'll fly a[a]way, oh glory
+    [d]I'll fly a[a]way (in the morning)
+    [a]When I die, halle[a]lujah by and by
+    [e]I'll fly a[a]way
 
 verse:
-    When the shadows of this life have grown, I'll fly away
-    Like a bird that prison bars has flown, I'll fly away
-
-chorus
+    When the shadows of this life have grown
+    I'll fly away
+    Like a bird that prison bars has flown
+    I'll fly away
 
 verse:
-    Just a few more weary days and then, I'll fly away
-    To a land where joys will never end, I'll fly away
+    Oh, how glad and happy when we meet
+    I'll fly away
+    No more cold iron shackles on my feet
+    I'll fly away
 
-chorus
+verse:
+    Just a few more weary days and then
+    I'll fly away
+    To a land where joys will never end
+    I'll fly away
