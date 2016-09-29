@@ -15,6 +15,7 @@ def validate_tag(tag):
     valid_tags = ["americana", "singalong"]
 
     if tag not in valid_tags:
+        print("ERROR: Invalid tag -- %s" % tag)
         return False
 
     return True
@@ -28,7 +29,16 @@ def validate_song(song):
     songs_directory_contents = listdir("../production")
 
     if song not in songs_directory_contents:
+        print("ERROR: Song not found -- %s" % song)
         return False
+
+    # Check for existing tags
+    with open("../production/" + song, "r") as f:
+        text = f.read()
+
+        if "tags =" in text:
+            print("ERROR: Song already has tags -- %s" % song)
+            return False
 
     return True
 
@@ -50,18 +60,18 @@ def main(tag, songs):
     """
 
     if not validate_tag(tag):
-        print("ERROR: Invalid tag")
         return False
 
     for song in songs:
         if not validate_song(song):
-            print("ERROR: Invalid song -- %s" % song)
             return False
 
     for song in songs:
         with open("../production/" + song, "r") as f:
             old_text = f.read()
+
         new_text = add_tag(tag, old_text)
+
         with open("../production/" + song, "w") as f:
             f.write(new_text)
             # Add a blank line at the end
@@ -113,7 +123,7 @@ def test_invalid_song():
     assert validate_song("Wildwood_Flower") == False
 
 def test_valid_song():
-    assert validate_song("Wildwood_Flower_-_Maud_Irving.song") == True
+    assert validate_song("Apeman_-_The_Kinks.song") == True
 
 def test_add_a_tag():
     sample_in = """header:
@@ -130,8 +140,3 @@ def test_add_a_tag():
     genres = ["folk", "country", "bluegrass"]"""
 
     assert add_tag("americana", sample_in) == desired_out
-
-def test_add_tag_to_file():
-    sample_in = ["Wildwood_Flower_-_Maud_Irving.song"]
-
-    assert main("americana", sample_in) == True
