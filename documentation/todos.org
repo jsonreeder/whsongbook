@@ -114,3 +114,6 @@
 - Based on chord progression
 ** Bug: Arabic artist pages are not working
 ** Add GL for proper input format for genres
+** Have tag list come out in alphabetical order
+** Add artists page similar to tags page (maybe # of songs next to name)
+** Add genres page similar to tags page
