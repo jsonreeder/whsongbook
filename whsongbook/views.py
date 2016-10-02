@@ -163,6 +163,9 @@ def tag_page(tag):
             cur["link"] = "/browse/%s/%s" % (artist.replace(" ", "_"), title.replace(" ", "_"))
             songs.append(cur)
 
+        # Alphabetize songs
+        songs = sorted(songs, key = lambda k: k["title"])
+
         return render_template("tag.html", tag=tag.title(), songs=songs)
 
 @app.route("/songs_list")
