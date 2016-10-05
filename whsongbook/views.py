@@ -180,10 +180,7 @@ def songs_list():
     Display the list of songs and metadata.
     """
 
-    ret = ""
-    for song in songs_data:
-        ret += str(song.metadata)
-    return str(ret)
+    return str([song.get_metadata() for song in songs_data])
 
 
 @app.route("/songs_data")
