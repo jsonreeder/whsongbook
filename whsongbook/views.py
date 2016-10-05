@@ -176,6 +176,10 @@ def tag_page(tag):
 
 @app.route("/songs_list")
 def songs_list():
+    """
+    Display the list of songs and metadata.
+    """
+
     ret = ""
     for song in songs_data:
         ret += str(song.metadata)
