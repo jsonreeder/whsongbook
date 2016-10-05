@@ -184,3 +184,12 @@ def songs_list():
     for song in songs_data:
         ret += str(song.metadata)
     return str(ret)
+
+
+@app.route("/songs_data")
+def display_songs_data():
+    """
+    Display a list of all song content and metadata.
+    """
+
+    return str([song.get_json() for song in songs_data])
