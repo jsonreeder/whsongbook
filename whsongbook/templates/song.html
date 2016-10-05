@@ -12,9 +12,6 @@
       {% if metadata["capo"] %}
       <h3>Capo {{ metadata["capo"] }}</h3>
       {% endif %}
-      {% if metadata["genres"] %}
-      <h3>Genre: {{ macros.genre_links(metadata["genres"]) }}</h3>
-      {% endif %}
       {% if metadata["tags"] %}
       <h3>Tags: {{ macros.tag_links(metadata["tags"]) }}</h3>
       {% endif %}
