@@ -52,8 +52,8 @@ def browse():
         cur["artist"] = song.metadata["artist"]
         cur["title"] = song.metadata["title"]
         cur["artist_link"] = "/browse/%s" % (cur["artist"].replace(" ", "_"))
-        cur["song_link"] = "%s/%s" % (cur["artist_link"], cur["title"].replace(
-            " ", "_"))
+        cur["song_link"] = "%s/%s" % (cur["artist_link"],
+                                      cur["title"].replace(" ", "_"))
         songs.append(cur)
 
     return render_template(
@@ -105,11 +105,12 @@ def artist(artist_underscore):
         for song in artists_data[artist]:
             cur = defaultdict(list)
             cur["title"] = song
-            cur["link"] = "/browse/%s/%s" % (artist_underscore, song.replace(
-                " ", "_"))
+            cur["link"] = "/browse/%s/%s" % (artist_underscore,
+                                             song.replace(" ", "_"))
             songs.append(cur)
 
         return render_template("artist.html", artist=artist, songs=songs)
+
 
 @app.route("/genre/<genre>")
 def genre_page(genre):
@@ -125,10 +126,12 @@ def genre_page(genre):
             title, artist = song
             cur = defaultdict(list)
             cur["display"] = "%s - %s" % (title, artist)
-            cur["link"] = "/browse/%s/%s" % (artist.replace(" ", "_"), title.replace(" ", "_"))
+            cur["link"] = "/browse/%s/%s" % (artist.replace(" ", "_"),
+                                             title.replace(" ", "_"))
             songs.append(cur)
 
         return render_template("genre.html", genre=genre.title(), songs=songs)
+
 
 @app.route("/tags")
 def tags_page():
@@ -146,6 +149,7 @@ def tags_page():
 
     return render_template("tags.html", tags=tags)
 
+
 @app.route("/tags/<tag>")
 def tag_page(tag):
     """
@@ -160,13 +164,15 @@ def tag_page(tag):
             title, artist = song
             cur = defaultdict(list)
             cur["display"] = "%s - %s" % (title, artist)
-            cur["link"] = "/browse/%s/%s" % (artist.replace(" ", "_"), title.replace(" ", "_"))
+            cur["link"] = "/browse/%s/%s" % (artist.replace(" ", "_"),
+                                             title.replace(" ", "_"))
             songs.append(cur)
 
         # Alphabetize songs
-        songs = sorted(songs, key = lambda k: k["title"])
+        songs = sorted(songs, key=lambda k: k["title"])
 
         return render_template("tag.html", tag=tag.title(), songs=songs)
+
 
 @app.route("/songs_list")
 def songs_list():
