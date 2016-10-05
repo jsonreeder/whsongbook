@@ -39,18 +39,21 @@ class Song:
         ret += "Content = %s\n" % pprint.pformat(self.content)
         return ret
 
+    def get_metadata(self):
+        """
+        Return the metadata for a song. For outside access.
+        """
+
+        return self.metadata
+
     def get_json(self):
         """
         Return the content of the song object formatted for JSON
         """
 
-        return {self.filename: {"metadata": self.metadata, "content": self.content}}
+        return {self.filename: {"metadata": self.metadata,
+                                "content": self.content}}
 
-    def get_lyrics(self):
-        """
-        Return the title, metadata, and lyrics of the song object formatted for JSON
-        TODO: Implement
-        """
 
 def parse_pitch(filename, pitch):
     """

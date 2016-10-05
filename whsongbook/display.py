@@ -12,7 +12,8 @@ ACCIDENTALS = {"f": "b", "s": "#"}
 LANGUAGE_INDICES = {"en": 0, "es": 1, "ar": 2}
 SECTION_TRANSLATIONS = {"header": ("header", "header", "header"),
                         "verse": ("verse", "verso", "كوبليه"),
-                        "pre-chorus": ("pre-chorus", "pre-coro", "ما قبل اللازمة"),
+                        "pre-chorus":
+                        ("pre-chorus", "pre-coro", "ما قبل اللازمة"),
                         "chorus": ("chorus", "coro", "اللازمة"),
                         "bridge": ("bridge", "puente", "bridge"),
                         "instrumental": ("instrumental", "instrumental",
@@ -37,6 +38,7 @@ def display_lyrics(lyrics):
     # Replace spaces with nonbreaking spaces
     ret = ret.replace(" ", "\xA0") or "\xA0\xA0"
     return ret
+
 
 def display_chord(filename, chord):
     """
@@ -93,6 +95,7 @@ def display_section_name(name, language):
     language_index = LANGUAGE_INDICES[language]
     ret = SECTION_TRANSLATIONS[name][language_index]
     return "(%s)" % (ret.title())
+
 
 def connect_arabic(parsed_line):
     """
