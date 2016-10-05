@@ -47,12 +47,6 @@ class Song:
         return {self.filename: {"metadata": self.metadata,
                                 "content": self.content}}
 
-    def get_lyrics(self):
-        """
-        Return the title, metadata, and lyrics of the song object formatted for JSON
-        TODO: Implement
-        """
-
 
 def parse_pitch(filename, pitch):
     """
