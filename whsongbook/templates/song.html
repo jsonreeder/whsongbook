@@ -12,6 +12,9 @@
       {% if metadata["capo"] %}
       <h3>Capo {{ metadata["capo"] }}</h3>
       {% endif %}
+      {% if metadata["time"] %}
+      <h3>Time: {{ metadata["time"] }}</h3>
+      {% endif %}
       {% if metadata["tags"] %}
       <h3>Tags: {{ macros.tag_links(metadata["tags"]) }}</h3>
       {% endif %}
