@@ -38,10 +38,10 @@ if failing_songs:
 artists_data = defaultdict(list)
 tags_data = defaultdict(list)
 for s in songs_data:
-    artists_data[s.metadata["artist"]].append(s.metadata["title"])
+    artists_data[s.metadata["artist"]].append(s)
     try:
         for tag in s.metadata["tags"]:
-            tags_data[tag].append((s.metadata["title"], s.metadata["artist"]))
+            tags_data[tag].append(s)
     except KeyError:
         pass
 

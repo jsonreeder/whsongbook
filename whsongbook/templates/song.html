@@ -2,23 +2,21 @@
 {% extends "base.html" %}
 {% block content %}
       <link rel="stylesheet" href="{{ url_for('static', filename='css/song.css') }}">
-      {% if metadata["language"] %}
-          {% if metadata["language"] == "ar" %}
+        {% if song.get_language() == "ar" %}
             <link rel="stylesheet" href="{{ url_for('static', filename='css/song_rtl.css') }}">
-          {% endif %}
+        {% endif %}
+	    <h1>{{ song.get_title() }}</h1>
+	    <h2><a href={{ song.get_artist_link() }}>{{ song.get_artist() }}</a></h2>
+      {% if song.get_capo() %}
+        <h3>Capo: {{ song.get_capo() }}</h3>
       {% endif %}
-	    <h1>{{ title }}</h1>
-	    <h2><a href={{ artist_link }}>{{ artist }}</a></h2>
-      {% if metadata["capo"] %}
-      <h3>Capo: {{ metadata["capo"] }}</h3>
+      {% if song.get_time() %}
+        <h3>Time: {{ song.get_time() }}</h3>
       {% endif %}
-      {% if metadata["time"] %}
-      <h3>Time: {{ metadata["time"] }}</h3>
+      {% if song.get_tags() %}
+        <h3>Tags: {{ macros.tag_links(song.get_tags()) }}</h3>
       {% endif %}
-      {% if metadata["tags"] %}
-      <h3>Tags: {{ macros.tag_links(metadata["tags"]) }}</h3>
-      {% endif %}
-      {% for type, content in sections %}
-      {{ macros.render_section(type, content, filename, metadata["language"]) }}
+      {% for type, content in song.get_content() %}
+        {{ macros.render_section(type, content, song.get_filename(), song.get_language()) }}
       {% endfor %}
 {% endblock %}
