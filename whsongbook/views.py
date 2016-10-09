@@ -46,19 +46,11 @@ def browse():
     Display a list of links to all songs.
     """
 
-    songs = []
-    for song in songs_data:
-        cur = defaultdict(list)
-        cur["artist"] = song.metadata["artist"]
-        cur["title"] = song.metadata["title"]
-        cur["artist_link"] = "/browse/%s" % (cur["artist"].replace(" ", "_"))
-        cur["song_link"] = "%s/%s" % (cur["artist_link"],
-                                      cur["title"].replace(" ", "_"))
-        songs.append(cur)
-
     return render_template(
-        "browse.html", songs=sorted(
-            songs, key=lambda song: song["title"]))
+        "browse.html",
+        songs=sorted(
+            songs_data, key=lambda song: song.get_title()),
+        header="All Songs")
 
 
 @app.route("/browse/<artist_underscore>/<title_underscore>")
@@ -72,21 +64,13 @@ def song(artist_underscore, title_underscore):
 
     # test for urls to songs that do not exist
     try:
-        selection = next(song for song in songs_data
-                         if song.metadata["title"] == title and song.metadata[
-                             "artist"] == artist)
-        artist_link = "/browse/%s" % (artist.replace(" ", "_"))
+        selection = next(
+            song for song in songs_data
+            if song.get_title() == title and song.get_artist() == artist)
     except StopIteration:
         return redirect("/browse")
 
-    return render_template(
-        "song.html",
-        filename=selection.filename,
-        title=title,
-        artist=artist,
-        metadata=selection.metadata,
-        artist_link=artist_link,
-        sections=selection.content)
+    return render_template("song.html", song=selection)
 
 
 @app.route("/browse/<artist_underscore>")
@@ -101,15 +85,9 @@ def artist(artist_underscore):
     if artist not in artists_data.keys():
         return redirect("/browse")
     else:
-        songs = []
-        for song in artists_data[artist]:
-            cur = defaultdict(list)
-            cur["title"] = song
-            cur["link"] = "/browse/%s/%s" % (artist_underscore,
-                                             song.replace(" ", "_"))
-            songs.append(cur)
-
-        return render_template("artist.html", artist=artist, songs=songs)
+        songs = [song for song in artists_data[artist]]
+        header = artist.title()
+        return render_template("browse.html", songs=songs, header=header)
 
 
 @app.route("/tags")
@@ -138,19 +116,9 @@ def tag_page(tag):
     if tag not in tags_data.keys():
         return redirect("/browse")
     else:
-        songs = []
-        for song in tags_data[tag]:
-            title, artist = song
-            cur = defaultdict(list)
-            cur["display"] = "%s - %s" % (title, artist)
-            cur["link"] = "/browse/%s/%s" % (artist.replace(" ", "_"),
-                                             title.replace(" ", "_"))
-            songs.append(cur)
-
-        # Alphabetize songs
-        songs = sorted(songs, key=lambda k: k["title"])
-
-        return render_template("tag.html", tag=tag.title(), songs=songs)
+        songs = [song for song in tags_data[tag]]
+        header = tag.title()
+        return render_template("browse.html", songs=songs, header=header)
 
 
 @app.route("/songs_list")

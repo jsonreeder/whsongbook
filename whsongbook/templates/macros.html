@@ -73,6 +73,25 @@
 </tbody>
 {% endmacro %}
 
+{% macro song_table_object(songs) %}
+<thead>
+    <tr>
+        <th><h4>Title<h4></th>
+        <th><h4>Artist</h4></th>
+    </tr>
+</thead>
+<tbody>
+    {% for song in songs %}
+    <tr>
+        <td><a href = "{{ song.get_song_link() }}">{{ song.get_title() }}</a></td>
+        <td><a href = "{{ song.get_artist_link() }}">{{ song.get_artist() }}</a></td>
+    </tr>
+    {% endfor %}
+    <tr>
+    </tr>
+</tbody>
+{% endmacro %}
+
 {% macro genre_links(genres) %}
 <ul id="genre_list"">
 {% for genre in genres %}

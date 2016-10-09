@@ -39,12 +39,96 @@ class Song:
         ret += "Content = %s\n" % pprint.pformat(self.content)
         return ret
 
+    def get_title(self):
+        """
+        Return the title for a song. For outside access.
+        """
+
+        return self.metadata["title"]
+
+    def get_artist(self):
+        """
+        Return the artist for a song. For outside access.
+        """
+
+        return self.metadata["artist"]
+
+    def get_language(self):
+        """
+        Return the language for a song. For outside access.
+        """
+
+        return self.metadata["language"]
+
+    def get_capo(self):
+        """
+        Return the capo for a song if it exists. For outside access.
+        """
+
+        try:
+            return self.metadata["capo"]
+        except KeyError:
+            return False
+
+    def get_tags(self):
+        """
+        Return the tags for a song if they exist. For outside access.
+        """
+
+        try:
+            return self.metadata["tags"]
+        except KeyError:
+            return False
+
+    def get_time(self):
+        """
+        Return the time signature for a song if it exists. For outside access.
+        """
+
+        try:
+            return self.metadata["time"]
+        except KeyError:
+            return False
+
+    def get_artist_link(self):
+        """
+        Return the song_link for a song.
+        """
+
+        artist_link = "/browse/%s" % (self.metadata["artist"].replace(" ", "_"))
+
+        return artist_link
+
+    def get_song_link(self):
+        """
+        Return the song_link for a song.
+        """
+
+        artist_link = "/browse/%s" % (self.metadata["artist"].replace(" ", "_"))
+        song_link = "%s/%s" % (artist_link, self.metadata["title"].replace(" ", "_"))
+
+        return song_link
+
+    def get_filename(self):
+        """
+        Return the filename for a song. For outside access.
+        """
+
+        return self.filename
+
     def get_metadata(self):
         """
         Return the metadata for a song. For outside access.
         """
 
         return self.metadata
+
+    def get_content(self):
+        """
+        Return the content for a song. For outside access.
+        """
+
+        return self.content
 
     def get_json(self):
         """
