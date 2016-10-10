@@ -20,8 +20,8 @@ from . import parse, display
 # Load songs
 songs_data = [parse.parse_file(file) for file in os.listdir("songs/production/")]
 # Log whie debugging
-logging.debug("Songs Data:\n")
-logging.debug(pprint.pformat(songs_data))
+# logging.debug("Songs Data:\n")
+# logging.debug(pprint.pformat(songs_data))
 
 # Die if any songs fail to parse
 if failing_songs:
@@ -40,10 +40,10 @@ for s in songs_data:
         pass
 
 # Log whie debugging
-logging.debug("Artists_Data:\n")
-logging.debug(pprint.pformat(artists_data))
-logging.debug("Tags_Data:\n")
-logging.debug(pprint.pformat(tags_data))
+# logging.debug("Artists_Data:\n")
+# logging.debug(pprint.pformat(artists_data))
+# logging.debug("Tags_Data:\n")
+# logging.debug(pprint.pformat(tags_data))
 
 from . import views
 
