@@ -56,7 +56,13 @@ logging.debug("Languages_Data:\n")
 logging.debug(pprint.pformat(languages_data))
 
 # Configure search indexing
-schema = Schema(title=TEXT(stored=True), path=ID(stored=True), content=TEXT)
+schema = Schema(
+    title=TEXT(stored=True),
+    artist=TEXT(stored=True),
+    song_link=TEXT(stored=True),
+    artist_link=TEXT(stored=True),
+    path=ID(stored=True),
+    content=TEXT)
 dir_path = os.path.dirname(os.path.realpath(__file__))
 ix = create_in(dir_path + "/whoosh_index", schema)
 writer = ix.writer()
@@ -65,6 +71,9 @@ writer = ix.writer()
 for song in songs_data:
     writer.add_document(
         title=song.get_title(),
+        artist=song.get_artist(),
+        song_link=song.get_song_link(),
+        artist_link=song.get_artist_link(),
         path=song.get_filename(),
         content=str(song.get_content()))
 
