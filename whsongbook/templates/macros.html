@@ -90,3 +90,11 @@
 {% endfor %}
 </ul>
 {% endmacro %}
+
+{% macro search_results(results) %}
+<ul>
+    {% for result in results %}
+    <li>{{result}}</li>
+    {% endfor %}
+</ul>
+{% endmacro %}
