@@ -2,9 +2,8 @@ import os.path
 from whoosh.index import create_in
 from whoosh.fields import *
 schema = Schema(title=TEXT(stored=True), path=ID(stored=True), content=TEXT)
-if not os.path.exists("indexdir"):
-    os.mkdir("indexdir")
-ix = create_in("indexdir", schema)
+dir_path = os.path.dirname(os.path.realpath(__file__))
+ix = create_in(dir_path + "/whoosh_index", schema)
 writer = ix.writer()
 writer.add_document(title=u"First document", path=u"/a",
                     content=u"This is the first document we've added!")
