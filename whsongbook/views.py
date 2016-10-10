@@ -7,7 +7,8 @@ This module defines the endpoints of the Flask app.
 from random import choice
 from collections import defaultdict
 from flask import render_template, redirect
-from . import app, songs_data, artists_data, tags_data
+from whoosh.fields import *
+from . import app, songs_data, artists_data, tags_data, ix
 
 
 @app.route("/")
@@ -135,3 +136,17 @@ def display_songs_data():
     """
 
     return str([song.get_json() for song in songs_data])
+
+
+@app.route("/search")
+def search():
+    """
+    Search for songs.
+    """
+
+    from whoosh.qparser import QueryParser
+    with ix.searcher() as searcher:
+        query = QueryParser("title", ix.schema).parse("document")
+        results = searcher.search(query)
+
+    return render_template("search.html", results=results)
