@@ -65,15 +65,6 @@ writer.add_document(
 
 writer.commit()
 
-from whoosh.qparser import QueryParser
-with ix.searcher() as searcher:
-    query = QueryParser("title", ix.schema).parse("document")
-    results = searcher.search(query)
-
-logging.debug("Search Results")
-logging.debug(results)
-logging.debug(len(results))
-
 from . import views
 
 def check_type(data):
