@@ -20,7 +20,8 @@ failing_songs = []
 from . import parse, display
 
 # Load songs
-songs_data = [parse.parse_file(file) for file in os.listdir("songs/production/")]
+songs_data = [parse.parse_file(file)
+              for file in os.listdir("songs/production/")]
 # Log whie debugging
 # logging.debug("Songs Data:\n")
 # logging.debug(pprint.pformat(songs_data))
@@ -54,25 +55,23 @@ logging.debug(pprint.pformat(tags_data))
 logging.debug("Languages_Data:\n")
 logging.debug(pprint.pformat(languages_data))
 
-# Index for searches
+# Configure search indexing
 schema = Schema(title=TEXT(stored=True), path=ID(stored=True), content=TEXT)
 dir_path = os.path.dirname(os.path.realpath(__file__))
 ix = create_in(dir_path + "/whoosh_index", schema)
 writer = ix.writer()
 
-# Add fake docs for searching
-writer.add_document(
-    title=u"First document",
-    path=u"/a",
-    content=u"This is the first document we've added!")
-writer.add_document(
-    title=u"Second document",
-    path=u"/b",
-    content=u"The second one is even more interesting!")
+# Index songs for searching
+for song in songs_data:
+    writer.add_document(
+        title=song.get_title(),
+        path=song.get_filename(),
+        content=str(song.get_content()))
 
 writer.commit()
 
 from . import views
+
 
 def check_type(data):
     return isinstance(data, list)
@@ -85,4 +84,3 @@ app.jinja_env.globals.update(
     connect_arabic = display.connect_arabic,
     display_language_name = display.display_language_name
 )
-

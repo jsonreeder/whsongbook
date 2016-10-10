@@ -247,7 +247,7 @@ def search():
 
     from whoosh.qparser import QueryParser
     with ix.searcher() as searcher:
-        query = QueryParser("title", ix.schema).parse("document")
+        query = QueryParser("title", ix.schema).parse("love")
         results = searcher.search(query)
         titles = [result["title"] for result in results]
 
