@@ -144,10 +144,19 @@ def search():
     Search for songs.
     """
 
+    # Query Index
     from whoosh.qparser import QueryParser
     with ix.searcher() as searcher:
         query = QueryParser("artist", ix.schema).parse("Bob")
         results = searcher.search(query)
-        titles = [result["title"] for result in results]
+        filenames = [result["path"] for result in results]
 
-    return render_template("search.html", results=titles)
+    # Find corresponding song objects
+    result_objects = []
+    for filename in filenames:
+        result_objects.append(
+            next(song for song in songs_data
+                 if song.get_filename() == filename))
+
+    return render_template(
+        "browse.html", songs=result_objects, header="Search Results")
