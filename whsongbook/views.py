@@ -148,5 +148,6 @@ def search():
     with ix.searcher() as searcher:
         query = QueryParser("title", ix.schema).parse("document")
         results = searcher.search(query)
+        titles = [result["title"] for result in results]
 
-    return render_template("search.html", results=results)
+    return render_template("search.html", results=titles)
