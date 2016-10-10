@@ -10,6 +10,8 @@ import logging
 import pprint
 from collections import defaultdict
 from flask import Flask
+from whoosh.index import create_in
+from whoosh.fields import *
 
 logging.basicConfig(filename="errors.log", level=logging.DEBUG)
 app = Flask(__name__)
@@ -44,6 +46,33 @@ for s in songs_data:
 # logging.debug(pprint.pformat(artists_data))
 # logging.debug("Tags_Data:\n")
 # logging.debug(pprint.pformat(tags_data))
+
+# Index for searches
+schema = Schema(title=TEXT(stored=True), path=ID(stored=True), content=TEXT)
+dir_path = os.path.dirname(os.path.realpath(__file__))
+ix = create_in(dir_path + "/whoosh_index", schema)
+writer = ix.writer()
+
+# Add fake docs for searching
+writer.add_document(
+    title=u"First document",
+    path=u"/a",
+    content=u"This is the first document we've added!")
+writer.add_document(
+    title=u"Second document",
+    path=u"/b",
+    content=u"The second one is even more interesting!")
+
+writer.commit()
+
+from whoosh.qparser import QueryParser
+with ix.searcher() as searcher:
+    query = QueryParser("title", ix.schema).parse("document")
+    results = searcher.search(query)
+
+logging.debug("Search Results")
+logging.debug(results)
+logging.debug(len(results))
 
 from . import views
 
