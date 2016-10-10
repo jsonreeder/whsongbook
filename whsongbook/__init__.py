@@ -11,7 +11,7 @@ import pprint
 from collections import defaultdict
 from flask import Flask
 
-logging.basicConfig(filename="errors.log", level=logging.ERROR)
+logging.basicConfig(filename="errors.log", level=logging.DEBUG)
 app = Flask(__name__)
 failing_songs = []
 
