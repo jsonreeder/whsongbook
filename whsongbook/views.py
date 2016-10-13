@@ -31,13 +31,11 @@ def about():
 @app.route("/random")
 def random():
     """
-    Display a randomly selected song page.
+    Redirect to a randomly selected song page.
     """
 
     selection = choice(songs_data)
-    artist_underscore = selection.metadata["artist"].replace(" ", "_")
-    title_underscore = selection.metadata["title"].replace(" ", "_")
-    return redirect("/browse/%s/%s" % (artist_underscore, title_underscore))
+    return redirect(selection.get_song_link())
 
 
 @app.route("/browse")

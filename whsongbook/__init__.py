@@ -23,12 +23,6 @@ songs_data = [parse.parse_file(file) for file in os.listdir("songs/production/")
 logging.debug("Songs Data:\n")
 logging.debug(pprint.pformat(songs_data))
 
-# Load JSON
-# songs_data_json = [song.get_json() for song in songs_data]
-# logging.debug("Songs JSON:\n")
-# logging.debug(pprint.pformat(songs_data_json))
-
-
 # Die if any songs fail to parse
 if failing_songs:
     import sys
