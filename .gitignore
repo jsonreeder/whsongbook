@@ -6,3 +6,4 @@ archives/
 *.log
 **/junk*
 .*
+/personal.org
