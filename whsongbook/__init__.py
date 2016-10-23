@@ -62,6 +62,7 @@ app.jinja_env.globals.update(
     display_lyrics = display.display_lyrics,
     display_chord = display.display_chord,
     display_section_name = display.display_section_name,
-    connect_arabic = display.connect_arabic
+    connect_arabic = display.connect_arabic,
+    display_language_name = display.display_language_name
 )
 

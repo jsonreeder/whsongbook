@@ -7,7 +7,7 @@ This module defines the endpoints of the Flask app.
 from random import choice
 from collections import defaultdict
 from flask import render_template, redirect
-from . import app, songs_data, artists_data, tags_data, languages_data
+from . import app, songs_data, artists_data, tags_data, languages_data, display
 
 
 @app.route("/")
@@ -154,7 +154,7 @@ def languages_page():
     languages = []
     for language in sorted(languages_data.keys()):
         cur = defaultdict(list)
-        cur["display"] = language.title()
+        cur["display"] = display.display_language_name(language)
         cur["link"] = "/languages/%s" % language
         languages.append(cur)
 
@@ -171,7 +171,7 @@ def language_page(language):
         return redirect("/languages")
     else:
         songs = [song for song in languages_data[language]]
-        header = language.title()
+        header = display.display_language_name(language)
         return render_template("songs.html", songs=songs, header=header)
 
 
