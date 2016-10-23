@@ -93,7 +93,7 @@ def artists():
         cur["link"] = "/artists/%s" % artist
         artists.append(cur)
 
-    return render_template("artists.html", artists=artists)
+    return render_template("list_buttons.html", items=artists, header="Artists")
 
 
 @app.route("/artists/<artist_underscore>")
@@ -127,7 +127,7 @@ def tags_page():
         cur["link"] = "/tags/%s" % tag
         tags.append(cur)
 
-    return render_template("tags.html", tags=tags)
+    return render_template("list_buttons.html", items=tags, header="Tags")
 
 
 @app.route("/tags/<tag>")
@@ -158,7 +158,7 @@ def languages_page():
         cur["link"] = "/languages/%s" % language
         languages.append(cur)
 
-    return render_template("languages.html", languages=languages)
+    return render_template("list_buttons.html", items=languages, header="Languages")
 
 
 @app.route("/languages/<language>")
