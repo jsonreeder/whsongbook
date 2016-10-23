@@ -38,6 +38,15 @@ def random():
     return redirect(selection.get_song_link())
 
 
+@app.route("/newbrowse")
+def newbrowse():
+    """
+    Display a list of links to all songs.
+    """
+
+    return render_template("newbrowse.html")
+
+
 @app.route("/browse")
 def browse():
     """
