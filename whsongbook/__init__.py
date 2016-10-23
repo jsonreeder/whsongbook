@@ -20,19 +20,24 @@ from . import parse, display
 # Load songs
 songs_data = [parse.parse_file(file) for file in os.listdir("songs/production/")]
 # Log whie debugging
-logging.debug("Songs Data:\n")
-logging.debug(pprint.pformat(songs_data))
+# logging.debug("Songs Data:\n")
+# logging.debug(pprint.pformat(songs_data))
 
 # Die if any songs fail to parse
 if failing_songs:
     import sys
     sys.exit(1)
 
-# Build artist and tag lists
+# Build metadata lists
 artists_data = defaultdict(list)
 tags_data = defaultdict(list)
+languages_data = defaultdict(list)
 for s in songs_data:
     artists_data[s.metadata["artist"]].append(s)
+    try:
+        languages_data[s.metadata["language"]].append(s)
+    except KeyError:
+        pass
     try:
         for tag in s.metadata["tags"]:
             tags_data[tag].append(s)
@@ -44,6 +49,8 @@ logging.debug("Artists_Data:\n")
 logging.debug(pprint.pformat(artists_data))
 logging.debug("Tags_Data:\n")
 logging.debug(pprint.pformat(tags_data))
+logging.debug("Languages_Data:\n")
+logging.debug(pprint.pformat(languages_data))
 
 from . import views
 
