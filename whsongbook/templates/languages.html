@@ -1,0 +1,10 @@
+{% import "macros.html" as macros %}
+{% extends "base.html" %}
+{% block content %}
+    <h1>Languages</h1>
+    <ul>
+        {% for language in languages %}
+        <li><a href="{{ language["link"] }}">{{ language["display"] }}</a></li>
+        {% endfor %}
+        </ul>
+{% endblock %}
