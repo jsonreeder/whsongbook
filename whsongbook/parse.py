@@ -95,7 +95,7 @@ class Song:
         Return the song_link for a song.
         """
 
-        artist_link = "/songs/%s" % (self.metadata["artist"].replace(" ", "_"))
+        artist_link = "/artists/%s" % (self.metadata["artist"].replace(" ", "_"))
 
         return artist_link
 
