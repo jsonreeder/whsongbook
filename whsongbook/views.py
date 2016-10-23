@@ -80,6 +80,22 @@ def song(artist_underscore, title_underscore):
     return render_template("song.html", song=selection)
 
 
+@app.route("/artists")
+def artists():
+    """
+    Display a list of links to all artists.
+    """
+
+    artists = []
+    for artist in sorted(artists_data.keys()):
+        cur = defaultdict(list)
+        cur["display"] = artist.title()
+        cur["link"] = "/artists/%s" % artist
+        artists.append(cur)
+
+    return render_template("artists.html", artists=artists)
+
+
 @app.route("/artists/<artist_underscore>")
 def artist(artist_underscore):
     """
