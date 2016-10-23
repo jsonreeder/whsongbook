@@ -41,7 +41,7 @@ def random():
 @app.route("/browse")
 def browse():
     """
-    Display a list of links to all songs.
+    Display a list of paths to groups of songs.
     """
 
     return render_template("browse.html")
@@ -54,10 +54,13 @@ def songs():
     """
 
     return render_template(
-        "songs.html",
+        "buttons.html",
         songs=sorted(
             songs_data, key=lambda song: song.get_title()),
-        header="All Songs")
+        header="Songs",
+        parent="Browse",
+        show_artist=True,
+        contains_song_objects=True)
 
 
 @app.route("/songs/<artist_underscore>/<title_underscore>")
@@ -90,10 +93,15 @@ def artists():
     for artist in sorted(artists_data.keys()):
         cur = defaultdict(list)
         cur["display"] = artist.title()
-        cur["link"] = "/artists/%s" % artist
+        cur["link"] = "/artists/%s" % artist.replace(" ", "_")
         artists.append(cur)
 
-    return render_template("list_buttons.html", items=artists, header="Artists")
+    return render_template(
+        "buttons.html",
+        items=artists,
+        header="Artists",
+        parent="Browse",
+        contains_song_objects=False)
 
 
 @app.route("/artists/<artist_underscore>")
@@ -103,6 +111,8 @@ def artist(artist_underscore):
     """
 
     artist = artist_underscore.replace("_", " ")
+    path = "/artists"
+    parent = "Artists"
 
     # test for urls to artists that do not exist
     if artist not in artists_data.keys():
@@ -110,7 +120,14 @@ def artist(artist_underscore):
     else:
         songs = [song for song in artists_data[artist]]
         header = artist.title()
-        return render_template("songs.html", songs=songs, header=header)
+        return render_template(
+            "buttons.html",
+            songs=songs,
+            header=header,
+            path=path,
+            parent=parent,
+            show_artist=False,
+            contains_song_objects=True)
 
 
 @app.route("/tags")
@@ -127,7 +144,12 @@ def tags_page():
         cur["link"] = "/tags/%s" % tag
         tags.append(cur)
 
-    return render_template("list_buttons.html", items=tags, header="Tags")
+    return render_template(
+        "buttons.html",
+        items=tags,
+        header="Tags",
+        parent="Browse",
+        contains_song_objects=False)
 
 
 @app.route("/tags/<tag>")
@@ -136,12 +158,21 @@ def tag_page(tag):
     Display a page for each tag, with a list of all songs in that tag.
     """
 
+    path = "/tags"
+    parent = "Tags"
     if tag not in tags_data.keys():
         return redirect("/tags")
     else:
         songs = [song for song in tags_data[tag]]
         header = tag.title()
-        return render_template("songs.html", songs=songs, header=header)
+        return render_template(
+            "buttons.html",
+            songs=songs,
+            header=header,
+            path=path,
+            parent=parent,
+            show_artist=True,
+            contains_song_objects=True)
 
 
 @app.route("/languages")
@@ -158,7 +189,12 @@ def languages_page():
         cur["link"] = "/languages/%s" % language
         languages.append(cur)
 
-    return render_template("list_buttons.html", items=languages, header="Languages")
+    return render_template(
+        "buttons.html",
+        items=languages,
+        header="Languages",
+        parent="Browse",
+        contains_song_objects=False)
 
 
 @app.route("/languages/<language>")
@@ -167,12 +203,21 @@ def language_page(language):
     Display a page for each language, with a list of all songs in that language.
     """
 
+    path = "/languages"
+    parent = "Languages"
     if language not in languages_data.keys():
-        return redirect("/languages")
+        return redirect(parent)
     else:
         songs = [song for song in languages_data[language]]
         header = display.display_language_name(language)
-        return render_template("songs.html", songs=songs, header=header)
+        return render_template(
+            "buttons.html",
+            songs=songs,
+            header=header,
+            path=path,
+            parent=parent,
+            show_artist=True,
+            contains_song_objects=True)
 
 
 @app.route("/songs_list")
