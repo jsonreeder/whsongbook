@@ -38,29 +38,29 @@ def random():
     return redirect(selection.get_song_link())
 
 
-@app.route("/newbrowse")
-def newbrowse():
-    """
-    Display a list of links to all songs.
-    """
-
-    return render_template("newbrowse.html")
-
-
 @app.route("/browse")
 def browse():
     """
     Display a list of links to all songs.
     """
 
+    return render_template("browse.html")
+
+
+@app.route("/songs")
+def songs():
+    """
+    Display a list of links to all songs.
+    """
+
     return render_template(
-        "browse.html",
+        "songs.html",
         songs=sorted(
             songs_data, key=lambda song: song.get_title()),
         header="All Songs")
 
 
-@app.route("/browse/<artist_underscore>/<title_underscore>")
+@app.route("/songs/<artist_underscore>/<title_underscore>")
 def song(artist_underscore, title_underscore):
     """
     Display a specific song transcription.
@@ -75,12 +75,12 @@ def song(artist_underscore, title_underscore):
             song for song in songs_data
             if song.get_title() == title and song.get_artist() == artist)
     except StopIteration:
-        return redirect("/browse")
+        return redirect("/songs")
 
     return render_template("song.html", song=selection)
 
 
-@app.route("/browse/<artist_underscore>")
+@app.route("/artists/<artist_underscore>")
 def artist(artist_underscore):
     """
     Display a page for each artist, with a list of links to their songs.
@@ -90,11 +90,11 @@ def artist(artist_underscore):
 
     # test for urls to artists that do not exist
     if artist not in artists_data.keys():
-        return redirect("/browse")
+        return redirect("/artists")
     else:
         songs = [song for song in artists_data[artist]]
         header = artist.title()
-        return render_template("browse.html", songs=songs, header=header)
+        return render_template("songs.html", songs=songs, header=header)
 
 
 @app.route("/tags")
@@ -121,11 +121,11 @@ def tag_page(tag):
     """
 
     if tag not in tags_data.keys():
-        return redirect("/browse")
+        return redirect("/tags")
     else:
         songs = [song for song in tags_data[tag]]
         header = tag.title()
-        return render_template("browse.html", songs=songs, header=header)
+        return render_template("songs.html", songs=songs, header=header)
 
 
 @app.route("/songs_list")

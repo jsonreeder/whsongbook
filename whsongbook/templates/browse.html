@@ -1,12 +1,10 @@
-{% import "macros.html" as macros %}
 {% extends "base.html" %}
 {% block content %}
-<h1>{{header}}</h1>
-<div class="row">
-    <div>
-        <table class="table table-striped">
-            {{macros.song_table_object(songs)}}
-        </table>
-    </div>
-</div>
+<h1>Browse</h1>
+<ul>
+    <li>Songs</li>
+    <li>Artists</li>
+    <li>Tags</li>
+    <li>Languages</li>
+</ul>
 {% endblock %}
