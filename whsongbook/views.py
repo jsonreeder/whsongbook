@@ -7,7 +7,7 @@ This module defines the endpoints of the Flask app.
 from random import choice
 from collections import defaultdict
 from flask import render_template, redirect
-from . import app, songs_data, artists_data, tags_data
+from . import app, songs_data, artists_data, tags_data, languages_data, display
 
 
 @app.route("/")
@@ -41,17 +41,29 @@ def random():
 @app.route("/browse")
 def browse():
     """
+    Display a list of paths to groups of songs.
+    """
+
+    return render_template("browse.html")
+
+
+@app.route("/songs")
+def songs():
+    """
     Display a list of links to all songs.
     """
 
     return render_template(
-        "browse.html",
+        "buttons.html",
         songs=sorted(
             songs_data, key=lambda song: song.get_title()),
-        header="All Songs")
+        header="Songs",
+        parent="Browse",
+        show_artist=True,
+        contains_song_objects=True)
 
 
-@app.route("/browse/<artist_underscore>/<title_underscore>")
+@app.route("/songs/<artist_underscore>/<title_underscore>")
 def song(artist_underscore, title_underscore):
     """
     Display a specific song transcription.
@@ -66,26 +78,56 @@ def song(artist_underscore, title_underscore):
             song for song in songs_data
             if song.get_title() == title and song.get_artist() == artist)
     except StopIteration:
-        return redirect("/browse")
+        return redirect("/songs")
 
     return render_template("song.html", song=selection)
 
 
-@app.route("/browse/<artist_underscore>")
+@app.route("/artists")
+def artists():
+    """
+    Display a list of links to all artists.
+    """
+
+    artists = []
+    for artist in sorted(artists_data.keys()):
+        cur = defaultdict(list)
+        cur["display"] = artist.title()
+        cur["link"] = "/artists/%s" % artist.replace(" ", "_")
+        artists.append(cur)
+
+    return render_template(
+        "buttons.html",
+        items=artists,
+        header="Artists",
+        parent="Browse",
+        contains_song_objects=False)
+
+
+@app.route("/artists/<artist_underscore>")
 def artist(artist_underscore):
     """
     Display a page for each artist, with a list of links to their songs.
     """
 
     artist = artist_underscore.replace("_", " ")
+    path = "/artists"
+    parent = "Artists"
 
     # test for urls to artists that do not exist
     if artist not in artists_data.keys():
-        return redirect("/browse")
+        return redirect("/artists")
     else:
         songs = [song for song in artists_data[artist]]
         header = artist.title()
-        return render_template("browse.html", songs=songs, header=header)
+        return render_template(
+            "buttons.html",
+            songs=songs,
+            header=header,
+            path=path,
+            parent=parent,
+            show_artist=False,
+            contains_song_objects=True)
 
 
 @app.route("/tags")
@@ -102,7 +144,12 @@ def tags_page():
         cur["link"] = "/tags/%s" % tag
         tags.append(cur)
 
-    return render_template("tags.html", tags=tags)
+    return render_template(
+        "buttons.html",
+        items=tags,
+        header="Tags",
+        parent="Browse",
+        contains_song_objects=False)
 
 
 @app.route("/tags/<tag>")
@@ -111,12 +158,67 @@ def tag_page(tag):
     Display a page for each tag, with a list of all songs in that tag.
     """
 
+    path = "/tags"
+    parent = "Tags"
     if tag not in tags_data.keys():
-        return redirect("/browse")
+        return redirect("/tags")
     else:
         songs = [song for song in tags_data[tag]]
         header = tag.title()
-        return render_template("browse.html", songs=songs, header=header)
+        return render_template(
+            "buttons.html",
+            songs=songs,
+            header=header,
+            path=path,
+            parent=parent,
+            show_artist=True,
+            contains_song_objects=True)
+
+
+@app.route("/languages")
+def languages_page():
+    """
+    Display a single page containing all languages with links to their individual
+    language pages
+    """
+
+    languages = []
+    for language in sorted(languages_data.keys()):
+        cur = defaultdict(list)
+        cur["display"] = display.display_language_name(language)
+        cur["link"] = "/languages/%s" % language
+        languages.append(cur)
+
+    return render_template(
+        "buttons.html",
+        items=sorted(
+            languages, key=lambda language: language["display"]),
+        header="Languages",
+        parent="Browse",
+        contains_song_objects=False)
+
+
+@app.route("/languages/<language>")
+def language_page(language):
+    """
+    Display a page for each language, with a list of all songs in that language.
+    """
+
+    path = "/languages"
+    parent = "Languages"
+    if language not in languages_data.keys():
+        return redirect(parent)
+    else:
+        songs = [song for song in languages_data[language]]
+        header = display.display_language_name(language)
+        return render_template(
+            "buttons.html",
+            songs=songs,
+            header=header,
+            path=path,
+            parent=parent,
+            show_artist=True,
+            contains_song_objects=True)
 
 
 @app.route("/songs_list")

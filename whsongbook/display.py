@@ -10,6 +10,7 @@ from . import failing_songs
 # Initialize global display variables
 ACCIDENTALS = {"f": "b", "s": "#"}
 LANGUAGE_INDICES = {"en": 0, "es": 1, "ar": 2}
+LANGUAGE_NAMES = {"en": "English", "es": "Español", "ar": "عربي"}
 SECTION_TRANSLATIONS = {"header": ("header", "header", "header"),
                         "verse": ("verse", "verso", "كوبليه"),
                         "pre-chorus":
@@ -135,3 +136,11 @@ def connect_arabic(parsed_line):
                     ret[chunk_num] = (chord, new_lyric)
 
     return ret
+
+
+def display_language_name(lang_abbreviation):
+    """
+    Return the correct display name for a given language
+    """
+
+    return LANGUAGE_NAMES[lang_abbreviation]
