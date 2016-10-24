@@ -1,0 +1,25 @@
+{% import "macros.html" as macros %}
+{% extends "base.html" %}
+{% block content %}
+{% if parent=="Browse" %}
+    <h1><a class="btn btn-success" href="/browse">Browse</a> {{header}}</h1>
+{% else %}
+    <h1><a class="btn btn-default" href="/browse">Browse</a> <a class="btn btn-success" href="{{path}}"> {{parent}}</a> {{header}}</h1>
+{% endif %}
+<hr>
+<div class="list-unstyled">
+    {% if contains_song_objects %}
+        {% for song in songs %}
+            {% if show_artist %}
+                <li><a class="list-group-item" href="{{ song.get_song_link() }}"> <b>{{song.get_title()}}</b> - {{song.get_artist() }}</a></li>
+            {% else %}
+                <li><a class="list-group-item" href="{{ song.get_song_link() }}"> <b>{{song.get_title()}}</b></a></li>
+            {% endif %}
+        {% endfor %}
+    {% else %}
+        {% for item in items %}
+        <li><a class="list-group-item" href="{{ item["link"] }}">{{ item["display"] }}</a></li>
+        {% endfor %}
+    {% endif %}
+</div>
+{% endblock %}
