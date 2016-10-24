@@ -191,7 +191,8 @@ def languages_page():
 
     return render_template(
         "buttons.html",
-        items=languages,
+        items=sorted(
+            languages, key=lambda language: language["display"]),
         header="Languages",
         parent="Browse",
         contains_song_objects=False)
