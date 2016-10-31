@@ -9,9 +9,16 @@ There are many ways to help, from adding new songs and correcting lyrics in exis
 
 The source code for the songs is available in the directory [[file:../songs/production][songs/production/]], and any changes to the chords or lyrics there will be reflected in the app.
 * Running Locally
-Running locally is a good way to get to know your neighborhood and exercise. Running this application locally is a good way to test and see what your changes and additions look like. Here are instructions for how to do the latter.
+Running locally is a good way to get to know your neighborhood and exercise. Running this application locally is a good way to test and see what your changes and additions look like. That can be done on your own computer, or on a virtual machine such as 
 
 If any of this is confusing, get in touch.
+** 0. Make sure you can run Python 3
+This app requires Python 3 to run. To check whether you have Python 3, attempt opening the interpreter by typing ~python3~ on the command line.
+
+If you do not have Python 3 installed, here are notes:
+*** With Anaconda
+- The Anaconda documentation describes how to run Python 3 even if you'd prefer to keep Python 2 the default: [[http://conda.pydata.org/docs/py2or3.html][Anaconda Docs: Managing Python]]
+  - The section ~Create a Python 3.5 environment~ is particularly relevant
 ** 1. Copy the files
 *** Option 1: From Github
 1. Return to the main page of the repository: [[https://github.com/jlreeder/whsongbook][link]]
@@ -36,15 +43,15 @@ Starting a virtual environment will contain the packages installed later
 1. Open up a terminal emulator and make sure that you are in the directory you downloaded in the step above
 2. Make sure that you have a version of Python 3
 3. Install the requirements listed in ~requirements.txt~:
-   - ~pip install -r requirements.txt~
+   - ~pip3 install -r requirements.txt~
 ** 4. Run the app
 - Execute the ~run.py~ script:
-  - ~python run.py~
+  - ~python3 run.py~
 ** 5. Use the app in your browser
 - Go to the following URL in any browser: ~http://0.0.0.0:8080/~
 - You should see the app
 - If you don't, something above went wrong. Again, don't hesitate to be in touch.
-* Add to the songs
+* Add Songs
 One of the most useful things to do is to add new song transcriptions. Here are some thoughts about how to do that.
 ** Logistics
 - Check out the existing songs in [[file:../songs/production][songs/production]] to learn the format
@@ -54,5 +61,9 @@ One of the most useful things to do is to add new song transcriptions. Here are 
 - In some cases, failing songs throw the app into a loop. If that happens, kill the "run" command by typing ~ctrl - c~ in your terminal, and note that the same errors will be listed multiple times in the log.
 ** Style
 There is a style guide for song transcriptions: [[file:style.org][style.org]].
-** Pull requests
-When you're done with a transcription, you can submit it for addition by making a pull request.
+* Making Pull Requests
+Here are instructions for how to submit your additions to production
+1) Fork this repository
+2) Make and commit changes on your fork
+3) Submit a pull request to the original repository with your changes
+4) Jason ([[github.com/jlreeder/][jlreeder]]) will accept the changes if they look good, or write comments if anything else is needed to incorporate them
