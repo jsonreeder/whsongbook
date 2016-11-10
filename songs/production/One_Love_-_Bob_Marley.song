@@ -2,6 +2,7 @@ header:
     title = "One Love"
     artist = "Bob Marley"
     capo = 1
+    tags = ["solidarity"]
 
 chorus:
     [a]   One Love, [e]   one heart

@@ -1,7 +1,7 @@
 header:
     title = "Zombie"
     artist = "The Cranberries"
-    tags = ["modern"]
+    tags = ["modern", "solidarity"]
 
 verse:
     [e:m]   Another [c:maj7]head hangs lowly
