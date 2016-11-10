@@ -86,7 +86,7 @@
 {% macro tag_links(tags) %}
 <ul id="genre_list"">
 {% for tag in tags %}
-    <li><a href = "/tags/{{tag}}">{{tag.title()}}</a></li>
+    <a class="btn btn-success btn-xs" href="/tags/{{tag}}">{{tag.title()}}</a>
 {% endfor %}
 </ul>
 {% endmacro %}

@@ -1,0 +1,35 @@
+header:
+    title = "We Shall Overcome"
+    artist = "Traditional"
+    associated_artists = ["Joan Baez", "Pete Seeger"]
+    tags = ["solidarity"]
+
+verse:
+    [c]We shall [f]over[c]come
+    [c]We shall [f]over[c]come
+    [c]We shall [f]over[a:m]come
+    [d]Some [g]day [g]
+
+chorus:
+    Oh, [f]deep in my [a:m]heart
+    [f]I do be[e:m]lieve
+    [c]We shall [f]over[c]come
+    [g]Some [c]day [c]
+
+verse:
+    We'll walk hand in hand
+    We'll walk hand in hand
+    We'll walk hand in hand
+    Some day
+
+chorus:
+    Oh, deep in my heart
+    I do believe
+    We'll walk hand in hand
+    Some day
+
+verse:
+    We shall live in peace...
+    We shall all be free...
+    We are not afraid...
+    We shall overcome...

@@ -1,0 +1,62 @@
+header:
+    title = "If I Had a Hammer"
+    artist = "Pete Seeger"
+    associated_artists = ["Peter, Paul and Mary"]
+    tags = ["solidarity"]
+    capo = 2
+
+verse:
+    If I had a [g]hammer [c] [d]
+    I'd hammer in the [g]morning [c] [d]
+    I'd hammer in the [g]evening [c] [d]
+    All over this [d]land [d]
+
+chorus:
+    I'd hammer out [g]danger [g]
+    I'd hammer out a [e:m]warning [e:m]
+    I'd hammer out [c]love be[g]tween
+    My [c]brothers and my [g]sisters
+    [c]All [g] [d]   over this
+    [g]Land [c] [d] [g c d]
+
+verse:
+    If I had a bell
+    I'd ring it in the morning
+    I'd ring it in the evening
+    All over this land
+
+chorus:
+    I'd ring out danger
+    I'd ring out a warning
+    I'd ring out love between
+    My brothers and my sisters
+    All over this
+    Land
+
+verse:
+    If I had a song
+    I'd sing it in the morning
+    I'd sing it in the evening
+    all over this land
+
+chorus:
+    I'd sing out danger
+    I'd sing out a warning
+    I'd sing out love between
+    My brothers and my sisters
+    All over this
+    Land
+
+verse:
+    Well, I've got a hammer
+    And I've got a bell
+    And I've got a song to sing
+    All over this land
+
+chorus:
+    It's the hammer of justice
+    It's the bell of freedom
+    It's a song about love between my
+    Brothers and my sisters
+    All over this
+    Land

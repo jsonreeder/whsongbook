@@ -1,6 +1,7 @@
 header:
     title = "Apeman"
     artist = "The Kinks"
+    tags = ["solidarity"]
 
 instrumental:
     [| d e:/gs | d e a |]

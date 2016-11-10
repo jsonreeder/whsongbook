@@ -1,7 +1,7 @@
 header:
     title = "Oh Freedom"
     artist = "Traditional"
-    tags = ["americana"]
+    tags = ["americana", "solidarity"]
     associated_artists = ["Odetta", "Joan Baez"]
 
 verse:
