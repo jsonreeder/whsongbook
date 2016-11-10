@@ -14,7 +14,7 @@
         <h3>Time: {{ song.get_time() }}</h3>
       {% endif %}
       {% if song.get_tags() %}
-        <h3>Tags: {{ macros.tag_links(song.get_tags()) }}</h3>
+        <h3>{{ macros.tag_links(song.get_tags()) }}</h3>
       {% endif %}
       {% for type, content in song.get_content() %}
         {{ macros.render_section(type, content, song.get_filename(), song.get_language()) }}
