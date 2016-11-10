@@ -1,6 +1,7 @@
 header:
     title = "Where do the Children Play?"
     artist = "Cat Stevens"
+    tags = ["solidarity"]
 
 instrumental:
     [| d g | d g | d g | d g |]
