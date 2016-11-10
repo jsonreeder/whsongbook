@@ -163,11 +163,12 @@ def tag_page(tag):
     if tag not in tags_data.keys():
         return redirect("/tags")
     else:
-        songs = [song for song in tags_data[tag]]
+        songs_with_tag = [song for song in tags_data[tag]]
         header = tag.title()
         return render_template(
             "buttons.html",
-            songs=songs,
+            songs=sorted(
+                songs_with_tag, key=lambda song: song.get_title()),
             header=header,
             path=path,
             parent=parent,
