@@ -1,7 +1,7 @@
 header:
-    title = "Blowin in the Wind"
+    title = "Blowin' in the Wind"
     artist = "Bob Dylan"
-    tags = ["sing-along"]
+    tags = ["sing-along", "solidarity"]
 
 verse:
     [d]How many [g]roads must a [d]man walk down
@@ -12,7 +12,7 @@ verse:
     Be[d]fore they're [g]forever [d]banned?
 
 chorus:
-    The [g]answer, my [a]friend, is [d]blowin' in the [b:m]wind,
+    The [g]answer, my [a]friend, is [d]blowin' in the [b:m]wind
     The [g]answer is [a]blowin' in the [d]wind
 
 verse:
