@@ -9,7 +9,7 @@ There are many ways to help, from adding new songs and correcting lyrics in exis
 
 The source code for the songs is available in the directory [[file:../songs/production][songs/production/]], and any changes to the chords or lyrics there will be reflected in the app.
 * Running Locally
-Running locally is a good way to get to know your neighborhood and exercise. Running this application locally is a good way to test and see what your changes and additions look like. That can be done on your own computer, or on a virtual machine such as 
+Running locally is a good way to get to know your neighborhood and exercise. Running this application locally is a good way to test and see what your changes and additions look like. That can be done on your own computer, or on a virtual machine such as
 
 If any of this is confusing, get in touch.
 ** 0. Make sure you can run Python 3
@@ -21,13 +21,13 @@ If you do not have Python 3 installed, here are notes:
   - The section ~Create a Python 3.5 environment~ is particularly relevant
 ** 1. Copy the files
 *** Option 1: From Github
-1. Return to the main page of the repository: [[https://github.com/jlreeder/whsongbook][link]]
+1. Return to the main page of the repository: [[https://github.com/jsonreeder/whsongbook][link]]
 2. Click ~Clone or download~
 3. Click ~Download ZIP~
 4. Unzip the folder
 *** Option 2: From the command line
 1. Clone the repository using git:
-   - ~git clone https://github.com/jlreeder/whsongbook.git~
+   - ~git clone https://github.com/jsonreeder/whsongbook.git~
 ** 2. Start a Virtual Environment (Optional)
 Starting a virtual environment will contain the packages installed later
 1. Make sure you have ~virtualenv~:
@@ -66,4 +66,4 @@ Here are instructions for how to submit your additions to production
 1) Fork this repository
 2) Make and commit changes on your fork
 3) Submit a pull request to the original repository with your changes
-4) Jason ([[github.com/jlreeder/][jlreeder]]) will accept the changes if they look good, or write comments if anything else is needed to incorporate them
+4) Jason ([[github.com/jsonreeder/][jsonreeder]]) will accept the changes if they look good, or write comments if anything else is needed to incorporate them
